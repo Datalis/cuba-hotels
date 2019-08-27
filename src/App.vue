@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <CubaMap msg="Welcome to Your Vue.js App"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import CubaMap from './components/CubaMap.vue'
 
 export default {
-  name: 'app',
-  components: {
-    CubaMap
-  }
+  name: 'app'
 }
 </script>
 

@@ -3,7 +3,7 @@
     <v-flex>
         <banner></banner>
         <owners></owners>
-
+        <building-card></building-card>
     </v-flex>
 </v-layout>
 </template>
@@ -12,12 +12,14 @@
     import Banner from '@/components/home/Banner'
     import YoutubeVideo from "../components/home/YoutubeVideo"
     import Owners from '@/components/home/Owners'
+    import BuildingCard from '@/components/home/BuildingCard'
 
     export default {
         name: "Home",
         components: {
             Banner,
             Owners,
+            BuildingCard,
             YoutubeVideo
         },
         data() {

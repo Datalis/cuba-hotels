@@ -8,7 +8,7 @@
                 <v-layout row pl-lg-5>
                     <v-flex xs6>
                         <v-card-title style="margin-top: 50px; ">
-                            <h1 style="margin-bottom: 50px; height: 30px; text-transform: uppercase; font-size: 44px; letter-spacing: 9px; color: #040404; font-weight: 800;">Los dueños</h1>
+                            <h1 style="margin-bottom: 50px; text-transform: uppercase; font-size: 44px; letter-spacing: 9px; color: #040404; font-weight: 800;">Los dueños</h1>
                             <div style="width: 45%; border-bottom: 2px solid #dd9526; "></div>
                         </v-card-title>
                         <v-card-text class="text-left" style="margin-top: 50px;">
@@ -19,7 +19,7 @@
                                 consequat...</v-flex></v-card-text>
                         <v-card-actions class="text-left"><v-flex style="margin-top: 50px; text-transform: uppercase; color: #dd9526">Leer más</v-flex></v-card-actions></v-flex>
                     <v-flex xs6>
-                        <v-img height="496" width="496" :src="require('@/assets/home/autumnclouds.jpg')">
+                        <v-img height="496" width="496" :src="require('@/assets/home/owners.png')">
                         </v-img>
                     </v-flex>
                 </v-layout>

@@ -1,31 +1,26 @@
 <template>
     <v-app-bar
-            app
-            flat>
-        <v-container
-                mx-auto
-                py-0>
-            <v-layout>
-                <v-btn
-                        :to="'/home'"
-                        class="m1-0 hidden-sm-and-down"
-                        text>Home
-                </v-btn>
-                <v-btn
-                        :to="'/home'"
-                        class="m1-0 hidden-sm-and-down"
-                        text>About
-                </v-btn>
-                <v-btn
-                        :to="'/home'"
-                        class="m1-0 hidden-sm-and-down"
-                        text>Travel
-                </v-btn>
+            absolute
+            flat
+            prominent
+    color="rgba(0,0,0,0.76)">
+        <v-app-bar-nav-icon color="rgb(255, 255, 255)"></v-app-bar-nav-icon>
+        <v-toolbar-title style="margin-left: 269px">
+            <v-layout column>
+                <v-flex xs12>
+                    <p class="text-uppercase font-weight-light" style="font-size: 29px; letter-spacing: 6px; color: #dc9321; text-align: left; margin-bottom: 0">
+                        Hoteles en Cuba:
+                    </p>
+                </v-flex>
+                <v-flex xs12>
+                    <p class="text-uppercase" style="font-size: 29px; letter-spacing: 6px; color: #dc9321; font-weight: 300; margin-top: 0">
+                        El valor de un pais
+                    </p>
+                </v-flex>
             </v-layout>
-        </v-container>
+        </v-toolbar-title>
     </v-app-bar>
 </template>
-
 <script>
     export default {
         name: "Toolbar"

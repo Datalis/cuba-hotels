@@ -1,10 +1,12 @@
 <template>
-    <v-app>
+    <v-app id="layout">
         <core-toolbar/>
-        <v-content id="home">
-            <router-view />
+        <v-content class="pt-lg-0" >
+            <v-container fluid fill-height class="pl-0 pr-0 pt-0">
+                <router-view></router-view>
+            </v-container>
         </v-content>
-        <core-footer/>
+<!--        <core-footer/>-->
     </v-app>
 </template>
 

@@ -1,34 +1,9 @@
 <template>
-    <div id="home">
-        <!--        <feed>-->
-        <v-container
-                grid-list-xl>
-            <v-layout wrap>
-                <v-flex xs12>
-                    <banner></banner>
-                    <cuba-map msg="Welcome to Your Vue.js App"/>
-                </v-flex>
-                <!--        <feed-card>-->
-
-                <feed-card
-                        :size="2"
-                        :value="articles[1]"
-                />
-                <feed-card
-                        :size="2"
-                        :value="articles[1]"
-                />
-                <!--        </feed-card>-->
-                <v-flex xs12>
-                    <youtube-video/></v-flex>
-            </v-layout>
-
-        </v-container>
-        <!--        </feed>-->
-        <!--        <banner></banner>-->
-
-    </div>
-
+<v-layout>
+    <v-flex>
+        <banner></banner>
+    </v-flex>
+</v-layout>
 </template>
 
 <script>
@@ -60,6 +35,11 @@
                         "category": "Leisure",
                         "hero": "autumnclouds.jpg"
                     }]
+            }
+        },
+        methods: {
+            applyFilter(list, filters){
+                list.filter(item => filters.every(f => item[f.cat] === f.value))
             }
         }
     }

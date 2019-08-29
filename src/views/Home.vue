@@ -2,23 +2,23 @@
 <v-layout>
     <v-flex>
         <banner></banner>
+        <owners></owners>
+
     </v-flex>
 </v-layout>
 </template>
 
 <script>
-    import CubaMap from '@/components/CubaMap'
     import Banner from '@/components/home/Banner'
-    import FeedCard from '@/components/FeedCard'
-    import YoutubeVideo from "../components/home/YoutubeVideo";
+    import YoutubeVideo from "../components/home/YoutubeVideo"
+    import Owners from '@/components/home/Owners'
 
     export default {
         name: "Home",
         components: {
-            YoutubeVideo,
-            CubaMap,
             Banner,
-            FeedCard
+            Owners,
+            YoutubeVideo
         },
         data() {
             return {

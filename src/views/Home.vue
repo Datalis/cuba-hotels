@@ -4,6 +4,7 @@
         <banner></banner>
         <owners></owners>
         <building-card></building-card>
+        <youtube-video style="margin-top: 300px"></youtube-video>
     </v-flex>
 </v-layout>
 </template>

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Home from '@/views/Home'
 import Interactive from "./components/home/Interactive";
+import Building from "./views/Building";
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
                     path: '/',
                     name: 'home',
                     component: Home
+                },
+                {
+                    path: '/',
+                    name: 'building',
+                    component: Building
                 }
             ]
         },

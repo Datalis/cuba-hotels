@@ -36,12 +36,20 @@
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </v-col>
-            <v-col cols="5">
+            <v-col cols="4">
                 <v-card>
-
+                    <v-img :src="require('@/assets/home/building.png')">
+                        <v-card-title style="height: 40%; background-color: #eeeeed">
+                            Los duenos
+                        </v-card-title>
+                    </v-img>
                 </v-card>
-                <v-card>
-
+                <v-card class="mt-12">
+                    <video-frame width="100%"></video-frame>
+                    <v-card-title style="background-color: #eeeeed">
+                        <h1 style="width: 100%">Video</h1>
+                        <h1 style="width: 100%">Resumen</h1>
+                    </v-card-title>
                 </v-card>
             </v-col>
         </v-row>
@@ -51,9 +59,11 @@
 
 <script>
     import Banner from '@/components/building/Banner'
+    import VideoFrame from "../components/videoFrame";
+
     export default {
         name: "Building",
-        components: {Banner}
+        components: {VideoFrame, Banner}
     }
 </script>
 

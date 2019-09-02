@@ -5,13 +5,9 @@
 
             </v-col>
             <v-col cols="2" >
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/9iPRF7YQTck" frameborder="0"
-                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <video-frame></video-frame>
             </v-col>
             <v-col cols="8" style="background-color: #4d4d4c; color: #FFFFFF" align="center">
-
-
                 <v-card flat max-width="496" style="background-color: inherit; margin: 12em; margin-right: 4em">
                     <v-card-title>
                         Video Resumen
@@ -29,8 +25,10 @@
 </template>
 
 <script>
+    import VideoFrame from "../videoFrame";
     export default {
-        name: "YoutubeVideo"
+        name: "YoutubeVideo",
+        components: {VideoFrame}
     }
 </script>
 

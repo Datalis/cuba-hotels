@@ -15,7 +15,6 @@ loadMap(Highcharts);
 export default {
   name: "CubaMap",
   components: {
-    // Highcharts: genComponent('Highcharts', Highcharts),
     Highmaps: genComponent("Highmaps", Highcharts)
   },
   props: {
@@ -25,18 +24,33 @@ export default {
     return {
       Highcharts: Highcharts,
       chartOptions: {
-        chart: {},
-        title: {
-          text: "Highmaps basic demo"
+        legend: {
+          enabled: false
         },
-        subtitle: {
-          text: "CUBA"
+        tooltip: {
+          backgroundColor: 'rgba(0,0,0,0.9)',
+          headerFormat: '',
+          pointFormat: '<span style="color: #cc983c"> {point.name}</span><br><span style="color: #cc983c">Hoteles: {point.x}</span>'
+        },
+        chart: {
+          backgroundColor: 'transparent',
+
+
+        },
+        colorAxis: {
+          // min: 0,
+          maxColor: 'transparent',
+          minColor: 'transparent'
+        },
+
+        title: {
+          text: ""
+        },
+        credits: {
+          enabled: false
         },
         mapNavigation: {
           enabled: false
-        },
-        colorAxis: {
-          min: 0
         },
         series: [
           {
@@ -63,14 +77,16 @@ export default {
             name: "Random data",
             states: {
               hover: {
-                color: "#BADA55"
+                color: "#cc983c" // region color when mouse hover
               }
             },
             dataLabels: {
-              enabled: true,
-              useHTML: true,
-              format: "{point.name}"
-            }
+              enabled: false, // over region labels
+              // useHTML: true,
+              // format: "{point.name}"
+            },
+            borderColor: '#000000', // line separator between regions
+            borderWidth: 3,
           }
         ]
       }
@@ -95,4 +111,10 @@ li {
 a {
   color: #42b983;
 }
+</style>
+
+<style>
+  .black-tooltip {
+    background-color: rgba(0,0,0,.2);
+  }
 </style>

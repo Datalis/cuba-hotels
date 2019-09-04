@@ -3,22 +3,22 @@
             absolute
             flat
             prominent
-    color="rgba(0,0,0,0.76)">
-        <v-app-bar-nav-icon color="rgb(255, 255, 255)"></v-app-bar-nav-icon>
-        <v-toolbar-title style="margin-left: 269px">
-            <v-layout column>
-                <v-flex xs12>
-                    <p class="text-uppercase font-weight-light" style="font-size: 29px; letter-spacing: 6px; color: #dc9321; text-align: left; margin-bottom: 0">
-                        Hoteles en Cuba:
-                    </p>
-                </v-flex>
-                <v-flex xs12>
-                    <p class="text-uppercase" style="font-size: 29px; letter-spacing: 6px; color: #dc9321; font-weight: 300; margin-top: 0">
-                        El valor de un pais
-                    </p>
-                </v-flex>
-            </v-layout>
-        </v-toolbar-title>
+            color="rgba(0, 0, 0, 0.76)"
+    >
+        <v-row>
+            <v-col cols="2">
+                <!-- todo: put icon-->
+                        <v-app-bar-nav-icon color="rgb(255, 255, 255)"></v-app-bar-nav-icon>
+            </v-col>
+            <v-col cols="10">
+                <p class="mb-0 text-uppercase font-weight-light bar-title">
+                    Hoteles en Cuba:
+                </p>
+                <p class="mt-0 text-uppercase  bar-title">
+                    El valor de un pais
+                </p>
+            </v-col>
+        </v-row>
     </v-app-bar>
 </template>
 <script>
@@ -28,5 +28,10 @@
 </script>
 
 <style scoped>
+    .bar-title {
+        font-size: 29px;
+        letter-spacing: 6px;
+        color: var(--primary-color);
+    }
 
 </style>

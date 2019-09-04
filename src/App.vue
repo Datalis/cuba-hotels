@@ -37,12 +37,15 @@ export default {
     src: url("assets/fonts/Montserrat-Thin.ttf") format("opentype");
   }
 
+  :root {
+    --primary-color: #dc9321;
+    --secundary-color: rgba(0, 0, 0, 0.76);
+  }
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /*text-align: center;*/
-  color: #2c3e50;
 }
 
 

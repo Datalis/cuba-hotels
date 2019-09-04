@@ -121,13 +121,38 @@
             </v-col>
         </v-row>
         <v-row style="background-color: #282828; margin-top: 150px">
-            <v-col cols="7"></v-col>
+            <v-col cols="7">
+                <v-card>
+                    <v-card-title>Proyectos en Construcción</v-card-title>
+                    <v-card-text>
+                        <v-row>
+                            2019 - 2020 - 2030
+                        </v-row>
+                        <v-list max-height="200" style="overflow-y: scroll">
+                            <v-list-item two-line :key="i" v-for="(h, i) in hotels" >
+                                <v-list-item-content>
+                                    <v-list-item-title>{{h}}</v-list-item-title>
+                                    <v-list-item-subtitle><v-rating :value="5" color="#cc983c" dense readonly></v-rating></v-list-item-subtitle>
+                                </v-list-item-content>
+                            </v-list-item>
+                        </v-list>
+                    </v-card-text>
+                </v-card>
+            </v-col>
             <v-col cols="5" style="padding: 0">
                 <v-img :src="require('@/assets/home/activep.png')"/>
             </v-col>
         </v-row>
-        <div class="background-img">
-            <v-img height="1130" width="750" :src="require('@/assets/home/background.png')"/>
+        <div>
+            <v-row class="background-img">
+                <v-col><v-img   height="1130" width="750" :src="require('@/assets/home/background.png')"/></v-col>
+                <v-col>
+                    <div style="margin-top: 250px">
+                        <h1>Hoteles</h1>
+                        <h1>Existentes</h1>
+                    </div>
+                </v-col>
+            </v-row>
         </div>
     </div>
 </template>
@@ -135,14 +160,14 @@
 <script>
     import CubaMap from "../CubaMap";
     import {mapGetters} from 'vuex'
-    import InfoDialog from "./InfoDialog";
 
     export default {
         name: "InteractiveMap",
-        components: {InfoDialog, CubaMap},
+        components: {CubaMap},
         data() {
             return {
-                showInfoDialog: false
+                showInfoDialog: false,
+                hotels: ['Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado']
             }
         },
         computed: {

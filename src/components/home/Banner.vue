@@ -1,28 +1,26 @@
 <template>
     <div style="position: relative">
-        <v-row align="end" style="margin-top: 330px; position: absolute; top: 0px">
-            <v-col cols="0" sm="2" lg="6">
-                <v-img height="570" width="710" :src="require('@/assets/home/banner2.png')">
+        <v-row align="end" class="text-row">
+            <v-col cols="1" sm="1" md="4" lg="6">
+                <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="7.92in" width="9.86in"
+                       :src="require('@/assets/home/banner2.png')">
                 </v-img>
             </v-col>
-            <v-col cols="12" sm="10" lg="6" class="text-right pa-lg-10 pa-sm-0">
-                <p style="margin-right: 20px">
-
+            <v-col cols="11" sm="11" md="8" lg="6" class="quoted-col">
+                <p class="quoted-text text-right">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    consequat. Duis aute irure dolor in.
                 </p>
             </v-col>
         </v-row>
         <v-row justify="end">
-            <v-col cols="2" class="pt-0">
+            <v-col lg="2" sm="0" class="pt-0">
             </v-col>
-            <v-col cols="10" class="pt-0">
+            <v-col lg="10" sm="12" class="pt-0">
                 <v-row>
-                    <v-img height="650" width="100%" :src="require('@/assets/home/banner.png')">
+                    <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.png')">
                     </v-img>
                 </v-row>
             </v-col>
@@ -37,5 +35,21 @@
 </script>
 
 <style scoped>
+    .text-row {
+        width: 100%;
+        margin-top: 4.583in;
+        position: absolute;
+        top: 0;
+        height: 7.92in;
+    }
 
+    .quoted-text {
+        margin-right: 20px;
+    }
+
+    .quoted-col{
+        padding-left: 8%;
+        padding-right: 5%;
+        padding-bottom: 3%;
+    }
 </style>

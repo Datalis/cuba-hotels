@@ -37,6 +37,11 @@ export default {
     src: url("assets/fonts/Montserrat-Thin.ttf") format("opentype");
   }
 
+  @font-face {
+    font-family: "Montserrat-ExtraBold";
+    src: url("assets/fonts/Montserrat-ExtraBold.otf") format("opentype");
+  }
+
   :root {
     --primary-color: #dc9321;
     --secundary-color: rgba(0, 0, 0, 0.76);

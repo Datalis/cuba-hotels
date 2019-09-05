@@ -1,31 +1,44 @@
 <template>
-    <v-row style="margin-top: 470px;">
+    <v-row align="end">
         <v-col cols="2">
-            <div style="width: 80%; height: 100%; border-bottom: 3px solid black"></div>
+            <div class="horizontal-line"></div>
         </v-col>
-        <v-col cols="8">
+        <v-col cols="10">
             <v-card color="gray" flat>
-                <v-layout row pl-lg-5>
-                    <v-flex xs6>
-                        <v-card-title style="margin-top: 50px; ">
-                            <h1 style="margin-bottom: 50px; text-transform: uppercase; font-size: 44px; letter-spacing: 9px; color: #040404; font-weight: 800;">Los dueños</h1>
-                            <div style="width: 45%; border-bottom: 2px solid #dd9526; "></div>
+                <v-row pl-lg-5>
+                    <v-col cols="12" sm="12" md="6" lg="5">
+                        <v-card-title class="card-title-container">
+                            <v-row align="center">
+                                <v-col cols="12">
+                                    <p class="card-title text-uppercase">Los dueños</p>
+                                </v-col>
+                            </v-row>
                         </v-card-title>
-                        <v-card-text class="text-left" style="margin-top: 50px;">
-                            <v-flex style="width: 390px; height: 135px; font-size: 17px; letter-spacing: 1px;  color: #4d4d4c; font-weight: 400;">
-                                ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat...</v-flex></v-card-text>
-                        <v-card-actions class="text-left"><v-flex style="margin-top: 50px; text-transform: uppercase; color: #dd9526">Leer más</v-flex></v-card-actions></v-flex>
-                    <v-flex xs6>
-                        <v-img height="496" width="496" :src="require('@/assets/home/owners.png')">
+                        <v-divider
+                                style="margin-left: 16px; width: 45%; border-bottom: 4px solid var(--primary-color); border-radius: 4px"></v-divider>
+                        <v-card-text class="text-left card-text-container">
+                            <v-row>
+                                <v-col class="card-text">
+                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat...
+                                </v-col>
+                            </v-row>
+                        </v-card-text>
+                        <v-card-actions class="text-left">
+                            <v-btn text class="more-btn">
+                                Leer más
+                            </v-btn>
+                        </v-card-actions>
+                    </v-col>
+                    <v-col cols="12" sm="12" md="6" lg="6">
+                        <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6.89in" width="6.89in"
+                               :src="require('@/assets/home/owners.png')">
                         </v-img>
-                    </v-flex>
-                </v-layout>
+                    </v-col>
+                </v-row>
             </v-card>
-        </v-col>
-        <v-col cols="2">
         </v-col>
     </v-row>
 </template>
@@ -37,5 +50,54 @@
 </script>
 
 <style scoped>
+    .horizontal-line {
+        width: 80%;
+        /*height: 100%;*/
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        display: inline-block;
+    }
 
+    .card-title-container {
+        margin-top: 0.736in;
+        margin-bottom: 0.736in;
+    }
+
+    .card-title {
+        /*margin-bottom: 50px;*/
+        font-size: 44.28pt;
+        letter-spacing: 3px;
+        color: #040404;
+        /*font-weight: 800;*/
+        line-height: 44.28pt;
+        height: max-content;
+        font-family: Montserrat-ExtraBold;
+    }
+
+    .card-text {
+        /*width: 390px;*/
+        /*height: 135px;*/
+        font-size: 17pt;
+        letter-spacing: 1px;
+        color: #4d4d4c;
+        font-family: Montserrat-Regular;
+    }
+
+    .card-text-container {
+        margin-top: 50px;
+    }
+
+    .more-btn {
+        margin-top: 50px;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-size: 22.3pt;
+        font-family: Montserrat-Light;
+    }
+
+    @media screen and (max-width: 360px) {
+        .card-title {
+            font-size: 28.28pt;
+        }
+    }
 </style>

@@ -45,11 +45,13 @@
 
     .quoted-text {
         margin-right: 20px;
+        font-family: Montserrat-Regular;
+        font-size: 16pt;
     }
 
     .quoted-col{
         padding-left: 8%;
         padding-right: 5%;
-        padding-bottom: 3%;
+        padding-bottom: 2%;
     }
 </style>

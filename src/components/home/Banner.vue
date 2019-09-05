@@ -47,6 +47,7 @@
         margin-right: 20px;
         font-family: Montserrat-Regular;
         font-size: 16pt;
+        color: #4d4d4c;
     }
 
     .quoted-col{

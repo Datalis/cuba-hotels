@@ -43,7 +43,7 @@ export default {
   }
 
   :root {
-    --primary-color: #dc9321;
+    --primary-color: #dd9526;
     --secundary-color: rgba(0, 0, 0, 0.76);
   }
 

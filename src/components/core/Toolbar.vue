@@ -33,5 +33,4 @@
         letter-spacing: 6px;
         color: var(--primary-color);
     }
-
 </style>

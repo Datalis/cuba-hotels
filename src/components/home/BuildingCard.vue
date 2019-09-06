@@ -6,11 +6,11 @@
         <v-col cols="10">
             <v-card color="gray" flat>
                 <v-row no-gutters>
-                    <v-col cols="5">
+                    <v-col cols="12" sm="12" md="6" lg="5">
                         <v-img height="6.9in" width="6.76in" :src="require('@/assets/home/building.png')">
                         </v-img>
                     </v-col>
-                    <v-col cols="5" style="position: relative;">
+                    <v-col cols="12" sm="12" md="6" lg="5" style="position: relative;">
                         <v-card-title class="card-title-container text-left">
                             <h1 class="card-title text-uppercase">
                                 La apuesta es construir
@@ -96,5 +96,13 @@
         height: 100%;
         position: absolute;
         top: 0;
+    }
+
+
+    @media screen and (max-width: 360px) {
+        .card-title {
+            font-size: 19.28pt;
+            line-height: 19.28pt;
+        }
     }
 </style>

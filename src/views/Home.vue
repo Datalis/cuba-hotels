@@ -2,8 +2,8 @@
 <v-layout>
     <v-flex>
         <banner></banner>
-        <owners></owners>
-        <building-card></building-card>
+        <owners style="margin-top: 6.597in;"></owners>
+        <building-card style="margin-top: 300px;"></building-card>
         <youtube-video style="margin-top: 300px"></youtube-video>
     </v-flex>
 </v-layout>

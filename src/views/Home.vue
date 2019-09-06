@@ -4,6 +4,7 @@
         <banner></banner>
         <owners style="margin-top: 6.597in;"></owners>
         <building-card style="margin-top: 300px;"></building-card>
+        <interactive-map style="margin-top: 300px"></interactive-map>
         <youtube-video style="margin-top: 300px"></youtube-video>
     </v-flex>
 </v-layout>
@@ -14,10 +15,12 @@
     import YoutubeVideo from "../components/home/YoutubeVideo"
     import Owners from '@/components/home/Owners'
     import BuildingCard from '@/components/home/BuildingCard'
+    import InteractiveMap from "../components/home/Interactive";
 
     export default {
         name: "Home",
         components: {
+            InteractiveMap,
             Banner,
             Owners,
             BuildingCard,

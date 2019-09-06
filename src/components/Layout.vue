@@ -1,5 +1,5 @@
 <template>
-    <v-app id="layout" style="background-color: #FFFFFF">
+    <v-app id="layout" style="background-color: transparent">
         <core-toolbar/>
         <v-content class="pt-lg-0">
             <v-container fluid fill-height class="pl-0 pr-0 pt-0">

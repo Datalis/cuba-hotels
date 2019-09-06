@@ -6,7 +6,7 @@
         </v-row>
         <v-row class="content-row">
             <v-col cols="2" style="padding-bottom: 0">
-                <div style="border-bottom: 3px solid black;height: 100%"></div>
+                <div class="horizontal-black-line"></div>
             </v-col>
             <v-col cols="8" class="main-container">
                 <v-row>
@@ -40,8 +40,8 @@
                         ></v-text-field>
                         <v-dialog
                                 v-model="showInfoDialog"
-                        width="max-content"
-                        attach="#list">
+                                width="max-content"
+                                attach="#list">
                             <v-card>
                                 <v-card-title>
                                     <div style="width: 100%">
@@ -70,8 +70,8 @@
                             </v-card>
                         </v-dialog>
                         <v-list
-                        two-line
-                        id="list">
+                                two-line
+                                id="list">
                             <v-list-item @click.stop="showHotelDialog()">
                                 <v-list-item-content>
                                     <v-list-item-title>
@@ -129,10 +129,12 @@
                             2019 - 2020 - 2030
                         </v-row>
                         <v-list max-height="200" style="overflow-y: scroll">
-                            <v-list-item two-line :key="i" v-for="(h, i) in hotels" >
+                            <v-list-item two-line :key="i" v-for="(h, i) in hotels">
                                 <v-list-item-content>
                                     <v-list-item-title>{{h}}</v-list-item-title>
-                                    <v-list-item-subtitle><v-rating :value="5" color="#cc983c" dense readonly></v-rating></v-list-item-subtitle>
+                                    <v-list-item-subtitle>
+                                        <v-rating :value="5" color="#cc983c" dense readonly></v-rating>
+                                    </v-list-item-subtitle>
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list>
@@ -143,17 +145,19 @@
                 <v-img :src="require('@/assets/home/activep.png')"/>
             </v-col>
         </v-row>
-        <div>
-            <v-row class="background-img">
-                <v-col><v-img   height="1130" width="750" :src="require('@/assets/home/background.png')"/></v-col>
-                <v-col>
-                    <div style="margin-top: 250px">
-                        <h1>Hoteles</h1>
-                        <h1>Existentes</h1>
-                    </div>
-                </v-col>
-            </v-row>
-        </div>
+
+        <v-row class="background-img">
+            <v-col>
+                <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
+            </v-col>
+            <v-col>
+                <div style="margin-top: 250px">
+                    <h1>Hoteles</h1>
+                    <h1>Existentes</h1>
+                </div>
+            </v-col>
+        </v-row>
+
     </div>
 </template>
 
@@ -174,7 +178,7 @@
             ...mapGetters(['categories', 'managers', 'regions']),
         },
         methods: {
-            showHotelDialog(){
+            showHotelDialog() {
                 this.showInfoDialog = true
             }
         }
@@ -182,6 +186,12 @@
 </script>
 
 <style scoped>
+    .horizontal-black-line {
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        height: 100%;
+    }
+
     .main-container {
         background-color: #eeeeed;
     }
@@ -217,8 +227,9 @@
 
     .background-img {
         position: absolute;
-        top: -80px;
-        left: -160px;
+        top: 0;
+        /*top: -80px;*/
+        /*left: -160px;*/
         z-index: -1
     }
 
@@ -233,7 +244,7 @@
 
     .filters-title {
         text-align: center;
-        background-color:  #cc983c;
+        background-color: #cc983c;
         width: max-content;
         padding: 15px 65px;
     }

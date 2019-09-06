@@ -5,7 +5,7 @@
         </v-col>
         <v-col cols="10">
             <v-card color="gray" flat>
-                <v-row pl-lg-5>
+                <v-row no-gutters>
                     <v-col cols="12" sm="12" md="6" lg="5">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
@@ -31,12 +31,17 @@
                                 Leer más
                             </v-btn>
                         </v-card-actions>
+
                     </v-col>
-                    <v-col cols="12" sm="12" md="6" lg="6">
+                    <v-col cols="12" sm="12" md="6" lg="6"  style="position: relative;">
+                        <div class="gray-panel">
+
+                        </div>
                         <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6.89in" width="6.89in"
                                :src="require('@/assets/home/owners.png')">
                         </v-img>
                     </v-col>
+
                 </v-row>
             </v-card>
         </v-col>
@@ -93,6 +98,15 @@
         color: var(--primary-color);
         font-size: 22.3pt;
         font-family: Montserrat-Light;
+    }
+
+    .gray-panel {
+        background-color: rgba(58, 58, 58, 0.2);
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 100%;
     }
 
     @media screen and (max-width: 360px) {

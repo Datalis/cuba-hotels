@@ -1,46 +1,47 @@
 <template>
-    <v-row style="margin-top: 300px;">
+    <v-row>
         <v-col cols="2">
 
         </v-col>
-        <v-col cols="8">
+        <v-col cols="10">
             <v-card color="gray" flat>
-                <v-layout row pl-lg-5>
-                    <v-flex xs6>
-                        <v-img height="496" width="496" :src="require('@/assets/home/owners.png')">
+                <v-row no-gutters>
+                    <v-col cols="5">
+                        <v-img height="6.9in" width="6.76in" :src="require('@/assets/home/building.png')">
                         </v-img>
-                    </v-flex>
-                    <v-flex xs6>
-                        <v-card-title style="margin-top: 10px;" class="text-left">
-                            <h1 style="margin-bottom: 10px; text-transform: uppercase; line-height: 46px; font-size: 44px; letter-spacing: 9px; color: #040404; font-weight: 800;">
-                                La apuesta es construir</h1>
-
-                            <div style="width: 45%; border-bottom: 2px solid #dd9526; "></div>
+                    </v-col>
+                    <v-col cols="5" style="position: relative;">
+                        <v-card-title class="card-title-container text-left">
+                            <h1 class="card-title text-uppercase">
+                                La apuesta es construir
+                            </h1>
                         </v-card-title>
-                        <div style="position: relative;" >
-                            <v-card-text class="text-left" style="margin-top: 50px; ">
-                                <v-flex style="background-color: transparent; width: 390px; height: 135px; font-size: 17px; letter-spacing: 1px;  color: #4d4d4c; font-weight: 400;">
+                        <v-divider
+                                style="margin-left: auto; width: 45%; border-bottom: 4px solid var(--primary-color); border-radius: 4px"></v-divider>
+                        <v-card-text class="card-text-container text-left">
+                            <v-row>
+                                <v-col class="card-text">
                                     ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat...
-                                </v-flex>
+                                </v-col>
+                            </v-row>
+                        </v-card-text>
+                        <v-card-actions>
+                            <v-btn text class="more-btn">
+                                Leer más
+                            </v-btn>
+                        </v-card-actions>
+                        <div class="gray-panel">
 
-                            </v-card-text>
-                            <v-card-actions class="text-right">
-                                <v-flex style="margin-top: 50px; text-transform: uppercase; color: #dd9526">Leer más
-                                </v-flex>
-                            </v-card-actions>
-                            <div style="background-color: rgba(0,0,0,0.2); width:50%; height: 200%; position: absolute; top: 0; left: 50%">
-
-                            </div>
                         </div>
-                    </v-flex>
-                </v-layout>
+                    </v-col>
+                </v-row>
+
             </v-card>
         </v-col>
-        <v-col cols="2">
-        </v-col>
+
     </v-row>
 </template>
 
@@ -51,5 +52,49 @@
 </script>
 
 <style scoped>
+    .card-title-container {
+        margin-top: 0.40in;
+        margin-bottom: 0.40in;
+        /*height: 2.63in;*/
+        /*0.7in*/
+        margin-left: 0.4in;
+    }
 
+    .card-title {
+        margin-bottom: 10px;
+
+        line-height: 55.28pt;
+        font-size: 44.28pt;
+        letter-spacing: 3px;
+        color: #040404;
+        font-family: Montserrat-ExtraBold;
+    }
+
+    .card-text-container {
+        margin-top: 0.44in;
+    }
+
+
+    .card-text {
+        font-size: 17pt;
+        letter-spacing: 1px;
+        color: #4d4d4c;
+        margin-left: 0.4in;
+    }
+
+    .more-btn {
+        margin-left: auto;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        font-size: 22.3pt;
+        font-family: Montserrat-Light;
+    }
+
+    .gray-panel {
+        background-color: rgba(58, 58, 58, 0.2);
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+    }
 </style>

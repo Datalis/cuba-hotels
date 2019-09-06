@@ -11,15 +11,15 @@
             <v-col cols="8" class="main-container">
                 <v-row>
                     <v-col cols="12">
-                        <cuba-map></cuba-map>
+                        <cuba-map class="cuba-map"></cuba-map>
                     </v-col>
                 </v-row>
                 <v-row class="statistics-row" justify="center">
-                    <v-col cols="6">
+                    <v-col cols="5">
                         <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
                         <h1 style="text-align: center" class="statistics-value">560</h1>
                     </v-col>
-                    <v-col cols="6">
+                    <v-col cols="5">
                         <h3 class="statistics-title" style="text-align: center">Hoteles
                             <v-icon class="primary-color">star</v-icon>
                             <v-icon class="primary-color">star</v-icon>
@@ -31,8 +31,8 @@
                         <h1 class="statistics-value" style="text-align: center">300</h1>
                     </v-col>
                 </v-row>
-                <v-row>
-                    <v-col>
+                <v-row justify="center">
+                    <v-col cols="7">
                         <v-text-field
                                 filled
                                 label="Buscar"
@@ -70,11 +70,12 @@
                             </v-card>
                         </v-dialog>
                         <v-list
+                                style="background-color: transparent;"
                                 two-line
                                 id="list">
                             <v-list-item @click.stop="showHotelDialog()">
-                                <v-list-item-content>
-                                    <v-list-item-title>
+                                <v-list-item-content class="list-item">
+                                    <v-list-item-title class="list-item-title">
                                         Iberostar Gran Packard
                                     </v-list-item-title>
                                     <v-list-item-subtitle>
@@ -88,36 +89,63 @@
                                     </v-list-item-subtitle>
                                 </v-list-item-content>
                             </v-list-item>
-
                         </v-list>
                     </v-col>
-                    <v-col>
-                        <h3 class="filters-title">Filtros</h3>
+                    <v-col cols="4">
+                        <h3 class="filters-title text-uppercase">Filtros</h3>
                         <v-container fluid>
                             <h3 class="group-title">Categoría</h3>
-                            <v-checkbox class="_vcheck" color="#cc983c" :key="c.name" v-for="c in categories"
-                                        :label="c.name"></v-checkbox>
+                            <v-checkbox class="_vcheck" :key="c.name" v-for="c in categories">
+                                <template v-slot:label>
+                                    <div class="check-label">
+                                        {{c.name}}
+                                    </div>
+                                </template>
+                            </v-checkbox>
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
-                            <v-checkbox class="_vcheck" color="#cc983c" :key="m.name" v-for="m in managers"
-                                        :label="m.name"></v-checkbox>
+                            <v-checkbox class="_vcheck" :key="m.name" v-for="m in managers">
+                                <template v-slot:label>
+                                    <div class="check-label">
+                                        {{m.name}}
+                                    </div>
+                                </template>
+                            </v-checkbox>
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador extranjero</h3>
-                            <v-checkbox class="_vcheck" color="#cc983c" label="Si"></v-checkbox>
-                            <v-checkbox class="_vcheck" color="#cc983c" label="No"></v-checkbox>
+                            <v-checkbox class="_vcheck">
+                                <template v-slot:label>
+                                    <div class="check-label">
+                                        Si
+                                    </div>
+                                </template>
+                            </v-checkbox>
+                            <v-checkbox class="_vcheck">
+                                <template v-slot:label>
+                                    <div class="check-label">
+                                        No
+                                    </div>
+                                </template>
+                            </v-checkbox>
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Ubicación</h3>
-                            <v-checkbox class="_vcheck" color="#cc983c" :key="r.name" v-for="r in regions"
-                                        :label="r.name"></v-checkbox>
+                            <v-checkbox class="_vcheck" color="#171716" :key="r.name" v-for="r in regions"
+                                        :label="r.name">
+                                <template v-slot:label>
+                                    <div class="check-label">
+                                        {{r.name}}
+                                    </div>
+                                </template>
+                            </v-checkbox>
                         </v-container>
                     </v-col>
                 </v-row>
             </v-col>
             <v-col cols="2" style="padding-top: 0">
-                <div style="border-top: 3px solid black"></div>
+                <div class="horizontal-black-line-up"></div>
             </v-col>
         </v-row>
         <v-row style="background-color: #282828; margin-top: 150px">
@@ -146,15 +174,14 @@
             </v-col>
         </v-row>
 
-        <v-row class="background-img">
-            <v-col>
+        <!--- banner -->
+        <v-row class="background-img" align="start">
+            <v-col cols="5">
                 <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
             </v-col>
-            <v-col>
-                <div style="margin-top: 250px">
-                    <h1>Hoteles</h1>
-                    <h1>Existentes</h1>
-                </div>
+            <v-col cols="6" style="margin-top: 1in">
+                <h1 class="map-title text-uppercase">Hoteles</h1>
+                <h1 class="map-title text-uppercase">Existentes</h1>
             </v-col>
         </v-row>
 
@@ -186,67 +213,108 @@
 </script>
 
 <style scoped>
-    .horizontal-black-line {
-        border-bottom: 4px solid black;
-        border-radius: 4px;
-        height: 100%;
+    .content-row {
+        margin-top: 240px;
     }
 
     .main-container {
         background-color: #eeeeed;
+        height: 20.39in;
     }
 
+    .horizontal-black-line {
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        height: 100%;
+        width: 70%;
+    }
+    .horizontal-black-line-up {
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        width: 70%;
+        margin-left: auto;
+    }
+
+    .map-title {
+        letter-spacing: 3px;
+        font-size: 34.98pt;
+        color: #040404;
+        font-family: Montserrat-ExtraBold;
+    }
+
+
     .statistics-title {
-        font-size: 17px;
+        font-size: 16.71pt;
         letter-spacing: 3px;
         color: #000000;
-        font-family: "Montserrat-Bold";
+        font-family: Montserrat-ExtraBold;
         font-weight: 800;
         text-transform: uppercase;
     }
 
     .statistics-value {
-        font-size: 61px;
+        font-size: 61.04pt;
         letter-spacing: 12px;
         color: #cc983c;
-        font-family: "Montserrat-Bold";
+        font-family: Montserrat-ExtraBold;
         font-weight: 800;
     }
 
     .statistics-row {
-        margin-bottom: 158px;
+        margin-bottom: 2.73in;
     }
 
     .primary-color {
-        color: #cc983c;
+        color: #cc983c;;
     }
 
-    .content-row {
-        margin-top: 240px;
+    .list-item {
+
+        font-family: Montserrat-Regular;
+    }
+    .list-item-title{
+        font-size: 17pt;
+    }
+
+    ._vcheck {
+        height: 30pt;
+        margin-top: 0;
+
+    }
+
+    .check-label{
+        font-family: Montserrat-Regular;
+        font-size: 13.71pt;
+        color: #171716;
+    }
+
+    .group-title {
+        margin-bottom: 3px;
+        color: #171716;
+        font-family: Montserrat-Regular;
     }
 
     .background-img {
         position: absolute;
         top: 0;
-        /*top: -80px;*/
-        /*left: -160px;*/
-        z-index: -1
+        z-index: -1;
+        width: 100%;
     }
 
-    ._vcheck {
-        height: 30px;
-        margin-top: 0;
-    }
 
-    .group-title {
-        margin-bottom: 3px;
-    }
 
     .filters-title {
         text-align: center;
+        font-family: Montserrat-ExtraBold;
         background-color: #cc983c;
         width: max-content;
-        padding: 15px 65px;
+        padding: 15px 65pt;
+        font-size: 14.21pt;
+    }
+
+    .cuba-map {
+        position: relative;
+        left: 100px;
     }
 
 </style>

@@ -9,10 +9,10 @@
         name: "videoFrame",
         props:{
             width: {
-                default: '560'
+                default: '670'
             },
             height: {
-                default: '315'
+                default: '450'
             }
         }
     }

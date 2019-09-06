@@ -148,32 +148,7 @@
                 <div class="horizontal-black-line-up"></div>
             </v-col>
         </v-row>
-        <v-row style="background-color: #282828; margin-top: 150px">
-            <v-col cols="7">
-                <v-card>
-                    <v-card-title>Proyectos en Construcción</v-card-title>
-                    <v-card-text>
-                        <v-row>
-                            2019 - 2020 - 2030
-                        </v-row>
-                        <v-list max-height="200" style="overflow-y: scroll">
-                            <v-list-item two-line :key="i" v-for="(h, i) in hotels">
-                                <v-list-item-content>
-                                    <v-list-item-title>{{h}}</v-list-item-title>
-                                    <v-list-item-subtitle>
-                                        <v-rating :value="5" color="#cc983c" dense readonly></v-rating>
-                                    </v-list-item-subtitle>
-                                </v-list-item-content>
-                            </v-list-item>
-                        </v-list>
-                    </v-card-text>
-                </v-card>
-            </v-col>
-            <v-col cols="5" style="padding: 0">
-                <v-img :src="require('@/assets/home/activep.png')"/>
-            </v-col>
-        </v-row>
-
+        <building-projects></building-projects>
         <!--- banner -->
         <v-row class="background-img" align="start">
             <v-col cols="5">
@@ -191,14 +166,14 @@
 <script>
     import CubaMap from "../CubaMap";
     import {mapGetters} from 'vuex'
+    import BuildingProjects from "./BuildingProjects";
 
     export default {
         name: "InteractiveMap",
-        components: {CubaMap},
+        components: {BuildingProjects, CubaMap},
         data() {
             return {
-                showInfoDialog: false,
-                hotels: ['Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado']
+                showInfoDialog: false
             }
         },
         computed: {

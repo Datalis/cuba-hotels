@@ -6,7 +6,7 @@
                 <router-view></router-view>
             </v-container>
         </v-content>
-        <core-footer class="mt-12"/>
+        <core-footer style="margin-top: 200px"/>
     </v-app>
 </template>
 

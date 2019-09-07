@@ -2,8 +2,9 @@
     <div>
         <banner></banner>
         <v-row justify="center">
-            <v-col cols="5">
-                <p class="text-justify">
+            <v-col cols="5" class="pa-0">
+                <p class="author text-uppercase">Autor</p>
+                <p class="text-justify" style="margin-top: 70px">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -36,19 +37,24 @@
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
             </v-col>
-            <v-col cols="4">
-                <v-card>
+            <v-col cols="1"></v-col>
+            <v-col cols="3" class="pa-0">
+                <v-card class="first-card">
                     <v-img :src="require('@/assets/home/building.png')">
-                        <v-card-title style="height: 40%; background-color: #eeeeed">
-                            Los duenos
+                        <v-card-title class="card-title">
+                            <div class="card-title-text text-uppercase">
+                                Los dueños
+                            </div>
+                            <div class="sep-line"></div>
+                            <div class="card-action-text text-uppercase">Leer mas</div>
                         </v-card-title>
                     </v-img>
                 </v-card>
-                <v-card class="mt-12">
-                    <video-frame width="100%"></video-frame>
-                    <v-card-title style="background-color: #eeeeed">
-                        <h1 style="width: 100%">Video</h1>
-                        <h1 style="width: 100%">Resumen</h1>
+                <v-card class="mt-12" style="background-color: #292929">
+                    <video-frame width="100%" height="300"></video-frame>
+                    <v-card-title class="pr-12 pb-8" style="background-color: #292929;">
+                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Video</h1>
+                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Resumen</h1>
                     </v-card-title>
                 </v-card>
             </v-col>
@@ -68,5 +74,50 @@
 </script>
 
 <style scoped>
+    .first-card {
+        margin-top: 246px;
+    }
 
+    .card-title {
+        height: 40%;
+        background-color: #eeeeed;
+    }
+
+    .card-title-text {
+        font-family: Montserrat-ExtraBold;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 25pt;
+        margin-top: 8%;
+    }
+
+    .card-action-text {
+        font-family: Montserrat-Light;
+        color: var(--primary-color);
+        margin-right: 20px;
+        font-size: 14pt;
+    }
+
+    .author {
+        padding-left: 20px;
+        padding-top: 150px;
+        border-left: 4px solid var(--primary-color);
+        font-family: Montserrat-Light;
+        color: var(--primary-color);
+    }
+
+    .sep-line {
+        width: 40%;
+        margin-left: auto;
+        margin-right: 20px;
+        border: 2px solid var(--primary-color);
+    }
+
+    .video-title{
+        font-family: Montserrat-ExtraBold;
+        color: var(--primary-color);
+        font-size: 35pt;
+        line-height: 35pt;
+
+    }
 </style>

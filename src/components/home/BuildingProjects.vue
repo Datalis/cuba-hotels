@@ -24,7 +24,30 @@
             </v-list>
         </v-col>
         <v-col cols="5" class="pa-0">
-            <v-img height="7in" :src="require('@/assets/home/activep.png')"/>
+            <v-img height="7in" :src="require('@/assets/home/activep.png')">
+                <v-card style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
+                    <v-card-title class="text-uppercase">
+                        <div style="width: 100%; font-family: Montserrat-Bold">
+                            Iberostar Gran Packard
+                        </div>
+                    </v-card-title>
+                    <v-card-text class="text-uppercase" style="font-family: Montserrat-Light;">
+                        <p>200 habitaciones / Ciudad Habana / Polo Turístico / Nombre de los operadores
+                            cubanos y extranjeros / Modalidad</p>
+                    </v-card-text>
+                    <v-card-actions>
+                        <div style="width: max-content; margin-left: auto; margin-right: auto">
+                            <v-icon color="white">star</v-icon>
+                            <v-icon color="white">star</v-icon>
+                            <v-icon color="white">star</v-icon>
+                            <v-icon color="white">star</v-icon>
+                            <v-icon color="white">star</v-icon>
+                            <v-icon color="white">star</v-icon>
+                            Plus
+                        </div>
+                    </v-card-actions>
+                </v-card>
+            </v-img>
         </v-col>
     </v-row>
 </template>
@@ -41,10 +64,11 @@
 </script>
 
 <style scoped>
-    .container-row{
+    .container-row {
         background-color: #282828;
         margin-top: 150px
     }
+
     .card-title {
         font-size: 34.98pt;
         color: #cc983c;

@@ -38,37 +38,7 @@
                                 label="Buscar"
                                 prepend-inner-icon="search"
                         ></v-text-field>
-                        <v-dialog
-                                v-model="showInfoDialog"
-                                width="max-content"
-                                attach="#list">
-                            <v-card>
-                                <v-card-title>
-                                    <div style="width: 100%">
-                                        Iberostar Gran Packard
-                                    </div>
-                                </v-card-title>
-                                <v-card-text>
-                                    <p>Capacidad: 200 habitaciones</p>
-                                    <p>Provincia: Ciudad Habana</p>
-                                    <p>Polo Turístico: ?</p>
-                                    <p>Nombre de los operadores cubanos y extranjeros</p>
-                                    <p>Modalidad</p>
 
-                                </v-card-text>
-                                <v-card-actions>
-                                    <div style="width: max-content; margin-left: auto; margin-right: auto">
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        Plus
-                                    </div>
-                                </v-card-actions>
-                            </v-card>
-                        </v-dialog>
                         <v-list
                                 style="background-color: transparent;"
                                 two-line
@@ -90,6 +60,34 @@
                                 </v-list-item-content>
                             </v-list-item>
                         </v-list>
+                        <v-dialog
+                                v-model="showInfoDialog"
+                                width="max-content"
+                                attach="#list"
+                        >
+                            <v-card  style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
+                                <v-card-title class="text-uppercase">
+                                    <div style="width: 100%; font-family: Montserrat-Bold">
+                                        Iberostar Gran Packard
+                                    </div>
+                                </v-card-title>
+                                <v-card-text class="text-uppercase" style="font-family: Montserrat-Light;">
+                                    <p>200 habitaciones / Ciudad Habana / Polo Turístico / Nombre de los operadores
+                                        cubanos y extranjeros / Modalidad</p>
+                                </v-card-text>
+                                <v-card-actions>
+                                    <div style="width: max-content; margin-left: auto; margin-right: auto">
+                                        <v-icon color="white">star</v-icon>
+                                        <v-icon color="white">star</v-icon>
+                                        <v-icon color="white">star</v-icon>
+                                        <v-icon color="white">star</v-icon>
+                                        <v-icon color="white">star</v-icon>
+                                        <v-icon color="white">star</v-icon>
+                                        Plus
+                                    </div>
+                                </v-card-actions>
+                            </v-card>
+                        </v-dialog>
                     </v-col>
                     <v-col cols="4">
                         <h3 class="filters-title text-uppercase">Filtros</h3>
@@ -203,6 +201,7 @@
         height: 100%;
         width: 70%;
     }
+
     .horizontal-black-line-up {
         border-bottom: 4px solid black;
         border-radius: 4px;
@@ -247,7 +246,8 @@
 
         font-family: Montserrat-Regular;
     }
-    .list-item-title{
+
+    .list-item-title {
         font-size: 17pt;
     }
 
@@ -257,7 +257,7 @@
 
     }
 
-    .check-label{
+    .check-label {
         font-family: Montserrat-Regular;
         font-size: 13.71pt;
         color: #171716;
@@ -276,8 +276,6 @@
         width: 100%;
     }
 
-
-
     .filters-title {
         text-align: center;
         font-family: Montserrat-ExtraBold;
@@ -291,5 +289,4 @@
         position: relative;
         left: 100px;
     }
-
 </style>

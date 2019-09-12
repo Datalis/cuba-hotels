@@ -55,4 +55,25 @@
         padding-right: 5%;
         padding-bottom: 2%;
     }
+
+    @media screen and (max-width: 579px) {
+        .quoted-col {
+            height: 100%;
+            padding-top: 130%;
+        }
+    }
+
+    @media screen and (max-width: 492px) {
+        .quoted-col {
+            height: 100%;
+            padding-top: 130%;
+        }
+    }
+    @media screen and (max-width: 375px) {
+        .quoted-col {
+            height: 100%;
+            padding-top: 170%;
+        }
+    }
+
 </style>

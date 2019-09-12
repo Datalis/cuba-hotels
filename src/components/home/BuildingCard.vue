@@ -6,11 +6,11 @@
         <v-col cols="10">
             <v-card color="gray" flat>
                 <v-row no-gutters>
-                    <v-col cols="12" sm="12" md="6" lg="5">
-                        <v-img height="6.9in" width="6.76in" :src="require('@/assets/home/building.png')">
+                    <v-col cols="12" sm="4" md="6" lg="5">
+                        <v-img height="100%" width="6.76in" :src="require('@/assets/home/building.png')">
                         </v-img>
                     </v-col>
-                    <v-col cols="12" sm="12" md="6" lg="5" style="position: relative;">
+                    <v-col cols="12" sm="8" md="6" lg="5" style="position: relative;">
                         <v-card-title class="card-title-container text-left">
                             <h1 class="card-title text-uppercase">
                                 La apuesta es construir
@@ -84,6 +84,7 @@
 
     .more-btn {
         margin-left: auto;
+        margin-bottom: 50px;
         text-transform: uppercase;
         color: var(--primary-color);
         font-size: 22.3pt;

@@ -5,8 +5,8 @@
         </v-col>
         <v-col cols="10">
             <v-card color="gray" flat>
-                <v-row no-gutters>
-                    <v-col cols="12" sm="12" md="6" lg="5">
+                <v-row no-gutters style="width: 100%">
+                    <v-col cols="12" sm="8" md="6" lg="5">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
@@ -33,11 +33,11 @@
                         </v-card-actions>
 
                     </v-col>
-                    <v-col cols="12" sm="12" md="6" lg="6"  style="position: relative;">
+                    <v-col cols="12" sm="4" md="6" lg="6"  style="position: relative;">
                         <div class="gray-panel">
 
                         </div>
-                        <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6.89in" width="6.89in"
+                        <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6.89in"
                                :src="require('@/assets/home/owners.png')">
                         </v-img>
                     </v-col>
@@ -93,7 +93,8 @@
     }
 
     .more-btn {
-        margin-top: 50px;
+        margin-top: 25px;
+        margin-bottom: 50px;
         text-transform: uppercase;
         color: var(--primary-color);
         font-size: 22.3pt;
@@ -114,4 +115,12 @@
             font-size: 28.28pt;
         }
     }
+
+    @media screen and (max-width: 768px) {
+        .gray-panel {
+            width: 100%;
+        }
+    }
+
+
 </style>

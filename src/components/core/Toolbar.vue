@@ -33,4 +33,22 @@
         letter-spacing: 6px;
         color: var(--primary-color);
     }
+
+    @media screen and (max-width: 550px){
+        .bar-title{
+            font-size: 25px;
+        }
+    }
+
+    @media screen and (max-width: 450px){
+        .bar-title{
+            font-size: 20px;
+        }
+    }
+
+    @media screen and (max-width: 375px){
+        .bar-title{
+            font-size: 19px;
+        }
+    }
 </style>

@@ -26,19 +26,34 @@
                             <v-icon class="primary-color">star</v-icon>
                             <v-icon class="primary-color">star</v-icon>
                             <v-icon class="primary-color">star</v-icon>
-                            <v-icon class="primary-color">star</v-icon>
                         </h3>
                         <h1 class="statistics-value" style="text-align: center">300</h1>
                     </v-col>
                 </v-row>
                 <v-row justify="center">
-                    <v-col cols="7">
+                    <v-col
+                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1"
+                            cols="12" sm="7" md="7" lg="7" xl="7"
+                            style="height: max-content;">
                         <v-text-field
                                 filled
                                 label="Buscar"
                                 prepend-inner-icon="search"
+                                style="height: 40px; border: none"
+                                color="#cc983c"
                         ></v-text-field>
-
+                    </v-col>
+                    <v-col
+                            class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2"
+                            cols="12" sm="4" md="4" lg="4" xl="4"
+                            style="height: max-content;">
+                        <h3 class="filters-title text-uppercase">Filtros</h3>
+                    </v-col>
+                </v-row>
+                <v-row justify="center">
+                    <v-col cols="12" sm="7" md="7" lg="7" xl="7"
+                           order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-list
                                 style="background-color: transparent;"
                                 two-line
@@ -65,7 +80,7 @@
                                 width="max-content"
                                 attach="#list"
                         >
-                            <v-card  style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
+                            <v-card style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
                                 <v-card-title class="text-uppercase">
                                     <div style="width: 100%; font-family: Montserrat-Bold">
                                         Iberostar Gran Packard
@@ -89,27 +104,47 @@
                             </v-card>
                         </v-dialog>
                     </v-col>
-                    <v-col cols="4">
-                        <h3 class="filters-title text-uppercase">Filtros</h3>
+                    <v-col cols="12" sm="4" md="4" lg="4" xl="4"
+                           order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2">
                         <v-container fluid>
                             <h3 class="group-title">Categoría</h3>
-                            <v-checkbox class="_vcheck" :key="c.name" v-for="c in categories">
+                            <v-checkbox
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                                    :key="c.name"
+                                    v-for="c in categories">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         {{c.name}}
                                     </div>
                                 </template>
                             </v-checkbox>
+                            <v-select
+                                    color="#cc983c"
+                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    :items="categories"
+                                    item-text="name"
+                                    item-value="name">
+                            </v-select>
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
-                            <v-checkbox class="_vcheck" :key="m.name" v-for="m in managers">
+                            <v-checkbox
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                                    :key="m.name"
+                                    v-for="m in managers">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         {{m.name}}
                                     </div>
                                 </template>
                             </v-checkbox>
+                            <v-select
+                                    color="#cc983c"
+                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    :items="managers"
+                                    item-text="name"
+                                    item-value="name">
+                            </v-select>
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador extranjero</h3>
@@ -130,7 +165,8 @@
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Ubicación</h3>
-                            <v-checkbox class="_vcheck" color="#171716" :key="r.name" v-for="r in regions"
+                            <v-checkbox class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#171716"
+                                        :key="r.name" v-for="r in regions"
                                         :label="r.name">
                                 <template v-slot:label>
                                     <div class="check-label">
@@ -138,6 +174,13 @@
                                     </div>
                                 </template>
                             </v-checkbox>
+                            <v-select
+                                    color="#cc983c"
+                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    :items="regions"
+                                    item-text="name"
+                                    item-value="name">
+                            </v-select>
                         </v-container>
                     </v-col>
                 </v-row>
@@ -157,7 +200,6 @@
                 <h1 class="map-title text-uppercase">Existentes</h1>
             </v-col>
         </v-row>
-
     </div>
 </template>
 
@@ -239,7 +281,7 @@
     }
 
     .primary-color {
-        color: #cc983c;;
+        color: #cc983c;
     }
 
     .list-item {
@@ -288,5 +330,12 @@
     .cuba-map {
         position: relative;
         left: 100px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .statistics-value {
+            font-size: 50.04pt;
+            letter-spacing: 3px;
+        }
     }
 </style>

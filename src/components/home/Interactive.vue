@@ -14,10 +14,9 @@
                         <cuba-map class="cuba-map"></cuba-map>
                     </v-col>
                 </v-row>
-                <v-row class="statistics-row" justify="center">
+                <v-row justify="center">
                     <v-col cols="5">
                         <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
-                        <h1 style="text-align: center" class="statistics-value">560</h1>
                     </v-col>
                     <v-col cols="5">
                         <h3 class="statistics-title" style="text-align: center">Hoteles
@@ -27,6 +26,13 @@
                             <v-icon class="primary-color">star</v-icon>
                             <v-icon class="primary-color">star</v-icon>
                         </h3>
+                    </v-col>
+                </v-row>
+                <v-row class="statistics-row" justify="center">
+                    <v-col cols="5">
+                        <h1 style="text-align: center" class="statistics-value">560</h1>
+                    </v-col>
+                    <v-col cols="5">
                         <h1 class="statistics-value" style="text-align: center">300</h1>
                     </v-col>
                 </v-row>
@@ -36,10 +42,11 @@
                             cols="12" sm="7" md="7" lg="7" xl="7"
                             style="height: max-content;">
                         <v-text-field
+                                class="search-box"
                                 filled
                                 label="Buscar"
                                 prepend-inner-icon="search"
-                                style="height: 40px; border: none"
+                                style="height: 40px;"
                                 color="#cc983c"
                         ></v-text-field>
                     </v-col>
@@ -109,6 +116,8 @@
                         <v-container fluid>
                             <h3 class="group-title">Categoría</h3>
                             <v-checkbox
+                                    off-icon=""
+                                    color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
                                     :key="c.name"
                                     v-for="c in categories">
@@ -129,6 +138,8 @@
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
+                                    off-icon=""
+                                    color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
                                     :key="m.name"
                                     v-for="m in managers">
@@ -148,14 +159,14 @@
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador extranjero</h3>
-                            <v-checkbox class="_vcheck">
+                            <v-checkbox off-icon="" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         Si
                                     </div>
                                 </template>
                             </v-checkbox>
-                            <v-checkbox class="_vcheck">
+                            <v-checkbox off-icon="" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         No
@@ -165,9 +176,11 @@
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Ubicación</h3>
-                            <v-checkbox class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#171716"
-                                        :key="r.name" v-for="r in regions"
-                                        :label="r.name">
+                            <v-checkbox
+                                    off-icon=""
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#cc983c"
+                                    :key="r.name" v-for="r in regions"
+                                    :label="r.name">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         {{r.name}}
@@ -192,7 +205,7 @@
         <building-projects></building-projects>
         <!--- banner -->
         <v-row class="background-img" align="start">
-            <v-col cols="5">
+            <v-col cols="4" sm="4" md="5" lg="5" xl="5">
                 <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
             </v-col>
             <v-col cols="6" style="margin-top: 1in">
@@ -264,7 +277,6 @@
         letter-spacing: 3px;
         color: #000000;
         font-family: Montserrat-ExtraBold;
-        font-weight: 800;
         text-transform: uppercase;
     }
 
@@ -277,7 +289,7 @@
     }
 
     .statistics-row {
-        margin-bottom: 2.73in;
+        margin-bottom: 2in;
     }
 
     .primary-color {
@@ -296,7 +308,6 @@
     ._vcheck {
         height: 30pt;
         margin-top: 0;
-
     }
 
     .check-label {
@@ -334,8 +345,20 @@
 
     @media screen and (max-width: 600px) {
         .statistics-value {
-            font-size: 50.04pt;
+            font-size: 45.04pt;
             letter-spacing: 3px;
         }
+    }
+
+    @media screen and (max-width: 500px) {
+        .statistics-value {
+            font-size: 30.04pt;
+            letter-spacing: 3px;
+            line-height: 1.2pt;
+        }
+
+        .statistics-title {
+            font-size: 13.71pt;
+            letter-spacing: 1px;}
     }
 </style>

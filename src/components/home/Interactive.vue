@@ -359,6 +359,20 @@
 
         .statistics-title {
             font-size: 13.71pt;
-            letter-spacing: 1px;}
+            letter-spacing: 1px;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .statistics-value {
+            font-size: 20.04pt;
+            letter-spacing: 3px;
+            line-height: 1.2pt;
+        }
+
+        .statistics-title {
+            font-size: 10.71pt;
+            letter-spacing: 1px;
+        }
     }
 </style>

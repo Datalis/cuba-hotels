@@ -5,13 +5,13 @@
             prominent
             color="rgba(0, 0, 0, 0.76)"
     >
-        <v-row>
+        <v-row class="pt-3">
             <v-col cols="2">
                 <!-- todo: put icon-->
                         <v-app-bar-nav-icon color="rgb(255, 255, 255)"></v-app-bar-nav-icon>
             </v-col>
-            <v-col cols="10">
-                <p class="mb-0 text-uppercase font-weight-light bar-title">
+            <v-col cols="10" style="width: max-content">
+                <p class="mb-0 text-uppercase bar-title">
                     Hoteles en Cuba:
                 </p>
                 <p class="mt-0 text-uppercase  bar-title">
@@ -42,13 +42,15 @@
 
     @media screen and (max-width: 450px){
         .bar-title{
-            font-size: 20px;
+            font-size: 25px;
+            letter-spacing: 3px;
         }
     }
 
     @media screen and (max-width: 375px){
         .bar-title{
             font-size: 19px;
+            letter-spacing: 0px;
         }
     }
 </style>

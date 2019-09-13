@@ -16,7 +16,7 @@
             </v-col>
         </v-row>
         <v-row justify="end">
-            <v-col lg="10" sm="12" class="pt-0">
+            <v-col  cols="12" sm="12" md="12"  lg="10" xl="10" class="pt-0">
                 <v-row>
                     <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.png')"/>
                 </v-row>

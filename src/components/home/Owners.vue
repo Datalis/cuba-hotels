@@ -1,9 +1,9 @@
 <template>
     <v-row align="end">
-        <v-col cols="2">
+        <v-col cols="2" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
             <div class="horizontal-line"></div>
         </v-col>
-        <v-col cols="10">
+        <v-col class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3" cols="12" sm="10" md="10" lg="10" xl="10">
             <v-card color="gray" flat>
                 <v-row no-gutters style="width: 100%">
                     <v-col cols="12" sm="8" md="6" lg="5">

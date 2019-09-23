@@ -1,9 +1,7 @@
 <template>
     <v-row>
-        <v-col cols="2">
-
-        </v-col>
-        <v-col cols="10">
+        <v-col cols="2" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"/>
+        <v-col class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3" cols="12" sm="10" md="10" lg="10" xl="10">
             <v-card color="gray" flat>
                 <v-row no-gutters>
                     <v-col cols="12" sm="4" md="6" lg="5">
@@ -38,10 +36,8 @@
                         </div>
                     </v-col>
                 </v-row>
-
             </v-card>
         </v-col>
-
     </v-row>
 </template>
 
@@ -71,15 +67,17 @@
     }
 
     .card-text-container {
-        margin-top: 0.44in;
+        margin-top: 20px;
     }
 
 
     .card-text {
-        font-size: 17pt;
+        line-height: 20pt;
+        font-size: 16pt;
         letter-spacing: 1px;
         color: #4d4d4c;
         margin-left: 0.4in;
+        font-family: Montserrat-Regular;
     }
 
     .more-btn {
@@ -87,7 +85,7 @@
         margin-bottom: 50px;
         text-transform: uppercase;
         color: var(--primary-color);
-        font-size: 22.3pt;
+        font-size: 20.3pt;
         font-family: Montserrat-Light;
     }
 

@@ -356,7 +356,6 @@
             letter-spacing: 3px;
             line-height: 1.2pt;
         }
-
         .statistics-title {
             font-size: 13.71pt;
             letter-spacing: 1px;

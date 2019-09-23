@@ -13,7 +13,7 @@
 <script>
     import Banner from '@/components/home/Banner'
     import YoutubeVideo from "../components/home/YoutubeVideo"
-    import Owners from '@/components/home/Owners'
+    import Owners from '@/components/home/OwnersCard'
     import BuildingCard from '@/components/home/BuildingCard'
     import InteractiveMap from "../components/home/Interactive";
 

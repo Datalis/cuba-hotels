@@ -58,9 +58,8 @@
 
     .card-title {
         margin-bottom: 10px;
-
-        line-height: 55.28pt;
-        font-size: 44.28pt;
+        line-height: 50.28pt;
+        font-size: 40pt;
         letter-spacing: 3px;
         color: #040404;
         font-family: Montserrat-ExtraBold;
@@ -69,7 +68,6 @@
     .card-text-container {
         margin-top: 20px;
     }
-
 
     .card-text {
         line-height: 20pt;

@@ -289,7 +289,7 @@
     }
 
     .statistics-row {
-        margin-bottom: 2in;
+        margin-bottom: 1in;
     }
 
     .primary-color {
@@ -306,7 +306,7 @@
     }
 
     ._vcheck {
-        height: 30pt;
+        height: 20pt;
         margin-top: 0;
     }
 

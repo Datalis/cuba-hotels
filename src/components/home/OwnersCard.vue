@@ -68,8 +68,8 @@
 
     .card-title {
         /*margin-bottom: 50px;*/
-        font-size: 44.28pt;
-        letter-spacing: 3px;
+        font-size: 40pt;
+        letter-spacing: 2px;
         color: #040404;
         /*font-weight: 800;*/
         line-height: 44.28pt;

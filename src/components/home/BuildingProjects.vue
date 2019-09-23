@@ -21,6 +21,15 @@
                         </v-list-item-subtitle>
                     </v-list-item-content>
                 </v-list-item>
+                <v-divider color="#3b3b3b"></v-divider>
+                <v-list-item class="pl-0" two-line>
+                    <v-list-item-content>
+                        <v-list-item-title class="item-title">Habana Libre</v-list-item-title>
+                        <v-list-item-subtitle>
+                            <v-rating :value="3" color="#cc983c" dense readonly></v-rating>
+                        </v-list-item-subtitle>
+                    </v-list-item-content>
+                </v-list-item>
             </v-list>
         </v-col>
         <v-col cols="5" class="pa-0">
@@ -70,7 +79,8 @@
     }
 
     .card-title {
-        font-size: 34.98pt;
+        letter-spacing: 4px;
+        font-size: 30pt;
         color: #cc983c;
         font-family: Montserrat-ExtraBold;
     }

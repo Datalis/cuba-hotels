@@ -76,7 +76,6 @@
                                         <v-icon class="primary-color">star</v-icon>
                                         <v-icon class="primary-color">star</v-icon>
                                         <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
                                         Plus
                                     </v-list-item-subtitle>
                                 </v-list-item-content>
@@ -99,7 +98,6 @@
                                 </v-card-text>
                                 <v-card-actions>
                                     <div style="width: max-content; margin-left: auto; margin-right: auto">
-                                        <v-icon color="white">star</v-icon>
                                         <v-icon color="white">star</v-icon>
                                         <v-icon color="white">star</v-icon>
                                         <v-icon color="white">star</v-icon>

@@ -49,8 +49,8 @@
 
 <style scoped>
     .card-title-container {
-        margin-top: 0.40in;
-        margin-bottom: 0.40in;
+        margin-top: 0.2in;
+        margin-bottom: 0.2in;
         /*height: 2.63in;*/
         /*0.7in*/
         margin-left: 0.4in;
@@ -92,7 +92,8 @@
         width: 50%;
         height: 100%;
         position: absolute;
-        top: 0;
+        top: 45%;
+        left: 70%;
     }
 
 

@@ -4,7 +4,7 @@
         <banner></banner>
         <owners style="margin-top: 6.597in;"></owners>
         <building-card style="margin-top: 300px;"></building-card>
-        <interactive-map style="margin-top: 300px"></interactive-map>
+        <interactive-map style="margin-top: 270px"></interactive-map>
         <youtube-video style="margin-top: 300px"></youtube-video>
     </v-flex>
 </v-layout>

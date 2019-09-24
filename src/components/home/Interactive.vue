@@ -114,7 +114,7 @@
                         <v-container fluid>
                             <h3 class="group-title">Categoría</h3>
                             <v-checkbox
-                                    off-icon=""
+                                    on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
                                     :key="c.name"
@@ -136,7 +136,7 @@
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
-                                    off-icon=""
+                                    on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
                                     :key="m.name"
@@ -157,14 +157,14 @@
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador extranjero</h3>
-                            <v-checkbox off-icon="" color="#cc983c" class="_vcheck">
+                            <v-checkbox on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         Si
                                     </div>
                                 </template>
                             </v-checkbox>
-                            <v-checkbox off-icon="" color="#cc983c" class="_vcheck">
+                            <v-checkbox color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         No
@@ -175,7 +175,7 @@
                         <v-container fluid>
                             <h3 class="group-title">Ubicación</h3>
                             <v-checkbox
-                                    off-icon=""
+                                    on-icon="$vuetify.icons.checkboxOff"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#cc983c"
                                     :key="r.name" v-for="r in regions"
                                     :label="r.name">
@@ -371,5 +371,19 @@
             font-size: 10.71pt;
             letter-spacing: 1px;
         }
+    }
+</style>
+<style>
+    ._vcheck i {
+        align-self: center;
+        color: #cc983c !important;
+        border-radius: 0 !important;
+        width: 14pt;
+        height: 14pt;
+    }
+
+    .v-input--is-label-active i {
+        color: #cc983c !important;
+        background-color: #cc983c;
     }
 </style>

@@ -26,7 +26,7 @@
                     <v-list-item-content>
                         <v-list-item-title class="item-title">Habana Libre</v-list-item-title>
                         <v-list-item-subtitle>
-                            <v-rating :value="3" color="#cc983c" dense readonly></v-rating>
+                            <v-rating :value="3" empty-icon="" color="#cc983c" dense readonly></v-rating>
                         </v-list-item-subtitle>
                     </v-list-item-content>
                 </v-list-item>
@@ -46,7 +46,6 @@
                     </v-card-text>
                     <v-card-actions>
                         <div style="width: max-content; margin-left: auto; margin-right: auto">
-                            <v-icon color="white">star</v-icon>
                             <v-icon color="white">star</v-icon>
                             <v-icon color="white">star</v-icon>
                             <v-icon color="white">star</v-icon>

@@ -3,8 +3,55 @@
         <banner></banner>
         <v-row justify="center">
             <v-col cols="5" class="pa-0">
-                <p class="author text-uppercase">Autor</p>
-                <p class="text-justify" style="margin-top: 70px">
+                <p class="author text-uppercase"  style="margin-bottom: 70px">Autor</p>
+                <div style="height:90vh; overflow-y: scroll; ">
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>  <p class="text-justify">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>  <p class="text-justify">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -12,35 +59,13 @@
                     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                 </p>
-                <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-                <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+
+                </div>
             </v-col>
             <v-col cols="1"></v-col>
-            <v-col cols="3" class="pa-0">
-                <v-card class="first-card">
-                    <v-img :src="require('@/assets/home/building.png')">
+            <v-col cols="2" class="pa-0">
+                <v-card class="card first-card">
+                    <v-img :src="require('@/assets/home/building.png')" height="45vh">
                         <v-card-title class="card-title">
                             <div class="card-title-text text-uppercase">
                                 Los dueños
@@ -50,11 +75,10 @@
                         </v-card-title>
                     </v-img>
                 </v-card>
-                <v-card class="mt-12" style="background-color: #292929">
-                    <video-frame width="100%" height="300"></video-frame>
-                    <v-card-title class="pr-12 pb-8" style="background-color: #292929;">
-                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Video</h1>
-                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Resumen</h1>
+                <v-card class="mt-12 card" style="background-color: #292929;">
+                    <video-frame width="100%" height="200px"></video-frame>
+                    <v-card-title class="pr-4 pb-5" style="background-color: #292929; height: 5%">
+                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Video Resumen</h1>
                     </v-card-title>
                 </v-card>
             </v-col>
@@ -74,12 +98,17 @@
 </script>
 
 <style scoped>
+    .card {
+        height: max-content;
+        border-radius: 0;
+    }
+
     .first-card {
         margin-top: 246px;
     }
 
     .card-title {
-        height: 40%;
+        height: 33%;
         background-color: #eeeeed;
     }
 
@@ -87,7 +116,7 @@
         font-family: Montserrat-ExtraBold;
         margin-left: auto;
         margin-right: auto;
-        font-size: 25pt;
+        font-size: 19pt;
         margin-top: 8%;
     }
 
@@ -95,7 +124,7 @@
         font-family: Montserrat-Light;
         color: var(--primary-color);
         margin-right: 20px;
-        font-size: 14pt;
+        font-size: 10pt;
     }
 
     .author {
@@ -116,8 +145,7 @@
     .video-title{
         font-family: Montserrat-ExtraBold;
         color: var(--primary-color);
-        font-size: 35pt;
-        line-height: 35pt;
-
+        font-size: 15pt;
+        line-height: 15pt;
     }
 </style>

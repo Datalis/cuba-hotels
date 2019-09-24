@@ -2,7 +2,7 @@
     <div>
         <v-row align="center">
             <v-col cols="3" align="end" justify="end">
-                <video-frame style="margin-left: 50px"></video-frame>
+                <video-frame style="margin-left: 100px"></video-frame>
             </v-col>
             <v-col cols="9" class="container-panel" align="center">
                 <v-card class="card" flat max-width="496" style="">
@@ -34,14 +34,15 @@
 <style scoped>
     .card-title {
         font-family: Montserrat-ExtraBold;
-        font-size: 44.28pt;
+        font-size: 43.28pt;
         line-height: 44.28pt;
+        letter-spacing: 3px;
         color: #de9931;
     }
 
     .summary {
         font-family: Montserrat-Regular;
-        font-size: 17pt;
+        font-size: 15pt;
         color: #9a9997 !important;
         margin-top: 50px;
         line-height: 19pt;

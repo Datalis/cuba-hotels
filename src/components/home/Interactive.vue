@@ -84,9 +84,9 @@
                         <v-dialog
                                 v-model="showInfoDialog"
                                 width="max-content"
-                                attach="#list"
-                        >
+                                attach="#list">
                             <v-card style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
+                                <v-icon style="margin-left: 88%" color="black" @click="showInfoDialog=false">clear</v-icon>
                                 <v-card-title class="text-uppercase">
                                     <div style="width: 100%; font-family: Montserrat-Bold">
                                         Iberostar Gran Packard

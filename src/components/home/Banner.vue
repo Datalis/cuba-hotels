@@ -1,6 +1,6 @@
 <template>
     <div style="position: relative">
-        <v-row align="end" class="text-row">
+        <v-row align="end" class="text-row" no-gutters>
             <v-col cols="1" sm="1" md="4" lg="6">
                 <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="7.92in" width="9.86in"
                        :src="require('@/assets/home/banner2.png')">
@@ -14,9 +14,12 @@
                     consequat. Duis aute irure dolor in.
                 </p>
             </v-col>
+            <v-col cols="2" justify="end" style="padding-top: 150px; border-right: 4px solid black; font-family: Montserrat-Light; color: var(--primary-color);">
+                <div />
+            </v-col>
         </v-row>
         <v-row justify="end">
-            <v-col  cols="12" sm="12" md="12"  lg="10" xl="10" class="pt-0">
+            <v-col cols="12" sm="12" md="12" lg="10" xl="10" class="pt-0">
                 <v-row>
                     <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.png')"/>
                 </v-row>
@@ -47,7 +50,7 @@
         color: #4d4d4c;
     }
 
-    .quoted-col{
+    .quoted-col {
         padding-left: 8%;
         padding-right: 5%;
         padding-bottom: 2%;
@@ -66,6 +69,7 @@
             padding-top: 130%;
         }
     }
+
     @media screen and (max-width: 375px) {
         .quoted-col {
             height: 100%;

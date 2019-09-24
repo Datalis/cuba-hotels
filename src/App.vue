@@ -47,4 +47,19 @@ export default {
     --secundary-color: rgba(0, 0, 0, 0.76);
   }
 
+  /* width */
+  ::-webkit-scrollbar{
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track{
+    background-color: white;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+  }
+
 </style>

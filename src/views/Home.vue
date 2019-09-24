@@ -2,7 +2,7 @@
 <v-layout>
     <v-flex>
         <banner></banner>
-        <owners style="margin-top: 6.597in;"></owners>
+        <owners style="margin-top: 5.597in;"></owners>
         <building-card style="margin-top: 300px;"></building-card>
         <interactive-map style="margin-top: 270px"></interactive-map>
         <youtube-video style="margin-top: 300px"></youtube-video>

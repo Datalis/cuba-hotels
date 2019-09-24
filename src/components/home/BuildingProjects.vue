@@ -13,7 +13,7 @@
                 <v-col cols="3" class="period active">2030</v-col>
             </v-row>
             <v-list class="project-list" max-height="3.5in" max-width="90%">
-                <v-list-item class="pl-0" two-line :key="i" v-for="(h, i) in hotels">
+                <v-list-item class="pl-0" two-line :key="i" v-for="(h, i) in hotels" @click="showPopup()">
                     <v-list-item-content>
                         <v-list-item-title class="item-title">{{h}}</v-list-item-title>
                         <v-list-item-subtitle>
@@ -34,24 +34,19 @@
         </v-col>
         <v-col cols="5" class="pa-0">
             <v-img height="7in" :src="require('@/assets/home/activep.png')">
-                <v-card style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
-                    <v-card-title class="text-uppercase">
-                        <div style="width: 100%; font-family: Montserrat-Bold">
-                            Iberostar Gran Packard
-                        </div>
-                    </v-card-title>
-                    <v-card-text class="text-uppercase" style="font-family: Montserrat-Light;">
-                        <p>200 habitaciones / Ciudad Habana / Polo Turístico / Nombre de los operadores
-                            cubanos y extranjeros / Modalidad</p>
+                <v-card class="text-uppercase" v-show="showDetails"
+                        style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
+                    <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
+                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 16pt;">
+                        <p>Ficha del Proyecto</p>
+                        <p>Nombre / Ubicación</p>
+                        <p>Empresa a cargo</p>
+                        <p>Capacidad</p>
+                        <p>Fechas</p>
                     </v-card-text>
                     <v-card-actions>
-                        <div style="width: max-content; margin-left: auto; margin-right: auto">
-                            <v-icon color="white">star</v-icon>
-                            <v-icon color="white">star</v-icon>
-                            <v-icon color="white">star</v-icon>
-                            <v-icon color="white">star</v-icon>
-                            <v-icon color="white">star</v-icon>
-                            Plus
+                        <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
+                            En Construcción
                         </div>
                     </v-card-actions>
                 </v-card>
@@ -65,7 +60,16 @@
         name: "BuildingProjects",
         data() {
             return {
+                showDetails: false,
                 hotels: ['Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado']
+            }
+        },
+        methods: {
+            showPopup() {
+                this.showDetails = true
+            },
+            hidePopup() {
+                this.showDetails = false
             }
         }
     }
@@ -105,4 +109,25 @@
         overflow-y: scroll;
         background-color: transparent !important;
     }
+
+    /* width */
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background-color: white;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+    }
+
+    /*!* handle on hover *!*/
+    /*::-webkit-scrollbar-thumb:hover {*/
+    /*    background: #555555;*/
+    /*}*/
+
 </style>

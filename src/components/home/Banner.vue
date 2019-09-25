@@ -76,5 +76,4 @@
             padding-top: 170%;
         }
     }
-
 </style>

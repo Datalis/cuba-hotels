@@ -2,9 +2,12 @@
     <div>
         <banner></banner>
         <v-row justify="center">
+            <v-col cols="8" class="pa-0">
+                <p class="author text-uppercase"  style="margin-bottom: 70px">Autor</p></v-col></v-row>
+        <transition name="slide-fade">
+        <v-row justify="center">
             <v-col cols="5" class="pa-0">
-                <p class="author text-uppercase"  style="margin-bottom: 70px">Autor</p>
-                <div style="height:90vh; overflow-y: scroll; ">
+                <div class="info-container" style="height:90vh; padding-right: 10px; overflow-y: scroll; ">
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -61,6 +64,7 @@
                 </p>
 
                 </div>
+
             </v-col>
             <v-col cols="1"></v-col>
             <v-col cols="2" class="pa-0">
@@ -83,6 +87,7 @@
                 </v-card>
             </v-col>
         </v-row>
+        </transition>
     </div>
 
 </template>
@@ -104,7 +109,7 @@
     }
 
     .first-card {
-        margin-top: 246px;
+        /*margin-top: 246px;*/
     }
 
     .card-title {
@@ -147,5 +152,10 @@
         color: var(--primary-color);
         font-size: 15pt;
         line-height: 15pt;
+    }
+
+    .info-container{
+        animation-name: example;
+        animation-duration: 1s;
     }
 </style>

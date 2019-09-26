@@ -1,8 +1,8 @@
 <template>
     <v-row class="container-row" justify="end" align="center">
-        <v-col cols="1">
+        <v-col cols="1" sm="1" md="1" lg="1" xl="1" class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex">
         </v-col>
-        <v-col cols="5">
+        <v-col cols="12" sm="7" md="7" lg="5" xl="5" class="pl-12 pl-md-12 pl-lg-0 pl-xl-0">
             <div class="card-title text-uppercase text-left">Proyectos en</div>
             <div class="card-title text-uppercase text-left">Construcción</div>
             <v-row align="center" justify="start">
@@ -80,7 +80,7 @@
                         class="pl-0" two-line
                         @click="showPopup()">
                     <v-list-item-content>
-                        <v-list-item-title class="item-title">Otro Hotlel</v-list-item-title>
+                        <v-list-item-title class="item-title">Otro Hotel</v-list-item-title>
                         <v-list-item-subtitle>
                             <v-rating :value="5" color="#cc983c" dense readonly></v-rating>
                         </v-list-item-subtitle>
@@ -88,7 +88,7 @@
                 </v-list-item>
             </v-list>
         </v-col>
-        <v-col cols="5" class="pa-0">
+        <v-col cols="5" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
             <v-img height="7in" :src="require('@/assets/home/activep.png')">
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
@@ -129,6 +129,7 @@
         mounted() {
             const me = this
             this.$refs.list.$el.addEventListener('scroll', function (e) {
+                e.preventDefault()
                 const year = me.getActiveIYear()
                 console.log(year)
                 if (year > -1) {
@@ -256,5 +257,11 @@
     
     .handhover:hover{
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 960px) and (min-width: 600px){
+        .card-title {font-size: 22pt}
+        .period {
+            font-size: 30px;}
     }
 </style>

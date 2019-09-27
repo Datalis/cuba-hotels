@@ -2,7 +2,7 @@
     <v-row class="container-row" justify="end" align="center">
         <v-col cols="1" sm="1" md="1" lg="1" xl="1" class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex">
         </v-col>
-        <v-col cols="12" sm="7" md="7" lg="5" xl="5" class="pl-12 pl-md-12 pl-lg-0 pl-xl-0">
+        <v-col cols="11" sm="10" md="7" lg="5" xl="5" class="pl-0 pl-sm-0 pl-md-12 pl-lg-0 pl-xl-0">
             <div class="card-title text-uppercase text-left">Proyectos en</div>
             <div class="card-title text-uppercase text-left">Construcción</div>
             <v-row align="center" justify="start">
@@ -88,7 +88,7 @@
                 </v-list-item>
             </v-list>
         </v-col>
-        <v-col cols="5" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+        <v-col cols="1" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
             <v-img height="7in" :src="require('@/assets/home/activep.png')">
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
@@ -259,9 +259,23 @@
         cursor: pointer;
     }
 
-    @media screen and (max-width: 960px) and (min-width: 600px){
+    @media screen and (max-width: 960px) {
         .card-title {font-size: 22pt}
         .period {
             font-size: 30px;}
+    }
+
+    @media screen and (max-width: 600px) {
+        .card-title {font-size: 22pt}
+        .period {
+            font-size: 30px;}
+    }
+
+    @media screen and (max-width: 400px) {
+        .card-title {font-size: 18pt}
+        .item-title {font-size: 15pt}
+        .period {
+            font-size: 25px;
+        }
     }
 </style>

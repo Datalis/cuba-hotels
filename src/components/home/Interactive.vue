@@ -112,7 +112,7 @@
                     </v-col>
                     <v-col cols="12" sm="4" md="4" lg="4" xl="4"
                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2">
-                        <v-container fluid>
+                        <v-container fluid class="group-filter-container">
                             <h3 class="group-title">Categoría</h3>
                             <v-checkbox
                                     on-icon="$vuetify.icons.checkboxOff"
@@ -128,12 +128,12 @@
                             </v-checkbox>
                             <v-select
                                     color="#cc983c"
-                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="categories"
                                     item-text="name"
                                     item-value="name">
                             </v-select>
-                        </v-container>
+                        </v-container ccl>
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
@@ -150,7 +150,7 @@
                             </v-checkbox>
                             <v-select
                                     color="#cc983c"
-                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="managers"
                                     item-text="name"
                                     item-value="name">
@@ -188,7 +188,7 @@
                             </v-checkbox>
                             <v-select
                                     color="#cc983c"
-                                    class="d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="regions"
                                     item-text="name"
                                     item-value="name">
@@ -391,6 +391,7 @@
     }
 
     @media screen and (max-width: 600px) {
+
         .statistics-value {
             font-size: 45.04pt;
             letter-spacing: 3px;
@@ -403,6 +404,25 @@
     }
 
     @media screen and (max-width: 500px) {
+        .group-filter-container{
+
+            padding-bottom: 0;
+        }
+
+        .group-title{
+            font-size: 12pt;
+        }
+        .check-label{
+            font-size: 9pt;
+        }
+        .map-title {
+            letter-spacing: 2px;
+            font-size: 21.98pt;
+        }
+
+        .content-row{
+            margin-top: 140px;
+        }
         .statistics-value {
             font-size: 30.04pt;
             letter-spacing: 3px;
@@ -417,9 +437,23 @@
         .statistics-title-row{
             margin-top: -100px;
         }
+
+        .cuba-map{
+            left: 50px;
+        }
     }
 
     @media screen and (max-width: 320px) {
+        .title-component-container{
+            padding-left: 0 !important;
+        }
+        .map-title {
+            letter-spacing: 1px;
+            font-size: 16.98pt;
+        }
+        .content-row{
+            margin-top: 110px;
+        }
         .statistics-value {
             font-size: 20.04pt;
             letter-spacing: 3px;

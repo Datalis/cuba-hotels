@@ -2,7 +2,7 @@
     <v-footer padless class="footer-background">
         <v-row justify="center">
             <v-col cols="12" sm="3" md="3" lg="3" xl="3" class="pa-0" align="center">
-                <v-img :src="require('@/assets/home/footer.png')" height="100%" >
+                <v-img :src="require('@/assets/home/footer.png')">
                     <v-row align="center" justify="center" style="height: 100%" class="pl-sm-4">
                         <v-col
                                 v-for="icon in icons"

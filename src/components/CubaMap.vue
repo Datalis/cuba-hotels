@@ -148,8 +148,30 @@
     @media screen and (max-width: 500px) {
         .map-date {
             margin-bottom: -100px;
-            font-size: 21.93pt;
+            font-size: 20.93pt;
             left: 40%;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .map-date {
+            left: 30%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .map-date {
+            margin-bottom: -100px;
+            font-size: 21.93pt;
+            /*left: 15%;*/
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .map-date {
+            margin-bottom: -100px;
+            font-size: 15.93pt;
+            /*left: 20%;*/
         }
     }
 

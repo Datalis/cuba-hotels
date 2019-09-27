@@ -1,6 +1,6 @@
 <template>
-    <v-row align="end">
-        <v-col cols="2" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+    <v-row align="end" justify="start">
+        <v-col cols="1" sm="1" md="1" lg="2" xl="2" class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
             <div class="horizontal-line"></div>
         </v-col>
         <v-col class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3" cols="12" sm="10" md="10" lg="10" xl="10">

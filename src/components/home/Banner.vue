@@ -1,12 +1,12 @@
 <template>
     <div style="position: relative">
         <v-row align="end" class="text-row" no-gutters>
-            <v-col cols="1" sm="1" md="4" lg="6">
+            <v-col cols="1" sm="1" md="4" lg="6" xl="6">
                 <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="7.92in" width="9.86in"
                        :src="require('@/assets/home/banner2.png')">
                 </v-img>
             </v-col>
-            <v-col cols="11" sm="11" md="8" lg="6" class="quoted-col">
+            <v-col cols="11" sm="11" md="8" lg="6" xl=6 class="quoted-col">
                 <p class="quoted-text text-right">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -14,7 +14,9 @@
                     consequat. Duis aute irure dolor in.
                 </p>
             </v-col>
-            <v-col cols="2" justify="end" style="padding-top: 150px; border-right: 4px solid black; font-family: Montserrat-Light; color: var(--primary-color);">
+            <v-col cols="2" justify="end"
+                   class="d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"
+                   style="padding-top: 150px; border-right: 4px solid black; font-family: Montserrat-Light; color: var(--primary-color);">
                 <div />
             </v-col>
         </v-row>

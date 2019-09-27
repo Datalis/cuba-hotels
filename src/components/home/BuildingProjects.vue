@@ -28,7 +28,7 @@
                         two-line
                         @click="showPopup()">
                     <v-list-item-content>
-                        <v-list-item-title class="item-title">{{h}}</v-list-item-title>
+                        <v-list-item-title class="item-title text-wrap">{{h}}</v-list-item-title>
                         <v-list-item-subtitle>
                             <v-rating :value="5" color="#cc983c" dense readonly></v-rating>
                         </v-list-item-subtitle>
@@ -122,7 +122,7 @@
                 middle_year: 1,
                 last_year: 2,
                 showDetails: false,
-                hotels: ['Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado']
+                hotels: ['Paseo del prado Paseo del prado', 'Paseo del prado Paseo del prado', 'Paseo del prado', 'Paseo del prado', 'Paseo del prado']
             }
         },
 

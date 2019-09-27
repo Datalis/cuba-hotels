@@ -1,13 +1,13 @@
 <template>
-    <div>
+    <div style="position: relative">
         <banner></banner>
         <v-row justify="center">
             <v-col cols="8" class="pa-0">
-                <p class="author text-uppercase"  style="margin-bottom: 70px">Autor</p></v-col></v-row>
-        <transition name="slide-fade">
+                <p class="author text-uppercase" style="margin-bottom: 70px">Autor</p></v-col>
+        </v-row>
         <v-row justify="center">
             <v-col cols="5" class="pa-0">
-                <div class="info-container" style="height:90vh; padding-right: 10px; overflow-y: scroll; ">
+                <div class="info-container" style="padding-right: 10px;">
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -47,27 +47,30 @@
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
                         proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>  <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>  <p class="text-justify">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <p class="text-justify">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
 
                 </div>
 
             </v-col>
             <v-col cols="1"></v-col>
             <v-col cols="2" class="pa-0">
+
                 <v-card class="card first-card">
                     <v-img :src="require('@/assets/home/building.png')" height="45vh">
                         <v-card-title class="card-title">
@@ -87,9 +90,7 @@
                 </v-card>
             </v-col>
         </v-row>
-        </transition>
     </div>
-
 </template>
 
 <script>
@@ -147,15 +148,17 @@
         border: 2px solid var(--primary-color);
     }
 
-    .video-title{
+    .video-title {
         font-family: Montserrat-ExtraBold;
         color: var(--primary-color);
         font-size: 15pt;
         line-height: 15pt;
     }
 
-    .info-container{
+    .info-container {
         animation-name: example;
         animation-duration: 1s;
     }
+
+
 </style>

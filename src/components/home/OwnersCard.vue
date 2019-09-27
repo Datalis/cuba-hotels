@@ -8,7 +8,7 @@
                class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
                 <v-row no-gutters>
-                    <v-col cols="12" sm="5" md="5" lg="5" xl="5">
+                    <v-col cols="6" sm="5" md="5" lg="5" xl="5">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
@@ -21,7 +21,8 @@
                             <v-row>
                                 <v-col class="card-text">
                                     ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+
+                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>
                                     <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                                     consequat</span>...
                                 </v-col>
@@ -32,12 +33,11 @@
                                 Leer más
                             </v-btn>
                         </v-card-actions>
-
                     </v-col>
-                    <v-col cols="12" sm="6" md="6" lg="6" xl="6" style="position: relative;">
+                    <v-col cols="6" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6.3in"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6.3in"
                                :src="require('@/assets/home/owners.png')">
                         </v-img>
                     </v-col>
@@ -118,6 +118,7 @@
     @media screen and (max-width: 1264px) {
         .card-title {
             font-size: 35.28pt;
+            line-height: 40.28pt;
         }
 
         .card-title-container {
@@ -134,6 +135,7 @@
     @media screen and (max-width: 960px) {
         .card-title {
             font-size: 22.28pt;
+            line-height: 30.28pt;
         }
 
         .card-title-container {
@@ -158,12 +160,33 @@
         }
     }
 
-
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 500px) {
         .card-title {
-            font-size: 28.28pt;
+            font-size: 16.28pt;
+            line-height: 16.28pt;
+        }
+
+        .card-title-container {
+            margin-top: 0.236in;
+            margin-bottom: 0;
+        }
+
+        .card-text {
+            line-height: 13pt;
+            font-size: 10pt;
+        }
+
+        .more-btn {
+            margin-top: 0px;
+            margin-bottom: 10px;
+            font-size: 10.3pt;
         }
     }
 
+    @media screen and (max-width: 360px) {
+        .card-title {
+            font-size: 14.28pt;
+        }
+    }
 
 </style>

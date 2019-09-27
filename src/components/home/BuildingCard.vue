@@ -4,11 +4,11 @@
         <v-col class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3" cols="12" sm="10" md="10" lg="10" xl="10">
             <v-card color="gray" flat>
                 <v-row no-gutters>
-                    <v-col cols="12" sm="4" md="6" lg="5">
+                    <v-col cols="12" sm="4" md="6" lg="5" xl="5">
                         <v-img height="100%" width="6.76in" :src="require('@/assets/home/building.png')">
                         </v-img>
                     </v-col>
-                    <v-col cols="12" sm="8" md="6" lg="5" style="position: relative;">
+                    <v-col cols="12" sm="8" md="6" lg="5" xl="5" style="position: relative;">
                         <v-card-title class="card-title-container text-left">
                             <h1 class="card-title text-uppercase">
                                 La apuesta es construir

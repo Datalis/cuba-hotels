@@ -86,7 +86,8 @@
                                 width="max-content"
                                 attach="#list">
                             <v-card style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
-                                <v-icon style="margin-left: 88%" color="black" @click="showInfoDialog=false">clear</v-icon>
+                                <v-icon style="margin-left: 88%" color="black" @click="showInfoDialog=false">clear
+                                </v-icon>
                                 <v-card-title class="text-uppercase">
                                     <div style="width: 100%; font-family: Montserrat-Bold">
                                         Iberostar Gran Packard
@@ -341,6 +342,12 @@
         left: 100px;
     }
 
+    @media screen and (max-width: 1024px) {
+        .cuba-map {
+            left: 70px;
+        }
+    }
+
     @media screen and (max-width: 600px) {
         .statistics-value {
             font-size: 45.04pt;
@@ -354,6 +361,7 @@
             letter-spacing: 3px;
             line-height: 1.2pt;
         }
+
         .statistics-title {
             font-size: 13.71pt;
             letter-spacing: 1px;

@@ -1,5 +1,6 @@
 <template>
     <div>
+
         <div class="map-date">
             Agosto 2019
         </div>
@@ -124,6 +125,13 @@
         left: 78%;
         position: relative;
     }
+
+    @media screen and (max-width: 1024px) {
+        .map-date {
+            left: 70%;
+        }
+    }
+
 </style>
 
 <style>

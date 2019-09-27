@@ -1,6 +1,5 @@
 <template>
     <div>
-
         <div class="map-date">
             Agosto 2019
         </div>
@@ -129,6 +128,28 @@
     @media screen and (max-width: 1024px) {
         .map-date {
             left: 70%;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .map-date {
+            left: 52%;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .map-date {
+            font-size: 22.93pt;
+            margin-bottom: -40px;
+            left: 46%;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .map-date {
+            margin-bottom: -100px;
+            font-size: 21.93pt;
+            left: 40%;
         }
     }
 

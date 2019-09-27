@@ -14,7 +14,7 @@
                         <cuba-map class="cuba-map"></cuba-map>
                     </v-col>
                 </v-row>
-                <v-row justify="center">
+                <v-row class="statistics-title-row" justify="center">
                     <v-col cols="5">
                         <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
                     </v-col>
@@ -204,10 +204,10 @@
         <building-projects></building-projects>
         <!--- banner -->
         <v-row class="background-img" align="start">
-            <v-col cols="4" sm="4" md="5" lg="5" xl="5">
+            <v-col cols="3" sm="3" md="3" lg="4" xl="4">
                 <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
             </v-col>
-            <v-col cols="6" style="margin-top: 1in">
+            <v-col cols="7"  sm="7" md="7" lg="6" xl="6" class="title-component-container">
                 <h1 class="map-title text-uppercase">Hoteles</h1>
                 <h1 class="map-title text-uppercase">Existentes</h1>
             </v-col>
@@ -305,7 +305,7 @@
     }
 
     ._vcheck {
-        height: 20pt;
+        height: max-content;
         margin-top: 0;
     }
 
@@ -332,19 +332,61 @@
         text-align: center;
         font-family: Montserrat-ExtraBold;
         background-color: #cc983c;
-        width: max-content;
-        padding: 15px 65pt;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
         font-size: 14.21pt;
+
+
     }
 
     .cuba-map {
         position: relative;
         left: 100px;
     }
+    .title-component-container{
+        margin-top: 1in;
+    }
 
     @media screen and (max-width: 1024px) {
         .cuba-map {
             left: 70px;
+        }
+
+        .statistics-value {
+            font-size: 55.04pt;
+            letter-spacing: 3px;
+        }
+
+        .filters-title{
+            font-size: 12pt;
+        }
+
+        .check-label{
+            font-size: 12pt;
+        }
+    }
+
+    @media screen and (max-width: 960px) {
+        .cuba-map {
+            left: 70px;
+        }
+
+        .map-title {
+            letter-spacing: 2px;
+            font-size: 28.98pt;
+        }
+
+        .title-component-container{
+            margin-top: 0.5in;
+        }
+
+        .content-row{
+            margin-top: 180px;
+        }
+
+        .check-label{
+            font-size: 11pt;
         }
     }
 
@@ -353,6 +395,11 @@
             font-size: 45.04pt;
             letter-spacing: 3px;
         }
+
+        .statistics-title-row{
+            margin-top: -60px;
+        }
+
     }
 
     @media screen and (max-width: 500px) {
@@ -365,6 +412,10 @@
         .statistics-title {
             font-size: 13.71pt;
             letter-spacing: 1px;
+        }
+
+        .statistics-title-row{
+            margin-top: -100px;
         }
     }
 
@@ -388,6 +439,13 @@
         border-radius: 0 !important;
         width: 14pt;
         height: 14pt;
+    }
+
+    ._vcheck .v-input__slot {
+      margin-bottom: 0 !important;
+    }
+    ._vcheck .v-messages {
+        display: none  !important;
     }
 
     .v-input--is-label-active i {

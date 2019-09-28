@@ -2,12 +2,12 @@
     <v-footer padless class="footer-background">
         <v-row justify="center">
             <v-col cols="12" sm="3" md="3" lg="3" xl="3" class="pa-0" align="center">
-                <v-img :src="require('@/assets/home/footer.png')">
+                <v-img class="footer-img"  height="100%" :src="require('@/assets/home/footer.png')">
                     <v-row align="center" justify="center" style="height: 100%" class="pl-sm-4">
                         <v-col
                                 v-for="icon in icons"
                                 :key="icon" cols="3" align="center">
-                            <v-btn class="mr-4 white--text" icon>
+                            <v-btn class="mr-4  white--text" icon>
                                 <v-icon size="40px">{{ icon }}</v-icon>
                             </v-btn>
                         </v-col>
@@ -26,7 +26,6 @@
                     </v-col>
                 </v-row>
             </v-col>
-
         </v-row>
     </v-footer>
 </template>
@@ -65,5 +64,11 @@
         color: #fffefc;
         font-size: 19pt;
         letter-spacing: 5px;
+    }
+</style>
+
+<style>
+    .footer-img .v-responsive__content{
+        width: 100% !important;
     }
 </style>

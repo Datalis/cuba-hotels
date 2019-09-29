@@ -53,7 +53,7 @@
         name: "Building",
         computed: {
             ...mapGetters({
-                textos: 'montecarlo'
+                textos: 'gaesa'
             })
         },
         components: {VideoFrame, Banner}

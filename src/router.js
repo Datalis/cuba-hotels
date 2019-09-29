@@ -2,8 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Home from '@/views/Home'
-import Interactive from "./components/home/Interactive";
 import Building from "./views/Building";
+import Building1 from "./views/Building1";
 
 Vue.use(Router)
 
@@ -24,13 +24,13 @@ export default new Router({
                     path: '/building',
                     name: 'building',
                     component: Building
+                },
+                {
+                    path: '/building1',
+                    name: 'building1',
+                    component: Building1
                 }
             ]
-        },
-        {
-            path: '/map',
-            name: 'comp',
-            component: Interactive
-        },
+        }
     ]
 })

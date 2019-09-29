@@ -71,8 +71,8 @@
             <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
                 <v-row justify="start" align="start">
                     <v-col cols="12" style="height: max-content;">
-                        <v-card class="card first-card">
-                            <v-img :src="require('@/assets/home/building.png')" height="45vh">
+                        <v-card class="card first-card" width="50%">
+                            <v-img :src="require('@/assets/home/building.png')" height="3in">
                                 <v-card-title class="card-title">
                                     <div class="card-title-text text-uppercase">
                                         Los dueños
@@ -83,16 +83,15 @@
                             </v-img>
                         </v-card>
                     </v-col>
-                    <v-col cols="12">
-                        <v-card class="mt-12 card" style="background-color: #292929;">
+                    <v-col cols="12" style="height: max-content;">
+                        <v-card class="mt-12 card" style="background-color: #292929;" width="50%">
                             <video-frame width="100%" height="100%"></video-frame>
                             <v-card-title class="pr-4 pb-5" style="background-color: #292929; height: 5%">
-                                <h1 class="video-title text-uppercase text-right" style="width: 100%">Video Resumen</h1>
+                                <h1 class="video-title text-uppercase text-right" style="width: 100%">Video</h1>
+                                <h1 class="video-title text-uppercase text-right mt-2" style="width: 100%">Resumen</h1>
                             </v-card-title>
                         </v-card>
                     </v-col>
-
-
                 </v-row>
             </v-col>
         </v-row>

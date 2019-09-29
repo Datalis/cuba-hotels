@@ -2,11 +2,11 @@
     <div style="position: relative">
         <banner></banner>
         <v-row justify="center">
-            <v-col cols="8" class="pa-0">
+            <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
                 <p class="author text-uppercase" style="margin-bottom: 70px">Autor</p></v-col>
         </v-row>
-        <v-row justify="center">
-            <v-col cols="5" class="pa-0">
+        <v-row justify="center" align="start">
+            <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -66,28 +66,34 @@
                     </p>
 
                 </div>
-
             </v-col>
-            <v-col cols="1"></v-col>
-            <v-col cols="2" class="pa-0">
+            <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
+            <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
+                <v-row justify="start" align="start">
+                    <v-col cols="12" style="height: max-content;">
+                        <v-card class="card first-card">
+                            <v-img :src="require('@/assets/home/building.png')" height="45vh">
+                                <v-card-title class="card-title">
+                                    <div class="card-title-text text-uppercase">
+                                        Los dueños
+                                    </div>
+                                    <div class="sep-line"></div>
+                                    <div class="card-action-text text-uppercase">Leer mas</div>
+                                </v-card-title>
+                            </v-img>
+                        </v-card>
+                    </v-col>
+                    <v-col cols="12">
+                        <v-card class="mt-12 card" style="background-color: #292929;">
+                            <video-frame width="100%" height="100%"></video-frame>
+                            <v-card-title class="pr-4 pb-5" style="background-color: #292929; height: 5%">
+                                <h1 class="video-title text-uppercase text-right" style="width: 100%">Video Resumen</h1>
+                            </v-card-title>
+                        </v-card>
+                    </v-col>
 
-                <v-card class="card first-card">
-                    <v-img :src="require('@/assets/home/building.png')" height="45vh">
-                        <v-card-title class="card-title">
-                            <div class="card-title-text text-uppercase">
-                                Los dueños
-                            </div>
-                            <div class="sep-line"></div>
-                            <div class="card-action-text text-uppercase">Leer mas</div>
-                        </v-card-title>
-                    </v-img>
-                </v-card>
-                <v-card class="mt-12 card" style="background-color: #292929;">
-                    <video-frame width="100%" height="200px"></video-frame>
-                    <v-card-title class="pr-4 pb-5" style="background-color: #292929; height: 5%">
-                        <h1 class="video-title text-uppercase text-right" style="width: 100%">Video Resumen</h1>
-                    </v-card-title>
-                </v-card>
+
+                </v-row>
             </v-col>
         </v-row>
     </div>
@@ -158,6 +164,14 @@
     .info-container {
         animation-name: example;
         animation-duration: 1s;
+    }
+
+    @media screen and (max-width: 600px){
+        .author {
+
+            padding-top: 90px;
+
+        }
     }
 
 

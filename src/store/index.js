@@ -16,7 +16,8 @@ const store = new Vuex.Store({
         managers: state => state.managers,
         regions: state => state.regions,
         hotels: state => state.hotels,
-        projects: state => state.projects
+        projects: state => state.projects,
+        years: state => [...new Set(state.projects.map(p=> parseInt(p.fecha_fin)))].filter(y=> !isNaN(y))
     }
 })
 

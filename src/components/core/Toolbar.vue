@@ -36,13 +36,13 @@
 
     @media screen and (max-width: 550px){
         .bar-title{
-            font-size: 25px;
+            font-size: 23px;
         }
     }
 
     @media screen and (max-width: 450px){
         .bar-title{
-            font-size: 25px;
+            font-size: 23px;
             letter-spacing: 3px;
         }
     }

@@ -100,7 +100,6 @@
             const me = this
             this.$refs.list.$el.addEventListener('scroll', function (e) {
                 const year = me.getActiveIYear()
-                console.log(year)
                 if (year > -1) {
                     if (year > me.last_year) {
                         me.shiftRight()
@@ -111,7 +110,6 @@
                     me.active_year = year
                 }
             })
-            console.log(this.years)
         },
         methods: {
             showPopup(h) {

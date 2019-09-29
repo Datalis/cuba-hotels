@@ -3,67 +3,41 @@
         <banner></banner>
         <v-row justify="center">
             <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
-                <p class="author text-uppercase" style="margin-bottom: 70px">Autor</p></v-col>
+                <p class="author text-uppercase" style="margin-bottom: 70px">Julio Batista</p></v-col>
         </v-row>
         <v-row justify="center" align="start">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
+                    <p v-for="t in textos" class="text-justify">
+                        {{t}}
+                    </p>
+
+
                     <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+                    </p>
+
+                    <p class="text-justify">
+
+                    </p>
+
+                    <p class="text-justify">
+
+                    </p>
+
+                    <p class="text-justify">
+
+                    </p>
+
+                    <p class="text-justify">
+
+                    </p><p class="text-justify">
+
                     </p>
                     <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
                     </p>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <p class="text-justify">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
+
 
                 </div>
             </v-col>
@@ -100,10 +74,16 @@
 
 <script>
     import Banner from '@/components/building/Banner'
-    import VideoFrame from "../components/videoFrame";
+    import VideoFrame from '@/components/videoFrame'
+    import {mapGetters} from 'vuex'
 
     export default {
         name: "Building",
+        computed: {
+            ...mapGetters({
+                textos: 'montecarlo'
+            })
+        },
         components: {VideoFrame, Banner}
     }
 </script>
@@ -165,7 +145,7 @@
         animation-duration: 1s;
     }
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 600px) {
         .author {
 
             padding-top: 90px;

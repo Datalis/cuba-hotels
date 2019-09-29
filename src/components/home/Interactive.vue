@@ -122,6 +122,7 @@
                                 </template>
                             </v-checkbox>
                             <v-select
+
                                     color="#cc983c"
                                     class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="categories"
@@ -135,11 +136,11 @@
                                     on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
-                                    :key="m.name"
+                                    :key="m"
                                     v-for="m in managers">
                                 <template v-slot:label>
                                     <div class="check-label">
-                                        {{m.name}}
+                                        {{m}}
                                     </div>
                                 </template>
                             </v-checkbox>
@@ -173,11 +174,11 @@
                             <v-checkbox
                                     on-icon="$vuetify.icons.checkboxOff"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#cc983c"
-                                    :key="r.name" v-for="r in regions"
-                                    :label="r.name">
+                                    :key="r" v-for="r in regions"
+                                    :label="r">
                                 <template v-slot:label>
                                     <div class="check-label">
-                                        {{r.name}}
+                                        {{r}}
                                     </div>
                                 </template>
                             </v-checkbox>
@@ -339,7 +340,7 @@
 
     .check-label {
         font-family: Montserrat-Regular;
-        font-size: 13.71pt;
+        font-size: 11pt;
         color: #171716;
     }
 

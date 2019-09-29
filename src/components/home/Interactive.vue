@@ -59,10 +59,12 @@
                     </v-col>
                 </v-row>
                 <v-row justify="center">
-                    <v-col cols="12" sm="7" md="7" lg="7" xl="7"
+                    <v-col
+                            class="col-hotel-list"
+                            cols="12" sm="7" md="7" lg="7" xl="7"
                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-list
-                                style="background-color: transparent; height: 10.5in; overflow-y: scroll"
+                                style="background-color: transparent; height: 100%; overflow-y: scroll"
                                 two-line
                                 id="list">
                             <v-list-item :key="i" v-for="(h, i) in hotels" @click.stop="showHotelDialog(i)">
@@ -266,9 +268,13 @@
         margin-top: 240px;
     }
 
+    .col-hotel-list{
+        height: 10.5in;
+    }
+
     .main-container {
         background-color: #eeeeed;
-        height: 20.39in;
+        height: max-content;
     }
 
     .horizontal-black-line {
@@ -358,8 +364,6 @@
         padding-top: 15px;
         padding-bottom: 15px;
         font-size: 14.21pt;
-
-
     }
 
     .cuba-map {
@@ -486,6 +490,8 @@
             font-size: 10.71pt;
             letter-spacing: 1px;
         }
+
+
     }
 </style>
 <style>

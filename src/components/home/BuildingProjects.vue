@@ -27,7 +27,7 @@
                             v-for="h in projects.filter(p=>p.fecha_fin === y+'')"
                             class="pl-0"
                             two-line
-                            @click="showPopup()">
+                            @click="showPopup(h)">
                         <v-list-item-content class="pb-0 pt-0">
                             <v-list-item-title class="item-title text-wrap">{{h.nombre}}</v-list-item-title>
                         </v-list-item-content>
@@ -40,12 +40,12 @@
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
                     <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
-                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 16pt;">
-                        <p>Ficha del Proyecto</p>
-                        <p>Nombre / Ubicación</p>
-                        <p>Empresa a cargo</p>
-                        <p>Capacidad</p>
-                        <p>Fechas</p>
+                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 15pt;">
+                        <p class="mb-2">Ficha del Proyecto</p>
+                        <p class="mb-2">{{hotel.nombre}} / {{hotel.localizacion}}</p>
+                        <p class="mb-2">Empresa a cargo</p>
+                        <p class="mb-2">Capacidad</p>
+                        <p class="mb-2">Fechas</p>
                     </v-card-text>
                     <v-card-actions>
                         <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
@@ -70,6 +70,27 @@
                 middle_year: 1,
                 last_year: 2,
                 showDetails: false,
+                hotel: {
+                    "cadena": "Grupo Hotelero Cubanacán SA",
+                    "cat": "9",
+                    "est_inv": "CACH",
+                    "est_negocio": "Propio",
+                    "fecha_fin": "2018",
+                    "fecha_ini": "5",
+                    "ha": "4669600",
+                    "habitaciones": "",
+                    "id": 1,
+                    "localizacion": "Cayo Levisa",
+                    "modalidad": "Hotel",
+                    "nombre": "Hotel Cayo Levisa. 2da ampliación",
+                    "propiedad": "2018",
+                    "provincia": {
+                        "codigo": "cu-pr",
+                        "nombre": "Pinar del Río"
+                    },
+                    "suelo": "Ejecución",
+                    "tipo": "Ampliación"
+                },
             }
         },
         computed: {
@@ -93,7 +114,8 @@
             console.log(this.years)
         },
         methods: {
-            showPopup() {
+            showPopup(h) {
+                this.hotel = h
                 this.showDetails = true
             },
             hidePopup() {

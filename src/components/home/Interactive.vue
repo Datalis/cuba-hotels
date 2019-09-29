@@ -62,21 +62,16 @@
                     <v-col cols="12" sm="7" md="7" lg="7" xl="7"
                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-list
-                                style="background-color: transparent;"
+                                style="background-color: transparent; height: 10.5in; overflow-y: scroll"
                                 two-line
                                 id="list">
-                            <v-list-item @click.stop="showHotelDialog()">
+                            <v-list-item :key="i" v-for="(h, i) in hotels" @click.stop="showHotelDialog(i)">
                                 <v-list-item-content class="list-item">
                                     <v-list-item-title class="list-item-title">
-                                        Iberostar Gran Packard
+                                        {{h.nombre}}
                                     </v-list-item-title>
                                     <v-list-item-subtitle>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        <v-icon class="primary-color">star</v-icon>
-                                        Plus
+                                       <stars :stars="getCat(h)" :plus="h.cat.plus"></stars>
                                     </v-list-item-subtitle>
                                 </v-list-item-content>
                             </v-list-item>
@@ -90,21 +85,19 @@
                                 </v-icon>
                                 <v-card-title class="text-uppercase">
                                     <div style="width: 100%; font-family: Montserrat-Bold">
-                                        Iberostar Gran Packard
+                                        {{hotel.nombre}}
                                     </div>
                                 </v-card-title>
                                 <v-card-text class="text-uppercase" style="font-family: Montserrat-Light;">
-                                    <p>200 habitaciones / Ciudad Habana / Polo Turístico / Nombre de los operadores
-                                        cubanos y extranjeros / Modalidad</p>
+                                    <p> {{hotel.habitaciones}} habitaciones /
+                                        {{hotel.provincia.nombre}} /
+                                        {{hotel.polo}} /
+                                        {{hotel.oper_cu}} /
+                                        {{hotel.oper_ext}} / {{hotel.modalidad}}</p>
                                 </v-card-text>
                                 <v-card-actions>
                                     <div style="width: max-content; margin-left: auto; margin-right: auto">
-                                        <v-icon color="white">star</v-icon>
-                                        <v-icon color="white">star</v-icon>
-                                        <v-icon color="white">star</v-icon>
-                                        <v-icon color="white">star</v-icon>
-                                        <v-icon color="white">star</v-icon>
-                                        Plus
+                                        <stars color="white" :stars="getCat(hotel)" :plus="hotel.cat.plus"></stars>
                                     </div>
                                 </v-card-actions>
                             </v-card>
@@ -133,7 +126,7 @@
                                     item-text="name"
                                     item-value="name">
                             </v-select>
-                        </v-container ccl>
+                        </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
@@ -201,7 +194,7 @@
                 <div class="horizontal-black-line-up"></div>
             </v-col>
         </v-row>
-        <building-projects></building-projects>
+
         <!--- banner -->
         <v-row class="background-img" align="start">
             <v-col cols="3" sm="3" md="3" lg="4" xl="4">
@@ -212,6 +205,8 @@
                 <h1 class="map-title text-uppercase">Existentes</h1>
             </v-col>
         </v-row>
+
+        <building-projects></building-projects>
     </div>
 </template>
 
@@ -219,21 +214,48 @@
     import CubaMap from "../CubaMap";
     import {mapGetters} from 'vuex'
     import BuildingProjects from "./BuildingProjects";
+    import Stars  from '@/components/Stars'
 
     export default {
         name: "InteractiveMap",
-        components: {BuildingProjects, CubaMap},
+        components: {BuildingProjects, CubaMap, Stars},
         data() {
             return {
+                hotel: {
+                    habitaciones: "250",
+                    polo: "Centro Tradicional",
+                    provincia: {
+                        codigo: "OTRO",
+                        nombre: "La Habana"
+                    },
+                    oper_cu: "Grupo de turismo Gaviota SA",
+                    oper_ext: "Accor",
+                    modalidad: "Ciudad",
+                    cat: {
+                        estrellas: "5",
+                        plus: true
+                    },
+                },
                 showInfoDialog: false
             }
         },
         computed: {
-            ...mapGetters(['categories', 'managers', 'regions']),
+            ...mapGetters(['categories', 'managers', 'regions', 'hotels']),
         },
         methods: {
-            showHotelDialog() {
+            showHotelDialog(i) {
                 this.showInfoDialog = true
+                this.hotel = this.hotels[i]
+            },
+
+            getCat(h){
+                const cat = parseInt(h.cat.estrellas)
+                if(isNaN(cat)){
+                    return 0
+                } else{
+                    return cat
+                }
+
             }
         }
     }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <banner></banner>
-        <owners style="margin-top: 3in;"></owners>
+        <owners style="margin-top: 4in;"></owners>
         <building-card style="margin-top:  2in;"></building-card>
         <third-card style="margin-top: 3in;"></third-card>
         <interactive-map style="margin-top: 2in"></interactive-map>

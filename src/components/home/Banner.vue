@@ -8,14 +8,15 @@
             </v-col>
             <v-col cols="11" sm="11" md="8" lg="6" xl=6 class="quoted-col">
                 <p class="quoted-text text-right">
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in.
+                    Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se
+                    pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital
+                    cubano. ¿Valdrá la pena?
                 </p>
             </v-col>
             <v-col cols="2" justify="end"
                    class="d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"
                    style="padding-top: 150px; border-right: 4px solid black; font-family: Montserrat-Light; color: var(--primary-color);">
-                <div />
+                <div/>
             </v-col>
         </v-row>
         <v-row justify="end">
@@ -37,22 +38,22 @@
 <style scoped>
     .text-row {
         width: 100%;
-        margin-top: 2.5in;
+        margin-top: 3.1in;
         position: absolute;
         top: 0;
         height: 6in;
     }
 
     .quoted-text {
-        margin-right: 20px;
+        margin-right: 18px;
         font-family: Montserrat-Regular;
         font-size: 16pt;
         color: #4d4d4c;
     }
 
     .quoted-col {
-        padding-left: 8%;
-        padding-right: 5%;
+        padding-left: 5%;
+        padding-right: 3%;
         padding-bottom: 0;
     }
 

@@ -36,9 +36,11 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions>
-                            <v-btn text class="more-btn">
-                                Leer más
-                            </v-btn>
+                            <router-link to="/building2/" style="text-decoration: none">
+                                <v-btn text class="more-btn">
+                                    Leer más
+                                </v-btn>
+                            </router-link>
                         </v-card-actions>
                         <div class="gray-panel">
                         </div>
@@ -98,6 +100,7 @@
         color: var(--primary-color);
         font-size: 20.3pt;
         font-family: Montserrat-Light;
+        margin-left: 0.4in;
     }
 
     .gray-panel {

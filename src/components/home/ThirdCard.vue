@@ -44,9 +44,11 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions class="text-left">
-                            <v-btn text class="more-btn">
-                                Leer más
-                            </v-btn>
+                            <router-link to="/building1/" style="text-decoration: none">
+                                <v-btn text class="more-btn">
+                                    Leer más
+                                </v-btn>
+                            </router-link>
                         </v-card-actions>
                     </v-col>
                     <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">

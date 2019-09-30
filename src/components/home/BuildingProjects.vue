@@ -65,7 +65,7 @@
 
     export default {
         name: "BuildingProjects",
-        components: [Stars],
+        components: {Stars},
         data() {
             return {
                 active_year: 0,

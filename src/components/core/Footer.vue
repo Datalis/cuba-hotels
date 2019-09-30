@@ -16,13 +16,15 @@
             </v-col>
             <v-col cols="12" sm="9" md="9" lg="9" xl="9" class="pl-8" style="background-color: rgb(222, 153, 49)">
                 <v-row align="center" justify="center" style="height: 100%;">
-                    <v-col cols="12" sm="12" md="5" lg="5" xl="5" class="credits">
-                        <div class="text-uppercase credits-title">Creditos</div>
-                        <div>Jessica Dominguez / Julio Cesar</div>
-                        <div> Julio Cesar/ Jessica Dominguez</div>
+                    <v-col cols="12" sm="12" md="6" lg="8" xl="8" class="credits pt-12 pb-8">
+                        <div class="text-uppercase credits-title">Créditos</div>
+                        <div>Investigación, datos y textos: Jessica Dominguez y Julio Batista</div>
+                        <div>Programación: Abraham Calás</div>
+                        <div>Diseño: Wendy Valladares y Janet Aguilar</div>
+                        <div>Fotografía: Jans Sosa, Jorge Beltrán y Fidel Alejandro</div>
                     </v-col>
                     <v-col cols="12" sm="12" md="4" lg="4" xl="4">
-                        <div class="method text-uppercase">Metodologia</div>
+                        <div class="method text-uppercase">Metodología</div>
                     </v-col>
                 </v-row>
             </v-col>
@@ -49,7 +51,7 @@
     }
 
     .credits{
-        font-size: 14pt;
+        font-size: 12pt;
         font-family: Montserrat-Regular;
         color: #fffefc;
         letter-spacing: 1px;

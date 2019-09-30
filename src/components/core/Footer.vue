@@ -19,7 +19,7 @@
                     <v-col cols="12" sm="12" md="6" lg="8" xl="8" class="credits pt-12 pb-8">
                         <div class="text-uppercase credits-title">Créditos</div>
                         <div>Investigación, datos y textos: Jessica Dominguez y Julio Batista</div>
-                        <div>Programación: Abraham Calás</div>
+                        <div>Programación: Amelia Zulueta Contreras y Abraham Calás</div>
                         <div>Diseño: Wendy Valladares y Janet Aguilar</div>
                         <div>Fotografía: Jans Sosa, Jorge Beltrán y Fidel Alejandro</div>
                     </v-col>

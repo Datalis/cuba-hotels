@@ -33,7 +33,7 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions class="text-left">
-                            <router-link to="/building/" style="text-decoration: none">
+                            <router-link to="/montecarlo/" style="text-decoration: none">
                                 <v-btn text class="more-btn">
                                     Leer más
                                 </v-btn>

@@ -8,9 +8,13 @@
         <v-row justify="center" align="start">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
-                    <p :key="i" v-for="(t, i) in textos" class="text-justify">
-                        {{t}}
-                    </p>
+                    <div :key="i" v-for="(t, i) in textos">
+                        <p class="text-justify">
+                            {{t}}
+                        </p>
+<!--                        <p style="font-style: italic" v-if="i===7">grafico</p>-->
+                    </div>
+
                 </div>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>

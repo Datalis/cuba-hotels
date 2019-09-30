@@ -5,7 +5,7 @@
             <v-card color="gray" flat>
                 <v-row no-gutters>
                     <v-col cols="5" sm="5" md="5" lg="5" xl="5">
-                        <v-img height="100%" width="6.76in" :src="require('@/assets/home/building.jpg')">
+                        <v-img height="100%" width="7in" :src="require('@/assets/home/building1.jpg')">
                         </v-img>
                     </v-col>
                     <v-col cols="6" sm="5" md="5" lg="5" xl="5" style="position: relative;">

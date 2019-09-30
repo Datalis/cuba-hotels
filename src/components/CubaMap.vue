@@ -38,7 +38,13 @@
                     chart: {
                         backgroundColor: 'transparent',
 
-
+                    },
+                    exporting: {
+                        buttons: {
+                            contextButton: {
+                                enabled: false
+                            }
+                        }
                     },
                     colorAxis: {
                         // min: 0,

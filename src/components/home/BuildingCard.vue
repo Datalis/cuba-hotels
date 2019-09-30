@@ -30,7 +30,7 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions>
-                            <router-link to="/building2/" style="text-decoration: none">
+                            <router-link to="/negocio/" style="text-decoration: none">
                                 <v-btn text class="more-btn">
                                     Leer más
                                 </v-btn>

@@ -32,8 +32,8 @@ export default new Router({
                     component: Building1
                 },
                 {
-                    path: '/building2',
-                    name: 'building2',
+                    path: '/negocio',
+                    name: 'negocio',
                     component: Building2
                 }
             ]

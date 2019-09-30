@@ -26,12 +26,6 @@
                                 <v-col class="card-text">
                                     En manos del grupo Gaviota, de la Fuerzas Armadas, y de un conjunto cada vez más
                                     amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba
-                                    GAE S.A.
-<!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
-
-<!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
-<!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
-<!--                                    consequat</span>...-->
                                 </v-col>
                             </v-row>
                         </v-card-text>

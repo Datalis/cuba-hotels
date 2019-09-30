@@ -34,12 +34,7 @@
                                 <v-col class="card-text">
 
                                     En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir
-                                    244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar
-                                    <!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
-
-                                    <!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
-                                    <!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
-                                    <!--                                    consequat</span>...-->
+                                    244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar GAE S.A.
                                 </v-col>
                             </v-row>
                         </v-card-text>
@@ -54,9 +49,9 @@
                     <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="5.4in"
                                aspect-ratio="1"
-                               :src="require('@/assets/home/owners.jpg')">
+                               :src="require('@/assets/home/building.jpg')">
                         </v-img>
                     </v-col>
                 </v-row>

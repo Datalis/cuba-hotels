@@ -105,8 +105,8 @@
 
     @media screen and (max-width: 1264px) {
         .card-title {
-            font-size: 28.28pt;
-            line-height: 28.28pt;
+            font-size: 30pt;
+            line-height: 38pt;
         }
 
         .card-title-container {

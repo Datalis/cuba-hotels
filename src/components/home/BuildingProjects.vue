@@ -40,13 +40,23 @@
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
                     <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
-                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
-<!--                        <cambiar fechaini por estrellas> cat por habitaciones, propiedad por fechafin-->
-                        <stars :stars="5" color="white"></stars>
-                        <p class="mb-2">Hotel {{hotel.fecha_ini}} estrellas </p>
-                        <p class="mb-0">{{hotel.cat}} habitaciones</p>
-                        <p class="mb-2"><span style="font-style: italic; text-transform: none; font-family: Montserrat-Regular"> A cargo de: </span>{{hotel.cadena}}</p>
-                        <p class="mb-2"><span style="font-family: Montserrat-Regular"> Previsto para </span> {{hotel.propiedad}}</p>
+                    <v-card-text class="pt-0"
+                                 style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
+                        <!--                        <cambiar fechaini por estrellas> cat por habitaciones, propiedad por fechafin-->
+                        <stars :stars="getCat(hotel)" color="white"></stars>
+                        <p class="mb-3" style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
+                            {{hotel.habitaciones}} habitaciones</p>
+                        <p class="mb-3" style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
+                            {{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
+                        <p class="mb-0" style="font-family: Montserrat-Bold"><span
+                                style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;"> A cargo de: </span>{{hotel.cadena}}
+                        </p>
+                        <p class="mb-0"><span style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
+                            {{hotel.fecha_fin}}</p>
+                        <p class="mb-3"><span style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span> {{hotel.costo}}</p>
+                        <p style="font-family: Montserrat-Bold"><span
+                                style="font-style: italic; text-transform: none;"> Invesrión: </span>{{hotel.est_inv}}
+                        </p>
                     </v-card-text>
                     <v-card-actions>
                         <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
@@ -61,7 +71,7 @@
 
 <script>
     import {mapGetters} from 'vuex'
-    import Stars  from '@/components/Stars'
+    import Stars from '@/components/Stars'
 
     export default {
         name: "BuildingProjects",
@@ -115,6 +125,24 @@
             })
         },
         methods: {
+            getCat(h) {
+                const cat = parseInt(h.cat)
+                if (isNaN(cat)) {
+                    return 0
+                } else {
+                    return cat
+                }
+
+            },
+            getCost(h) {
+                const cat = parseInt(h.cat)
+                if (isNaN(cat)) {
+                    return 0
+                } else {
+                    return cat
+                }
+
+            },
             showPopup(h) {
                 this.hotel = h
                 this.showDetails = true
@@ -200,7 +228,6 @@
         color: #cc983c;
         font-family: Montserrat-ExtraBold;
     }
-
 
 
     .item-title {

@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import Home from '@/views/Home'
 import Building from "./views/Building";
 import Building1 from "./views/Building1";
+import Building2 from "./views/Building2";
 
 Vue.use(Router)
 
@@ -29,6 +30,11 @@ export default new Router({
                     path: '/building1',
                     name: 'building1',
                     component: Building1
+                },
+                {
+                    path: '/building2',
+                    name: 'building2',
+                    component: Building2
                 }
             ]
         }

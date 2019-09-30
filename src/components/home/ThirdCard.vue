@@ -9,21 +9,32 @@
             <v-card color="gray" flat>
                 <v-row no-gutters style="height: min-content !important;">
                     <v-col cols="8" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
-                        <v-card-title class="card-title-container">
-                            <v-row align="center">
-                                <v-col cols="12">
-                                    <p class="pt-0 mb-0 card-title text-uppercase">El regreso</p>
-                                    <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>
-                                    <p class="pt-0 mb-0 card-title text-uppercase">a Cuba</p>
-                                </v-col>
-                            </v-row>
-                        </v-card-title>
+                        <div class="card-title-container">
+                            <v-card-title class="text-left pt-6  pb-0">
+                                <h1 class="card-title text-uppercase">
+                                    el esquema
+                                </h1>
+                            </v-card-title>
+                            <v-card-title class="text-left pt-0">
+                                <h1 class="card-title text-uppercase">
+                                    GAESA
+                                </h1>
+                                <h1 class="card-title text-uppercase">
+                                    para construir
+                                </h1>
+                                <h1 class="card-title text-uppercase">
+                                    hoteles en Cuba
+                                </h1>
+                            </v-card-title>
+                        </div>
+
                         <v-divider class="title-divider"></v-divider>
                         <v-card-text class="text-left card-text-container">
                             <v-row>
                                 <v-col class="card-text">
-                                    Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar
-                                    hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario
+
+                                    En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir
+                                    244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar
                                     <!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
 
                                     <!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
@@ -41,7 +52,8 @@
                     <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6in" width="6in" aspect-ratio="1"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in"
+                               aspect-ratio="1"
                                :src="require('@/assets/home/owners.jpg')">
                         </v-img>
                     </v-col>
@@ -73,9 +85,9 @@
 
     .card-title {
         /*margin-bottom: 50px;*/
-        font-size: 30pt;
-        line-height: 38pt;
-        letter-spacing: 2px;
+        font-size: 25pt;
+        line-height: 30pt;
+        letter-spacing: 3px;
         color: #040404;
         /*font-weight: 800;*/
         height: max-content;
@@ -166,7 +178,7 @@
     }
 
     @media screen and (max-width: 599px) {
-        .gray-panel{
+        .gray-panel {
             width: 80%;
         }
     }
@@ -195,7 +207,6 @@
     }
 
 
-
     @media screen and (max-width: 360px) {
         .card-title {
             font-size: 20.28pt;
@@ -217,7 +228,7 @@
             line-height: 20.28pt;
         }
 
-        .gray-panel{
+        .gray-panel {
             width: 80%;
         }
     }

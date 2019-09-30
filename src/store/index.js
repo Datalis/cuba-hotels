@@ -8,6 +8,7 @@ const store = new Vuex.Store({
         categories: require('@/data/categories.json'),
         // regions: require('@/data/regions.json'),
         montecarlo: require('@/data/textos/montecarlo.json'),
+        business: require('@/data/textos/business.json'),
         gaesa: require('@/data/textos/gaesa.json'),
         hotels: require('@/data/hoteles.json'),
         projects: require('@/data/hoteles-const.json')
@@ -18,6 +19,7 @@ const store = new Vuex.Store({
         regions: state => [...new Set(state.hotels.map(p=> p.provincia.nombre))],
         montecarlo: state => state.montecarlo.textos,
         gaesa: state => state.gaesa.textos,
+        business: state => state.business.textos,
         // regions: state => state.regions,
         hotels: state => state.hotels,
         projects: state => state.projects,

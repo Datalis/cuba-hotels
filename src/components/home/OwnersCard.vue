@@ -41,7 +41,7 @@
                     <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6in" width="6in" aspect-ratio="1"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in" aspect-ratio="1"
                                :src="require('@/assets/home/owners.jpg')">
                         </v-img>
                     </v-col>

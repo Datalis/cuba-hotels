@@ -11,20 +11,12 @@
                     <v-col cols="6" sm="5" md="5" lg="5" xl="5" style="position: relative;">
                         <div class="card-title-container text-left">
                             <v-card-title class="text-left pt-6  pb-0">
-                                <h1 class="card-title text-uppercase">
-                                    el esquema
-                                </h1>
-                            </v-card-title>
-                            <v-card-title class="text-left pt-0">
-                                <h1 class="card-title text-uppercase">
-                                    GAESA
-                                </h1>
-                                <h1 class="card-title text-uppercase">
-                                    para construir
-                                </h1>
-                                <h1 class="card-title text-uppercase">
-                                    hoteles en Cuba
-                                </h1>
+                                <v-row align="center">
+                                    <v-col cols="12">
+                                        <p class="pt-0 mb-0 card-title text-uppercase">El negocio hotelero</p>
+                                        <p class="pt-0 mb-0 card-title text-uppercase">en Cuba</p>
+                                    </v-col>
+                                </v-row>
                             </v-card-title>
                         </div>
                         <v-divider
@@ -32,8 +24,8 @@
                         <v-card-text class="card-text-container text-left">
                             <v-row>
                                 <v-col class="card-text">
-                                    En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir
-                                    244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar
+                                    En manos del grupo Gaviota, de la Fuerzas Armadas, y de un conjunto cada vez más
+                                    amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba
                                     GAE S.A.
 <!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
 
@@ -76,8 +68,8 @@
 
     .card-title {
         /*margin-bottom: 10px;*/
-        font-size: 25pt;
-        line-height: 30pt;
+        font-size: 30pt;
+        line-height: 38pt;
         letter-spacing: 3px;
         color: #040404;
         font-family: Montserrat-ExtraBold;

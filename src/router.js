@@ -27,7 +27,7 @@ export default new Router({
                     component: Building
                 },
                 {
-                    path: '/building1',
+                    path: '/gaesa',
                     name: 'building1',
                     component: Building1
                 },

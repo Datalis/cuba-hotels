@@ -8,9 +8,18 @@
         <v-row justify="center" align="start">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
-                    <p :key="i" v-for="(t, i) in textos" class="text-justify">
-                        {{t}}
-                    </p>
+                    <div :key="i" v-for="(t, i) in textos" >
+                        <p class="text-justify">
+                            {{t}}
+                        </p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===10">¿Cómo se construyen los hoteles en Cuba?</p>
+                        <p style="font-style: italic" v-if="i===16">Grafico</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===32">Quién invierte realmente en Cuba: el esquema Gaesa</p>
+                        <p style="font-style: italic" v-if="i===43">Infografia</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===50">¿Para qué construir?</p>
+                        <p style="font-style: italic" v-if="i===61">grafico</p>
+                    </div>
+
                 </div>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>

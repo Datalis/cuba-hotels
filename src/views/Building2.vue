@@ -1,6 +1,6 @@
 <template>
     <div style="position: relative">
-        <banner></banner>
+        <banner3></banner3>
         <v-row justify="center">
             <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
                 <p class="author text-uppercase" style="margin-bottom: 70px">Jessica Dominguez Delgado</p></v-col>
@@ -45,7 +45,7 @@
 </template>
 
 <script>
-    import Banner from '@/components/building/Banner'
+    import Banner3 from '@/components/building/Banner3'
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
 
@@ -56,7 +56,7 @@
                 textos: 'business'
             })
         },
-        components: {VideoFrame, Banner}
+        components: {VideoFrame, Banner3}
     }
 </script>
 

@@ -16,11 +16,9 @@
                         <div>
                             <div style="margin-left: -90%;">
                                 <h1 class="text-left banner-title">
-                                    El regreso</h1>
+                                    El negocio hotelero</h1>
                                 <h1 class="text-left banner-title">
-                                    del lujo</h1>
-                                <h1 class="text-left banner-title">
-                                    a Cuba</h1>
+                                    en Cuba</h1>
                             </div>
                         </div>
                         <div style="border-bottom: 2px solid black; width: 80%; margin-left: auto">
@@ -35,16 +33,16 @@
 
 <script>
     export default {
-        name: "Banner"
+        name: "Banner3"
     }
 </script>
 
 <style scoped>
     .banner-title {
         white-space: nowrap;
-        font-size: 40.28pt;
+        font-size: 30.28pt;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 1px;
         font-family: Montserrat-ExtraBold;
     }
 

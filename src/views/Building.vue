@@ -1,5 +1,5 @@
 <template>
-    <div style="position: relative">
+    <div>
         <banner></banner>
         <v-row justify="center">
             <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
@@ -12,6 +12,8 @@
                         {{t}}
                     </p>
                 </div>
+                <evolucion-hoteles></evolucion-hoteles>
+                <bubble-habitaciones></bubble-habitaciones>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
             <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
@@ -48,6 +50,9 @@
     import Banner from '@/components/building/Banner'
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
+    import EvolucionHoteles from "../components/EvolucionHoteles";
+    import BubbleHabitaciones from "../components/BubbleHabitaciones";
+
 
     export default {
         name: "Building",
@@ -56,7 +61,7 @@
                 textos: 'montecarlo'
             })
         },
-        components: {VideoFrame, Banner}
+        components: {VideoFrame, Banner, EvolucionHoteles, BubbleHabitaciones}
     }
 </script>
 

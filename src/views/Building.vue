@@ -12,7 +12,6 @@
                         <p  class="text-justify">
                             {{t}}
                         </p>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===10">¿Cómo se construyen los hoteles en Cuba?</p>
                     </div>
                 </div>
 

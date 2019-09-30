@@ -2,15 +2,13 @@
     <div style="position: relative">
         <v-row align="end" class="text-row" no-gutters>
             <v-col cols="1" sm="1" md="4" lg="6" xl="6">
-                <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="7.92in" width="9.86in"
+                <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6in" width="8in"
                        :src="require('@/assets/home/banner2.jpg')">
                 </v-img>
             </v-col>
             <v-col cols="11" sm="11" md="8" lg="6" xl=6 class="quoted-col">
                 <p class="quoted-text text-right">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat. Duis aute irure dolor in.
                 </p>
             </v-col>
@@ -23,7 +21,7 @@
         <v-row justify="end">
             <v-col cols="12" sm="12" md="12" lg="10" xl="10" class="pt-0">
                 <v-row>
-                    <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.jpg')"/>
+                    <v-img height="7in" width="16.26in" :src="require('@/assets/home/banner.jpg')"/>
                 </v-row>
             </v-col>
         </v-row>
@@ -39,10 +37,10 @@
 <style scoped>
     .text-row {
         width: 100%;
-        margin-top: 4.583in;
+        margin-top: 2.5in;
         position: absolute;
         top: 0;
-        height: 7.92in;
+        height: 6in;
     }
 
     .quoted-text {
@@ -55,7 +53,7 @@
     .quoted-col {
         padding-left: 8%;
         padding-right: 5%;
-        padding-bottom: 2%;
+        padding-bottom: 0;
     }
 
     @media screen and (max-width: 579px) {

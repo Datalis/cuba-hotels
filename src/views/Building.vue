@@ -4,6 +4,8 @@
         <v-row justify="center">
             <v-col cols="5" class="pa-0">
                 <p class="author text-uppercase"  style="margin-bottom: 70px">Autor</p>
+                <evolucion-hoteles></evolucion-hoteles>
+                <bubble-habitaciones></bubble-habitaciones>
                 <div style="height:90vh; overflow-y: scroll; ">
                     <p class="text-justify">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -90,10 +92,13 @@
 <script>
     import Banner from '@/components/building/Banner'
     import VideoFrame from "../components/videoFrame";
+    import EvolucionHoteles from "../components/EvolucionHoteles";
+    import BubbleHabitaciones from "../components/BubbleHabitaciones";
+
 
     export default {
         name: "Building",
-        components: {VideoFrame, Banner}
+        components: {VideoFrame, Banner, EvolucionHoteles, BubbleHabitaciones}
     }
 </script>
 

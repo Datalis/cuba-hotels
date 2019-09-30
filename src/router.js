@@ -22,13 +22,13 @@ export default new Router({
                     component: Home
                 },
                 {
-                    path: '/building',
-                    name: 'building',
+                    path: '/montecarlo',
+                    name: 'montecarlo',
                     component: Building
                 },
                 {
                     path: '/gaesa',
-                    name: 'building1',
+                    name: 'gaesa',
                     component: Building1
                 },
                 {

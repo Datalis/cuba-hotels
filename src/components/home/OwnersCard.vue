@@ -12,7 +12,9 @@
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
-                                    <p class="card-title text-uppercase">Los dueños</p>
+                                    <p class="pt-0 mb-0 card-title text-uppercase">El regreso</p>
+                                    <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>
+                                    <p class="pt-0 mb-0 card-title text-uppercase">a Cuba</p>
                                 </v-col>
                             </v-row>
                         </v-card-title>
@@ -20,11 +22,13 @@
                         <v-card-text class="text-left card-text-container">
                             <v-row>
                                 <v-col class="card-text">
-                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar
+                                    hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario
+<!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
 
-                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>
-                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat</span>...
+<!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
+<!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+<!--                                    consequat</span>...-->
                                 </v-col>
                             </v-row>
                         </v-card-text>
@@ -63,17 +67,17 @@
     }
 
     .card-title-container {
-        margin-top: 0.736in;
-        margin-bottom: 0.736in;
+        margin-top: 0.3in;
+        margin-bottom: 0.3in;
     }
 
     .card-title {
         /*margin-bottom: 50px;*/
-        font-size: 40pt;
+        font-size: 30pt;
+        line-height: 38pt;
         letter-spacing: 2px;
         color: #040404;
         /*font-weight: 800;*/
-        line-height: 44.28pt;
         height: max-content;
         font-family: Montserrat-ExtraBold;
     }
@@ -84,6 +88,7 @@
         letter-spacing: 1px;
         color: #4d4d4c;
         font-family: Montserrat-Regular;
+        padding-right: 40px !important
     }
 
     .title-divider {
@@ -94,7 +99,7 @@
     }
 
     .card-text-container {
-        margin-top: 20px;
+        /*margin-top: 20px;*/
     }
 
     .more-btn {

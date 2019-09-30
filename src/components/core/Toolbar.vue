@@ -12,10 +12,10 @@
             </v-col>
             <v-col cols="10" style="width: max-content">
                 <p class="mb-0 text-uppercase bar-title">
-                    Hoteles en Cuba:
+                    La apuesta hotelera
                 </p>
                 <p class="mt-0 text-uppercase  bar-title">
-                    El valor de un pais
+                    en Cuba
                 </p>
             </v-col>
         </v-row>

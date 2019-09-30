@@ -1,5 +1,5 @@
 <template>
-    <v-app id="layout" style="background-color: transparent">
+    <v-app id="layout" style="background-color: transparent; overflow-x: hidden">
         <router-view></router-view>
     </v-app>
 </template>

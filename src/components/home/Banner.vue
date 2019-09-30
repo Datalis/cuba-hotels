@@ -3,7 +3,7 @@
         <v-row align="end" class="text-row" no-gutters>
             <v-col cols="1" sm="1" md="4" lg="6" xl="6">
                 <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="7.92in" width="9.86in"
-                       :src="require('@/assets/home/banner2.png')">
+                       :src="require('@/assets/home/banner2.jpg')">
                 </v-img>
             </v-col>
             <v-col cols="11" sm="11" md="8" lg="6" xl=6 class="quoted-col">
@@ -23,7 +23,7 @@
         <v-row justify="end">
             <v-col cols="12" sm="12" md="12" lg="10" xl="10" class="pt-0">
                 <v-row>
-                    <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.png')"/>
+                    <v-img height="9.63in" width="16.26in" :src="require('@/assets/home/banner.jpg')"/>
                 </v-row>
             </v-col>
         </v-row>

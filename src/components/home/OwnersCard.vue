@@ -5,10 +5,10 @@
             <div class="horizontal-line"></div>
         </v-col>
         <v-col cols="12" sm="10" md="10" lg="10" xl="10"
-               class="pa-8 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
+               class="pl-8  pr-0 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
-                <v-row no-gutters>
-                    <v-col cols="6" sm="5" md="5" lg="5" xl="5">
+                <v-row no-gutters style="height: min-content !important;">
+                    <v-col cols="8" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
@@ -38,11 +38,11 @@
                             </v-btn>
                         </v-card-actions>
                     </v-col>
-                    <v-col cols="6" sm="6" md="6" lg="6" xl="6" style="position: relative;">
+                    <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6.3in"
-                               :src="require('@/assets/home/owners.png')">
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6in" width="6in" aspect-ratio="1"
+                               :src="require('@/assets/home/owners.jpg')">
                         </v-img>
                     </v-col>
                 </v-row>
@@ -122,13 +122,13 @@
 
     @media screen and (max-width: 1264px) {
         .card-title {
-            font-size: 35.28pt;
-            line-height: 40.28pt;
+            font-size: 30pt;
+            line-height: 38pt;
         }
 
         .card-title-container {
-            margin-top: 0.4in;
-            margin-bottom: 0in;
+            margin-top: 0.3in;
+            margin-bottom: 0;
         }
 
         .more-btn {
@@ -165,20 +165,26 @@
         }
     }
 
+    @media screen and (max-width: 599px) {
+        .gray-panel{
+            width: 80%;
+        }
+    }
+
     @media screen and (max-width: 500px) {
         .card-title {
-            font-size: 16.28pt;
-            line-height: 16.28pt;
+            font-size: 20.28pt;
+            line-height: 22.28pt;
         }
 
         .card-title-container {
             margin-top: 0.236in;
-            margin-bottom: 0;
+            margin-bottom: 0.3in;
         }
 
         .card-text {
-            line-height: 13pt;
-            font-size: 10pt;
+            line-height: 16pt;
+            font-size: 12pt;
         }
 
         .more-btn {
@@ -188,9 +194,31 @@
         }
     }
 
+
+
     @media screen and (max-width: 360px) {
         .card-title {
-            font-size: 14.28pt;
+            font-size: 20.28pt;
+            line-height: 22.28pt;
+        }
+
+        .card-title-container {
+            margin-top: 0.236in;
+            margin-bottom: 0.3in;
+        }
+
+        .card-text {
+            line-height: 16pt;
+            font-size: 12pt;
+        }
+
+        .card-title {
+            font-size: 20.28pt;
+            line-height: 20.28pt;
+        }
+
+        .gray-panel{
+            width: 80%;
         }
     }
 

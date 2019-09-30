@@ -30,8 +30,8 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions>
-                            <router-link to="/negocio/" style="text-decoration: none">
-                                <v-btn text class="more-btn">
+                            <router-link class="text-right" to="/negocio/" style="text-decoration: none; width: 100%">
+                                <v-btn text class="more-btn ">
                                     Leer más
                                 </v-btn>
                             </router-link>
@@ -58,7 +58,7 @@
         /*height: 2.63in;*/
         /*0.7in*/
         /*margin-left: 0.1in;*/
-        margin-left: 0.4in;
+        margin-left: 0.1in;
         height: 36%;
     }
 
@@ -77,15 +77,13 @@
         letter-spacing: 1px;
         color: #4d4d4c;
         /*margin-left: 0.1in;*/
-        margin-left: 0.4in;
+        margin-left: 0.1in;
         font-family: Montserrat-Regular;
     }
 
     .card-text-container {
         margin-top: 20px;
     }
-
-
 
     .more-btn {
         margin-left: auto;
@@ -94,7 +92,6 @@
         color: var(--primary-color);
         font-size: 20.3pt;
         font-family: Montserrat-Light;
-        margin-left: 0.4in;
     }
 
     .gray-panel {

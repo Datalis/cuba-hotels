@@ -30,10 +30,10 @@
                 </v-row>
                 <v-row class="statistics-row" justify="center">
                     <v-col cols="5">
-                        <h1 style="text-align: center" class="statistics-value">560</h1>
+                        <h1 style="text-align: center" class="statistics-value">381</h1>
                     </v-col>
                     <v-col cols="5">
-                        <h1 class="statistics-value" style="text-align: center">300</h1>
+                        <h1 class="statistics-value" style="text-align: center">67</h1>
                     </v-col>
                 </v-row>
                 <v-row justify="center">

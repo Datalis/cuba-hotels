@@ -12,7 +12,10 @@
                         <p class="text-justify">
                             {{t}}
                         </p>
-<!--                        <p style="font-style: italic" v-if="i===7">grafico</p>-->
+                        <evolucion-hoteles v-if="i===5"></evolucion-hoteles>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===9">¿Quienes controlan el mercado?</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===22">De los males, el menor</p>
+                        <bubble-habitaciones v-if="i===28"></bubble-habitaciones>
                     </div>
 
                 </div>
@@ -52,6 +55,8 @@
     import Banner3 from '@/components/building/Banner3'
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
+    import BubbleHabitaciones from "../components/BubbleHabitaciones";
+    import EvolucionHoteles from "../components/EvolucionHoteles";
 
     export default {
         name: "Building",
@@ -60,7 +65,7 @@
                 textos: 'business'
             })
         },
-        components: {VideoFrame, Banner3}
+        components: {VideoFrame, Banner3, BubbleHabitaciones, EvolucionHoteles}
     }
 </script>
 

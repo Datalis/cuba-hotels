@@ -15,8 +15,8 @@
                         <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===10">¿Cómo se construyen los hoteles en Cuba?</p>
                     </div>
                 </div>
-                <evolucion-hoteles></evolucion-hoteles>
-                <bubble-habitaciones></bubble-habitaciones>
+
+
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
             <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
@@ -53,8 +53,8 @@
     import Banner from '@/components/building/Banner'
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
-    import EvolucionHoteles from "../components/EvolucionHoteles";
-    import BubbleHabitaciones from "../components/BubbleHabitaciones";
+
+
 
 
     export default {
@@ -64,7 +64,7 @@
                 textos: 'montecarlo'
             })
         },
-        components: {VideoFrame, Banner, EvolucionHoteles, BubbleHabitaciones}
+        components: {VideoFrame, Banner}
     }
 </script>
 

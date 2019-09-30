@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-icon :color="color" :key="i" v-for="i in Array.from(Array(stars).keys())">star</v-icon>
+        <v-icon small :color="color" :key="i" v-for="i in Array.from(Array(stars).keys())">star</v-icon>
         <span v-if="plus">Plus</span>
     </div>
 

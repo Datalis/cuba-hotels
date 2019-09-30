@@ -40,12 +40,13 @@
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
                     <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
-                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 15pt;">
-                        <p class="mb-2">Ficha del Proyecto</p>
-                        <p class="mb-2">{{hotel.nombre}} / {{hotel.localizacion}}</p>
-                        <p class="mb-2">Empresa a cargo</p>
-                        <p class="mb-2">Capacidad</p>
-                        <p class="mb-2">Fechas</p>
+                    <v-card-text style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
+<!--                        <cambiar fechaini por estrellas> cat por habitaciones, propiedad por fechafin-->
+                        <stars :stars="5" color="white"></stars>
+                        <p class="mb-2">Hotel {{hotel.fecha_ini}} estrellas </p>
+                        <p class="mb-0">{{hotel.cat}} habitaciones</p>
+                        <p class="mb-2"><span style="font-style: italic; text-transform: none; font-family: Montserrat-Regular"> A cargo de: </span>{{hotel.cadena}}</p>
+                        <p class="mb-2"><span style="font-family: Montserrat-Regular"> Previsto para </span> {{hotel.propiedad}}</p>
                     </v-card-text>
                     <v-card-actions>
                         <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
@@ -60,9 +61,11 @@
 
 <script>
     import {mapGetters} from 'vuex'
+    import Stars  from '@/components/Stars'
 
     export default {
         name: "BuildingProjects",
+        components: [Stars],
         data() {
             return {
                 active_year: 0,
@@ -198,9 +201,12 @@
         font-family: Montserrat-ExtraBold;
     }
 
+
+
     .item-title {
         color: #b6b4b2;
-        font-size: 17.71pt;
+        font-size: 12pt;
+        letter-spacing: 1px;
         font-family: Montserrat-Regular;
     }
 

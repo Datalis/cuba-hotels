@@ -3,7 +3,7 @@
         <div class="map-date">
             Agosto 2019
         </div>
-        <Highmaps ref="mapChartCuba" :options="chartOptions"/>
+        <Highmaps style="margin-top: -50px" ref="mapChartCuba" :options="chartOptions"/>
     </div>
 </template>
 

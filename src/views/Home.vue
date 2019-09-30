@@ -1,8 +1,9 @@
 <template>
     <div>
         <banner></banner>
-        <owners style="margin-top: 5.597in;"></owners>
+        <owners style="margin-top: 3in;"></owners>
         <building-card style="margin-top: 300px;"></building-card>
+        <third-card style="margin-top: 3in;"></third-card>
         <interactive-map style="margin-top: 290px"></interactive-map>
         <youtube-video style="margin-top: 300px"></youtube-video>
     </div>
@@ -13,6 +14,7 @@
     import YoutubeVideo from "@/components/home/YoutubeVideo"
     import Owners from '@/components/home/OwnersCard'
     import BuildingCard from '@/components/home/BuildingCard'
+    import ThirdCard from '@/components/home/ThirdCard'
     import InteractiveMap from "@/components/home/Interactive";
 
     export default {
@@ -22,7 +24,8 @@
             Banner,
             Owners,
             BuildingCard,
-            YoutubeVideo
+            YoutubeVideo,
+            ThirdCard
         },
         data() {
             return {

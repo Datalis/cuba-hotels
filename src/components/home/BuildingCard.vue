@@ -5,26 +5,27 @@
             <v-card color="gray" flat>
                 <v-row no-gutters>
                     <v-col cols="5" sm="5" md="5" lg="5" xl="5">
-                        <v-img height="100%" width="6.76in" :src="require('@/assets/home/building.png')">
+                        <v-img height="100%" width="6.76in" :src="require('@/assets/home/building.jpg')">
                         </v-img>
                     </v-col>
                     <v-col cols="6" sm="5" md="5" lg="5" xl="5" style="position: relative;">
                         <div class="card-title-container text-left">
-                            <v-card-title class="text-left pt-6">
+                            <v-card-title class="text-left pt-6  pb-0">
                                 <h1 class="card-title text-uppercase">
-                                    El esquema GAESA, o cómo construir hoteles en Cuba
+                                    el esquema
                                 </h1>
                             </v-card-title>
-                            <!--                            <v-card-title  class="text-left pt-0">-->
-                            <!--                                <h1 class="card-title text-uppercase">-->
-                            <!--                                    es-->
-                            <!--                                </h1>-->
-                            <!--                            </v-card-title>-->
-                            <!--                            <v-card-title class="text-left pt-0">-->
-                            <!--                                <h1 class="card-title text-uppercase">-->
-                            <!--                                    construir-->
-                            <!--                                </h1>-->
-                            <!--                            </v-card-title>-->
+                            <v-card-title class="text-left pt-0">
+                                <h1 class="card-title text-uppercase">
+                                    GAESA
+                                </h1>
+                                <h1 class="card-title text-uppercase">
+                                    para construir
+                                </h1>
+                                <h1 class="card-title text-uppercase">
+                                    hoteles en Cuba
+                                </h1>
+                            </v-card-title>
                         </div>
                         <v-divider
                                 style="margin-left: auto; width: 45%; border-bottom: 4px solid var(--primary-color); border-radius: 4px"></v-divider>
@@ -68,21 +69,18 @@
         margin-bottom: 0.2in;
         /*height: 2.63in;*/
         /*0.7in*/
+        /*margin-left: 0.1in;*/
         margin-left: 0.4in;
         height: 36%;
     }
 
     .card-title {
         /*margin-bottom: 10px;*/
-        font-size: 30pt;
-        line-height: 38pt;
+        font-size: 25pt;
+        line-height: 30pt;
         letter-spacing: 3px;
         color: #040404;
         font-family: Montserrat-ExtraBold;
-    }
-
-    .card-text-container {
-        margin-top: 20px;
     }
 
     .card-text {
@@ -90,9 +88,16 @@
         font-size: 16pt;
         letter-spacing: 1px;
         color: #4d4d4c;
+        /*margin-left: 0.1in;*/
         margin-left: 0.4in;
         font-family: Montserrat-Regular;
     }
+
+    .card-text-container {
+        margin-top: 20px;
+    }
+
+
 
     .more-btn {
         margin-left: auto;

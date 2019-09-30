@@ -309,7 +309,8 @@
     }
 
     .statistics-value {
-        font-size: 61.04pt;
+        font-size: 35.04pt;
+        line-height: 20pt;
         letter-spacing: 12px;
         color: #cc983c;
         font-family: Montserrat-ExtraBold;
@@ -317,7 +318,7 @@
     }
 
     .statistics-row {
-        margin-bottom: 1in;
+        margin-bottom: 0.4in;
     }
 
     .primary-color {
@@ -325,12 +326,12 @@
     }
 
     .list-item {
-
         font-family: Montserrat-Regular;
     }
 
     .list-item-title {
-        font-size: 17pt;
+        font-size: 12pt;
+        letter-spacing: 1px;
     }
 
     ._vcheck {

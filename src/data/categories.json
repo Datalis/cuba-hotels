@@ -1,8 +1,8 @@
 [
-  { "name": "5E" },
-  { "name": "4E" },
-  { "name": "3E" },
-  { "name": "2E" },
-  { "name": "1E" },
-  { "name": "SE" }
+  { "name": "5E", "val": 5 },
+  { "name": "4E", "val": 4 },
+  { "name": "3E", "val": 3 },
+  { "name": "2E", "val": 2 },
+  { "name": "1E", "val": 1 },
+  { "name": "SE", "val": 0 }
 ]

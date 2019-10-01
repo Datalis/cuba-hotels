@@ -42,6 +42,7 @@
                             cols="12" sm="7" md="7" lg="7" xl="7"
                             style="height: max-content;">
                         <v-text-field
+                                v-model="filters.text"
                                 class="search-box"
                                 filled
                                 label="Buscar"
@@ -62,18 +63,18 @@
                     <v-col
                             class="col-hotel-list"
                             cols="12" sm="7" md="7" lg="7" xl="7"
-                           order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
+                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-list
                                 style="background-color: transparent; height: 100%; overflow-y: scroll"
                                 two-line
                                 id="list">
-                            <v-list-item :key="i" v-for="(h, i) in hotels" @click.stop="showHotelDialog(i)">
+                            <v-list-item :key="i" v-for="(h, i) in filterHotels" @click.stop="showHotelDialog(i)">
                                 <v-list-item-content class="list-item">
                                     <v-list-item-title class="list-item-title">
                                         {{h.nombre}}
                                     </v-list-item-title>
                                     <v-list-item-subtitle>
-                                       <stars :stars="getCat(h)" :plus="h.cat.plus"></stars>
+                                        <stars :stars="getCat(h)" :plus="h.cat.plus"></stars>
                                     </v-list-item-subtitle>
                                 </v-list-item-content>
                             </v-list-item>
@@ -110,10 +111,13 @@
                         <v-container fluid class="group-filter-container">
                             <h3 class="group-title">Categoría</h3>
                             <v-checkbox
+                                    multiple
+                                    v-model="filters.categories"
                                     on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
                                     :key="c.name"
+                                    :value="c.val"
                                     v-for="c in categories">
                                 <template v-slot:label>
                                     <div class="check-label">
@@ -122,7 +126,6 @@
                                 </template>
                             </v-checkbox>
                             <v-select
-
                                     color="#cc983c"
                                     class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="categories"
@@ -133,9 +136,12 @@
                         <v-container fluid>
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
+                                    multiple
+                                    v-model="filters.opers_cu"
                                     on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                                    :value="m"
                                     :key="m"
                                     v-for="m in managers">
                                 <template v-slot:label>
@@ -154,14 +160,16 @@
                         </v-container>
                         <v-container fluid>
                             <h3 class="group-title">Operador extranjero</h3>
-                            <v-checkbox on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
+                            <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="1"
+                                        on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         Si
                                     </div>
                                 </template>
                             </v-checkbox>
-                            <v-checkbox color="#cc983c" class="_vcheck">
+                            <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="-1" color="#cc983c"
+                                        class="_vcheck">
                                 <template v-slot:label>
                                     <div class="check-label">
                                         No
@@ -172,8 +180,11 @@
                         <v-container fluid>
                             <h3 class="group-title">Ubicación</h3>
                             <v-checkbox
+                                    multiple
+                                    v-model="filters.regions"
                                     on-icon="$vuetify.icons.checkboxOff"
                                     class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#cc983c"
+                                    :value="r"
                                     :key="r" v-for="r in regions"
                                     :label="r">
                                 <template v-slot:label>
@@ -203,7 +214,7 @@
             <v-col cols="3" sm="3" md="3" lg="4" xl="4">
                 <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
             </v-col>
-            <v-col cols="7"  sm="7" md="7" lg="6" xl="6" class="title-component-container">
+            <v-col cols="7" sm="7" md="7" lg="6" xl="6" class="title-component-container">
                 <h1 class="map-title text-uppercase">Hoteles</h1>
                 <h1 class="map-title text-uppercase">Existentes</h1>
             </v-col>
@@ -217,7 +228,7 @@
     import CubaMap from "../CubaMap";
     import {mapGetters} from 'vuex'
     import BuildingProjects from "./BuildingProjects";
-    import Stars  from '@/components/Stars'
+    import Stars from '@/components/Stars'
 
     export default {
         name: "InteractiveMap",
@@ -239,26 +250,46 @@
                         plus: true
                     },
                 },
+                filters: {
+                    text: "",
+                    categories: [],
+                    opers_cu: [],
+                    opers_ext: 0,
+                    regions: []
+                },
                 showInfoDialog: false
             }
         },
         computed: {
             ...mapGetters(['categories', 'managers', 'regions', 'hotels']),
+            filterHotels() {
+                return this.hotels.filter(h => {
+                    const matchCategories = (this.filters.categories.length === 0 || this.filters.categories.includes(this.getCat(h)))
+                    const matchRegions = (this.filters.regions.length === 0 || this.filters.regions.includes(h.provincia.nombre))
+                    const matchOpersCu = (this.filters.opers_cu.length === 0 || this.filters.opers_cu.includes(h.oper_cu))
+                    if (this.filters.opers_ext > 0) {
+                        var match = matchCategories && matchRegions && matchOpersCu && h.oper_ext.length > 0
+                    } else if (this.filters.opers_ext < 0) {
+                        match = matchCategories && matchRegions && matchOpersCu && h.oper_ext.length === 0
+                    } else {
+                        match = matchCategories && matchRegions && matchOpersCu
+                    }
+                    return (match && h.nombre.toLowerCase().includes(this.filters.text.toLowerCase()))
+                })
+            }
         },
         methods: {
             showHotelDialog(i) {
                 this.showInfoDialog = true
-                this.hotel = this.hotels[i]
+                this.hotel = this.filterHotels[i]
             },
-
-            getCat(h){
+            getCat(h) {
                 const cat = parseInt(h.cat.estrellas)
-                if(isNaN(cat)){
+                if (isNaN(cat)) {
                     return 0
-                } else{
+                } else {
                     return cat
                 }
-
             }
         }
     }
@@ -269,7 +300,7 @@
         margin-top: 240px;
     }
 
-    .col-hotel-list{
+    .col-hotel-list {
         height: 10.5in;
     }
 
@@ -372,7 +403,8 @@
         position: relative;
         left: 100px;
     }
-    .title-component-container{
+
+    .title-component-container {
         margin-top: 1in;
     }
 
@@ -386,11 +418,11 @@
             letter-spacing: 3px;
         }
 
-        .filters-title{
+        .filters-title {
             font-size: 12pt;
         }
 
-        .check-label{
+        .check-label {
             font-size: 12pt;
         }
     }
@@ -405,15 +437,15 @@
             font-size: 28.98pt;
         }
 
-        .title-component-container{
+        .title-component-container {
             margin-top: 0.5in;
         }
 
-        .content-row{
+        .content-row {
             margin-top: 180px;
         }
 
-        .check-label{
+        .check-label {
             font-size: 11pt;
         }
     }
@@ -425,32 +457,35 @@
             letter-spacing: 3px;
         }
 
-        .statistics-title-row{
+        .statistics-title-row {
             margin-top: -60px;
         }
 
     }
 
     @media screen and (max-width: 500px) {
-        .group-filter-container{
+        .group-filter-container {
 
             padding-bottom: 0;
         }
 
-        .group-title{
+        .group-title {
             font-size: 12pt;
         }
-        .check-label{
+
+        .check-label {
             font-size: 9pt;
         }
+
         .map-title {
             letter-spacing: 2px;
             font-size: 21.98pt;
         }
 
-        .content-row{
+        .content-row {
             margin-top: 140px;
         }
+
         .statistics-value {
             font-size: 30.04pt;
             letter-spacing: 3px;
@@ -462,26 +497,29 @@
             letter-spacing: 1px;
         }
 
-        .statistics-title-row{
+        .statistics-title-row {
             margin-top: -100px;
         }
 
-        .cuba-map{
+        .cuba-map {
             left: 50px;
         }
     }
 
     @media screen and (max-width: 320px) {
-        .title-component-container{
+        .title-component-container {
             padding-left: 0 !important;
         }
+
         .map-title {
             letter-spacing: 1px;
             font-size: 16.98pt;
         }
-        .content-row{
+
+        .content-row {
             margin-top: 110px;
         }
+
         .statistics-value {
             font-size: 20.04pt;
             letter-spacing: 3px;
@@ -506,13 +544,14 @@
     }
 
     ._vcheck .v-input__slot {
-      margin-bottom: 0 !important;
-    }
-    ._vcheck .v-messages {
-        display: none  !important;
+        margin-bottom: 0 !important;
     }
 
-    .v-input--is-label-active i {
+    ._vcheck .v-messages {
+        display: none !important;
+    }
+
+    ._vcheck.v-input--is-label-active i {
         color: #cc983c !important;
         background-color: #cc983c;
     }

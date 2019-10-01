@@ -55,7 +55,7 @@
                             {{hotel.fecha_fin}}</p>
                         <p class="mb-3"><span style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span> {{hotel.costo}}</p>
                         <p style="font-family: Montserrat-Bold"><span
-                                style="font-style: italic; text-transform: none;"> Invesrión: </span>{{hotel.est_inv}}
+                                style="font-style: italic; text-transform: none;"> Inversión: </span>{{hotel.est_inv}}
                         </p>
                     </v-card-text>
                     <v-card-actions>

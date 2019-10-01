@@ -19,8 +19,8 @@
                                     El regreso</h1>
                                 <h1 class="text-left banner-title">
                                     del lujo</h1>
-                                <h1 class="text-left banner-title">
-                                    a Cuba</h1>
+<!--                                <h1 class="text-left banner-title">-->
+<!--                                    a Cuba</h1>-->
                             </div>
                         </div>
                         <div style="border-bottom: 2px solid black; width: 80%; margin-left: auto">

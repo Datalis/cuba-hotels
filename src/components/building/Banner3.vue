@@ -16,9 +16,9 @@
                         <div>
                             <div style="margin-left: -90%;">
                                 <h1 class="text-left banner-title">
-                                    El negocio hotelero</h1>
+                                    El negocio</h1>
                                 <h1 class="text-left banner-title">
-                                    en Cuba</h1>
+                                    hotelero</h1>
                             </div>
                         </div>
                         <div style="border-bottom: 2px solid black; width: 80%; margin-left: auto">
@@ -40,9 +40,9 @@
 <style scoped>
     .banner-title {
         white-space: nowrap;
-        font-size: 30.28pt;
+        font-size: 40.28pt;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 4px;
         font-family: Montserrat-ExtraBold;
     }
 

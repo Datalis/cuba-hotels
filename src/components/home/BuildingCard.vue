@@ -14,7 +14,7 @@
                                 <v-row align="center">
                                     <v-col cols="12">
                                         <p class="pt-0 mb-0 card-title text-uppercase">El negocio hotelero</p>
-                                        <p class="pt-0 mb-0 card-title text-uppercase">en Cuba</p>
+<!--                                        <p class="pt-0 mb-0 card-title text-uppercase">en Cuba</p>-->
                                     </v-col>
                                 </v-row>
                             </v-card-title>

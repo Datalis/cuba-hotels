@@ -23,7 +23,7 @@
                                     para construir
                                 </h1>
                                 <h1 class="card-title text-uppercase">
-                                    hoteles en Cuba
+                                    hoteles
                                 </h1>
                             </v-card-title>
                         </div>

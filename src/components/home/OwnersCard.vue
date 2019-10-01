@@ -14,7 +14,7 @@
                                 <v-col cols="12">
                                     <p class="pt-0 mb-0 card-title text-uppercase">El regreso</p>
                                     <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>
-                                    <p class="pt-0 mb-0 card-title text-uppercase">a Cuba</p>
+<!--                                    <p class="pt-0 mb-0 card-title text-uppercase">a Cuba</p>-->
                                 </v-col>
                             </v-row>
                         </v-card-title>

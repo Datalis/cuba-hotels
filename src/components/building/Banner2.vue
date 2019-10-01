@@ -22,7 +22,7 @@
                                 <h1 class="text-left banner-title">
                                     para construir</h1>
                                 <h1 class="text-left banner-title">
-                                    hoteles en Cuba</h1>
+                                    hoteles </h1>
                             </div>
                         </div>
                         <div style="border-bottom: 2px solid black; width: 80%; margin-left: auto">

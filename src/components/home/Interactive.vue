@@ -68,7 +68,7 @@
                                 style="background-color: transparent; height: 100%; overflow-y: scroll"
                                 two-line
                                 id="list">
-                            <v-list-item :key="i" v-for="(h, i) in filterHotels" @click.stop="showHotelDialog(i)">
+                            <v-list-item :key="i" v-for="(h, i) in filteredHotels" style="height: 55px !important; min-height: 55px !important;" @click.stop="showHotelDialog(i)">
                                 <v-list-item-content class="list-item">
                                     <v-list-item-title class="list-item-title">
                                         {{h.nombre}}
@@ -262,7 +262,7 @@
         },
         computed: {
             ...mapGetters(['categories', 'managers', 'regions', 'hotels']),
-            filterHotels() {
+            filteredHotels() {
                 return this.hotels.filter(h => {
                     const matchCategories = (this.filters.categories.length === 0 || this.filters.categories.includes(this.getCat(h)))
                     const matchRegions = (this.filters.regions.length === 0 || this.filters.regions.includes(h.provincia.nombre))
@@ -281,7 +281,7 @@
         methods: {
             showHotelDialog(i) {
                 this.showInfoDialog = true
-                this.hotel = this.filterHotels[i]
+                this.hotel = this.filteredHotels[i]
             },
             getCat(h) {
                 const cat = parseInt(h.cat.estrellas)

@@ -6,25 +6,32 @@
             <div class="card-title text-uppercase text-left">Proyectos en</div>
             <div class="card-title text-uppercase text-left">Construcción</div>
             <v-row align="center" justify="start">
-                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(first_year)}"
+                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(first_year), 'pb-0': true}"
                        @click="setActiveYear(first_year)">
                     {{getYear(first_year)}}
                 </v-col>
-                <v-col cols="1" class="period">-</v-col>
-                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(middle_year)}"
+                <v-col cols="1" class="period pb-0">-</v-col>
+                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(middle_year),'pb-0': true}"
                        @click="setActiveYear(middle_year)">{{getYear(middle_year)}}
                 </v-col>
-                <v-col cols="1" class="period">-</v-col>
-                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(last_year)}"
+                <v-col cols="1" class="period pb-0">-</v-col>
+                <v-col cols="3" :class="{period: true, handhover:true, active:isActive(last_year),'pb-0': true}"
                        @click="setActiveYear(last_year)">{{getYear(last_year)}}
                 </v-col>
+                <v-col cols="1" class="pb-0 mb-n1">
+                    <v-icon color="white" @click="shiftLeft">keyboard_arrow_left</v-icon>
+                    <v-icon color="white" @click="shiftRight">keyboard_arrow_right</v-icon>
+                </v-col>
             </v-row>
-            <v-list ref="list" class="project-list pt-0" max-height="3.5in" max-width="90%">
-                <div :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
-                    <v-divider :key="'y'+i" color="#3b3b3b" style="boder: none !important;"></v-divider>
+            <span @click="setType('Nuevo')" :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>
+            <span @click="setType('Ampliación')" :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones</span>
+            <v-list ref="list" class="project-list pt-0 mt-3" max-height="3.5in" max-width="90%">
+                <div :key="i" :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
+                    <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3" style="boder: none !important;"></v-divider>
                     <v-list-item
+                            style="min-height: 42px !important;"
                             :key="h.nombre"
-                            v-for="h in projects.filter(p=>p.fecha_fin === y+'')"
+                            v-for="h in filteredProjects.filter(p=>p.fecha_fin === y+'')"
                             class="pl-0"
                             two-line
                             @click="showPopup(h)">
@@ -42,18 +49,22 @@
                     <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
                     <v-card-text class="pt-0"
                                  style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
-                        <!--                        <cambiar fechaini por estrellas> cat por habitaciones, propiedad por fechafin-->
                         <stars :stars="getCat(hotel)" color="white"></stars>
-                        <p class="mb-3" style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
+                        <p class="mb-3"
+                           style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
                             {{hotel.habitaciones}} habitaciones</p>
-                        <p class="mb-3" style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
+                        <p class="mb-3"
+                           style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
                             {{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
                         <p class="mb-0" style="font-family: Montserrat-Bold"><span
                                 style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;"> A cargo de: </span>{{hotel.cadena}}
                         </p>
-                        <p class="mb-0"><span style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
+                        <p class="mb-0"><span
+                                style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
                             {{hotel.fecha_fin}}</p>
-                        <p class="mb-3"><span style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span> {{hotel.costo}}</p>
+                        <p class="mb-3"><span
+                                style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span>
+                            {{hotel.costo}}</p>
                         <p style="font-family: Montserrat-Bold"><span
                                 style="font-style: italic; text-transform: none;"> Inversión: </span>{{hotel.est_inv}}
                         </p>
@@ -104,11 +115,24 @@
                     "suelo": "Ejecución",
                     "tipo": "Ampliación"
                 },
+                ptype: ''
             }
         },
         computed: {
-            ...mapGetters(['projects', 'years'])
+            ...mapGetters(['projects', 'years']),
+            filteredProjects() {
+                return this.projects.filter(p => {
+                    if (this.ptype === 'Ampliación') {
+                        return p.tipo === 'Ampliación'
+                    } else if (this.ptype === 'Nuevo') {
+                        return p.tipo === 'Nuevo'
+                    } else {
+                        return true
+                    }
+                })
+            }
         },
+
         mounted() {
             const me = this
             this.$refs.list.$el.addEventListener('scroll', function (e) {
@@ -125,6 +149,14 @@
             })
         },
         methods: {
+            setType(ptype){
+                if (ptype === this.ptype){
+                    this.ptype = ''
+                } else {
+                    this.ptype = ptype
+                }
+
+            },
             getCat(h) {
                 const cat = parseInt(h.cat)
                 if (isNaN(cat)) {
@@ -190,12 +222,12 @@
                 }
             },
             shiftLeft() {
-                if (this.years[this.last_year - 1]) {
+                if (this.years[this.first_year - 1]) {
                     this.last_year = this.last_year - 1
                     this.middle_year = this.middle_year - 1
                     this.first_year = this.first_year - 1
                 }
-                if (this.years[this.last_year - 1]) {
+                if (this.years[this.first_year - 1]) {
                     this.last_year = this.last_year - 1
                     this.middle_year = this.middle_year - 1
                     this.first_year = this.first_year - 1
@@ -259,6 +291,17 @@
 
     .handhover:hover {
         cursor: pointer;
+    }
+
+    .filter-span {
+        cursor: pointer;
+        font-family: Montserrat-Light;
+        color: #4d4d4c;
+        text-decoration: underline;
+    }
+
+    .filter-span-active{
+        color: #cc983c;
     }
 
     @media screen and (max-width: 960px) {

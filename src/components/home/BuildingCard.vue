@@ -99,8 +99,8 @@
         width: 50%;
         height: 100%;
         position: absolute;
-        top: 45%;
-        left: 70%;
+        top: 0;
+        right: 50%;
     }
 
     @media screen and (max-width: 1264px) {
@@ -121,14 +121,7 @@
 
     }
 
-    @media screen and (max-width: 1024px) {
 
-        .gray-panel {
-
-            top: 43%;
-
-        }
-    }
 
     @media screen and (max-width: 960px) {
         .card-title {
@@ -159,11 +152,7 @@
             font-size: 13.3pt;
         }
 
-        .gray-panel {
 
-            top: 40%;
-
-        }
     }
 
     @media screen and (max-width: 768px) {

@@ -12,6 +12,7 @@
     import {genComponent} from "vue-highcharts";
     import loadMap from "highcharts/modules/map";
     import cujson from "../map/cu-all.json"
+    import {mapGetters} from 'vuex'
 
     loadMap(Highcharts);
 
@@ -23,6 +24,9 @@
         props: {
             msg: String
         },
+        computed: {
+            ...mapGetters(['hotels'])
+        },
         data() {
             return {
                 Highcharts: Highcharts,
@@ -33,11 +37,10 @@
                     tooltip: {
                         backgroundColor: 'rgba(0,0,0,0.9)',
                         headerFormat: '',
-                        pointFormat: '<span style="color: #cc983c"> {point.name}</span><br><span style="color: #cc983c">Hoteles: {point.x}</span>'
+                        pointFormat: '<span style="color: #cc983c"> {point.name}</span><br><span style="color: #cc983c">Hoteles: {point.value}</span>'
                     },
                     chart: {
-                        backgroundColor: 'transparent',
-
+                        backgroundColor: 'transparent'
                     },
                     exporting: {
                         buttons: {
@@ -51,7 +54,6 @@
                         maxColor: 'transparent',
                         minColor: 'transparent'
                     },
-
                     title: {
                         text: ""
                     },
@@ -65,23 +67,23 @@
                         {
                             mapData: cujson,
                             data: [
-                                ["cu-ho", 0],
-                                ["cu-ar", 1],
-                                ["cu-ma", 2],
-                                ["cu-vc", 3],
-                                ["cu-5812", 4],
-                                ["cu-ij", 5],
-                                ["cu-ss", 6],
-                                ["cu-ca", 7],
-                                ["cu-cm", 8],
-                                ["cu-ch", 9],
-                                ["cu-cf", 10],
-                                ["cu-gu", 11],
-                                ["cu-gr", 12],
-                                ["cu-lt", 13],
-                                ["cu-sc", 14],
-                                ["cu-mq", 15],
-                                ["cu-pr", 16]
+                                ["cu-ho", 1],
+                                ["cu-ar", 0],
+                                ["cu-ma", 0],
+                                ["cu-vc", 0],
+                                ["cu-5812", 0],
+                                ["cu-ij", 0],
+                                ["cu-ss", 0],
+                                ["cu-ca", 0],
+                                ["cu-cm", 0],
+                                ["cu-ch", 0],
+                                ["cu-cf", 0],
+                                ["cu-gu", 0],
+                                ["cu-gr", 0],
+                                ["cu-lt", 0],
+                                ["cu-sc", 0],
+                                ["cu-mq", 0],
+                                ["cu-pr", 0]
                             ],
                             name: "Random data",
                             states: {
@@ -100,6 +102,32 @@
                     ]
                 }
             };
+        },
+        mounted() {
+            this.$refs.mapChartCuba.chart.update({
+                series: [{
+                    data: [
+                        ["cu-ho", this.hotels.filter(h => h.provincia.nombre === 'Holguín').length],
+                        ["cu-ar", this.hotels.filter(h => h.provincia.nombre === 'Artemisa').length],
+                        ["cu-ma", this.hotels.filter(h => h.provincia.nombre === 'Matanzas').length],
+                        ["cu-vc", this.hotels.filter(h => h.provincia.nombre === 'Villa Clara').length],
+                        // ["cu-5812",999],
+                        ["cu-ij", this.hotels.filter(h => h.provincia.nombre === 'Isla de la Juventud').length],
+                        ["cu-ss",this.hotels.filter(h => h.provincia.nombre === 'Sancti Spíritus').length],
+                        ["cu-ca", this.hotels.filter(h => h.provincia.nombre === 'Ciego de Ávila').length],
+                        ["cu-cm", this.hotels.filter(h => h.provincia.nombre === 'Camagüey').length],
+                        ["cu-ch", this.hotels.filter(h => h.provincia.nombre === 'La Habana').length],
+                        ["cu-cf", this.hotels.filter(h => h.provincia.nombre === 'Cienfuegos').length],
+                        ["cu-gu", this.hotels.filter(h => h.provincia.nombre === 'Guantánamo').length],
+                        ["cu-gr", this.hotels.filter(h => h.provincia.nombre === 'Granma').length],
+                        ["cu-lt", this.hotels.filter(h => h.provincia.nombre === 'Las Tunas').length],
+                        ["cu-sc",this.hotels.filter(h => h.provincia.nombre === 'Santiago de Cuba').length],
+                        ["cu-mq", this.hotels.filter(h => h.provincia.nombre === 'Mayabeque').length],
+                        ["cu-pr", this.hotels.filter(h => h.provincia.nombre === 'Pinar del Río').length]
+
+                    ]
+                }]
+            })
         }
     };
 </script>

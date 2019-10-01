@@ -36,7 +36,7 @@
                             two-line
                             @click="showPopup(h)">
                         <v-list-item-content class="pb-0 pt-0">
-                            <v-list-item-title class="item-title text-wrap">{{h.nombre}}</v-list-item-title>
+                            <v-list-item-title :class="{'item-title': true, 'primary-color': h.id === hotel.id && showDetails, 'text-wrap': true}">{{h.nombre}}</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </div>
@@ -44,6 +44,7 @@
         </v-col>
         <v-col cols="1" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
             <v-img height="7in" :src="require('@/assets/home/activep.png')">
+                <transition name="slide-fade">
                 <v-card class="text-uppercase" v-show="showDetails"
                         style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
                     <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
@@ -75,6 +76,7 @@
                         </div>
                     </v-card-actions>
                 </v-card>
+                </transition>
             </v-img>
         </v-col>
     </v-row>
@@ -103,7 +105,7 @@
                     "fecha_ini": "5",
                     "ha": "4669600",
                     "habitaciones": "",
-                    "id": 1,
+                    "id": 0,
                     "localizacion": "Cayo Levisa",
                     "modalidad": "Hotel",
                     "nombre": "Hotel Cayo Levisa. 2da ampliación",
@@ -304,6 +306,10 @@
         color: #cc983c;
     }
 
+    .primary-color {
+        color: #cc983c;
+    }
+
     @media screen and (max-width: 960px) {
         .card-title {
             font-size: 22pt
@@ -336,5 +342,22 @@
         .period {
             font-size: 25px;
         }
+    }
+
+    /* Enter and leave animations can use different */
+    /* durations and timing functions.              */
+    .slide-fade-enter-active {
+        transition: all .3s linear;
+    }
+    .slide-fade-leave-active {
+        left: -100%;
+    }
+
+    /*.slide-fade-leave {*/
+    /*    left: -80%;*/
+    /*}*/
+    .slide-fade-enter
+        /* .slide-fade-leave-active below version 2.1.8 */ {
+        transform: translateX(-20px);
     }
 </style>

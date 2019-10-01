@@ -2,10 +2,10 @@
     <div style="width: 100%">
         <v-row no-gutters>
             <v-col cols="7">
-                <v-img :src="require('@/assets/building/banner.png')" min-height="400px"></v-img>
+                <v-img :src="require('@/assets/building/banner.png')" min-height="400px"  height="100%"></v-img>
             </v-col>
             <v-col cols="5" style="position: relative">
-                <v-img :src="require('@/assets/building/banner2.png')" min-height="270"></v-img>
+                <v-img :src="require('@/assets/home/owners.jpg')" aspect-ratio="1"  height="60%"></v-img>
                 <v-row no-gutters style="position: absolute; top: 0; width: 100%; height: 100%" justify="end" align="end">
                     <v-col cols="6" style="height: 80%" >
                         <div style="background-color: #eeeeed; width: 100%; height: 100%">

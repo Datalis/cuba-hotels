@@ -2,9 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/components/Layout'
 import Home from '@/views/Home'
-import Building from "./views/Building";
-import Building1 from "./views/Building1";
-import Building2 from "./views/Building2";
+import MontecarloText from "./views/MontecarloText";
+import GaesaText from "@/views/GaesaText";
+import BusinessText from "@/views/BusinessText";
 
 Vue.use(Router)
 
@@ -24,17 +24,17 @@ export default new Router({
                 {
                     path: '/montecarlo',
                     name: 'montecarlo',
-                    component: Building
+                    component: MontecarloText
                 },
                 {
                     path: '/gaesa',
                     name: 'gaesa',
-                    component: Building1
+                    component: GaesaText
                 },
                 {
                     path: '/negocio',
                     name: 'negocio',
-                    component: Building2
+                    component: BusinessText
                 }
             ]
         }

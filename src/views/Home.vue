@@ -1,9 +1,9 @@
 <template>
     <div>
         <banner></banner>
-        <owners style="margin-top: 4in;"></owners>
-        <building-card style="margin-top:  2in;"></building-card>
-        <third-card style="margin-top: 3in;"></third-card>
+        <montecarlo-card style="margin-top: 4in;"></montecarlo-card>
+        <business-card style="margin-top:  2in;"></business-card>
+        <gaesa-card style="margin-top: 3in;"></gaesa-card>
         <interactive-map style="margin-top: 2in"></interactive-map>
         <youtube-video style="margin-top: 2in"></youtube-video>
     </div>
@@ -12,9 +12,9 @@
 <script>
     import Banner from '@/components/home/Banner'
     import YoutubeVideo from "@/components/home/YoutubeVideo"
-    import Owners from '@/components/home/OwnersCard'
-    import BuildingCard from '@/components/home/BuildingCard'
-    import ThirdCard from '@/components/home/ThirdCard'
+    import MontecarloCard from '@/components/home/MontecarloCard'
+    import BusinessCard from '@/components/home/BusinessCard'
+    import GaesaCard from '@/components/home/GaesaCard'
     import InteractiveMap from "@/components/home/Interactive";
 
     export default {
@@ -22,10 +22,10 @@
         components: {
             InteractiveMap,
             Banner,
-            Owners,
-            BuildingCard,
+            MontecarloCard,
+            BusinessCard,
             YoutubeVideo,
-            ThirdCard
+            GaesaCard
         },
         data() {
             return {

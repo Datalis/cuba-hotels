@@ -225,7 +225,7 @@
 </template>
 
 <script>
-    import CubaMap from "../CubaMap";
+    import CubaMap from "../graphics/CubaMap";
     import {mapGetters} from 'vuex'
     import BuildingProjects from "./BuildingProjects";
     import Stars from '@/components/Stars'

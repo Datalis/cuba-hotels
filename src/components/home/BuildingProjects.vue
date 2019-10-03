@@ -23,11 +23,14 @@
                     <v-icon color="white" @click="shiftRight">keyboard_arrow_right</v-icon>
                 </v-col>
             </v-row>
-            <span @click="setType('Nuevo')" :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>
-            <span @click="setType('Ampliación')" :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones</span>
+            <span @click="setType('Nuevo')"
+                  :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>
+            <span @click="setType('Ampliación')"
+                  :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones</span>
             <v-list ref="list" class="project-list pt-0 mt-3" max-height="3.5in" max-width="90%">
                 <div :key="i" :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
-                    <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3" style="boder: none !important;"></v-divider>
+                    <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3"
+                               style="boder: none !important;"></v-divider>
                     <v-list-item
                             style="min-height: 42px !important;"
                             :key="h.nombre"
@@ -36,7 +39,10 @@
                             two-line
                             @click="showPopup(h)">
                         <v-list-item-content class="pb-0 pt-0">
-                            <v-list-item-title :class="{'item-title': true, 'primary-color': h.id === hotel.id && showDetails, 'text-wrap': true}">{{h.nombre}}</v-list-item-title>
+                            <v-list-item-title
+                                    :class="{'item-title': true, 'primary-color': h.id === hotel.id && showDetails, 'text-wrap': true}">
+                                {{h.nombre}}
+                            </v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
                 </div>
@@ -45,37 +51,37 @@
         <v-col cols="1" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
             <v-img height="7in" :src="require('@/assets/home/activep.png')">
                 <transition name="slide-fade">
-                <v-card class="text-uppercase" v-show="showDetails"
-                        style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
-                    <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
-                    <v-card-text class="pt-0"
-                                 style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
-                        <stars :stars="getCat(hotel)" color="white"></stars>
-                        <p class="mb-3"
-                           style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
-                            {{hotel.habitaciones}} habitaciones</p>
-                        <p class="mb-3"
-                           style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
-                            {{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
-                        <p class="mb-0" style="font-family: Montserrat-Bold"><span
-                                style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;"> A cargo de: </span>{{hotel.cadena}}
-                        </p>
-                        <p class="mb-0"><span
-                                style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
-                            {{hotel.fecha_fin}}</p>
-                        <p class="mb-3"><span
-                                style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span>
-                            {{hotel.costo}}</p>
-                        <p style="font-family: Montserrat-Bold"><span
-                                style="font-style: italic; text-transform: none;"> Inversión: </span>{{hotel.est_inv}}
-                        </p>
-                    </v-card-text>
-                    <v-card-actions>
-                        <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
-                            En Construcción
-                        </div>
-                    </v-card-actions>
-                </v-card>
+                    <v-card class="text-uppercase" v-show="showDetails"
+                            style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
+                        <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
+                        <v-card-text class="pt-0"
+                                     style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
+                            <stars :stars="getCat(hotel)" color="white"></stars>
+                            <p class="mb-3"
+                               style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
+                                {{hotel.habitaciones}} habitaciones</p>
+                            <p class="mb-3"
+                               style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
+                                {{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
+                            <p class="mb-0" style="font-family: Montserrat-Bold"><span
+                                    style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;"> A cargo de: </span>{{hotel.cadena}}
+                            </p>
+                            <p class="mb-0"><span
+                                    style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
+                                {{hotel.fecha_fin}}</p>
+                            <p class="mb-3"><span
+                                    style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span>
+                                {{hotel.costo}}</p>
+                            <p style="font-family: Montserrat-Bold"><span
+                                    style="font-style: italic; text-transform: none;"> Inversión: </span>{{hotel.est_inv}}
+                            </p>
+                        </v-card-text>
+                        <v-card-actions>
+                            <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
+                                En Construcción
+                            </div>
+                        </v-card-actions>
+                    </v-card>
                 </transition>
             </v-img>
         </v-col>
@@ -137,7 +143,7 @@
 
         mounted() {
             const me = this
-            this.$refs.list.$el.addEventListener('scroll', function (e) {
+            this.$refs.list.$el.addEventListener('scroll', function () {
                 const year = me.getActiveIYear()
                 if (year > -1) {
                     if (year > me.last_year) {
@@ -151,8 +157,8 @@
             })
         },
         methods: {
-            setType(ptype){
-                if (ptype === this.ptype){
+            setType(ptype) {
+                if (ptype === this.ptype) {
                     this.ptype = ''
                 } else {
                     this.ptype = ptype
@@ -302,7 +308,7 @@
         text-decoration: underline;
     }
 
-    .filter-span-active{
+    .filter-span-active {
         color: #cc983c;
     }
 
@@ -349,15 +355,14 @@
     .slide-fade-enter-active {
         transition: all .3s linear;
     }
+
     .slide-fade-leave-active {
         left: -100%;
     }
 
-    /*.slide-fade-leave {*/
-    /*    left: -80%;*/
-    /*}*/
     .slide-fade-enter
-        /* .slide-fade-leave-active below version 2.1.8 */ {
+        /* .slide-fade-leave-active below version 2.1.8 */
+    {
         transform: translateX(-20px);
     }
 </style>

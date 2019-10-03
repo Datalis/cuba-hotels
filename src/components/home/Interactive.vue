@@ -577,6 +577,8 @@
     ._vcheck.v-input--is-label-active i {
         color: #cc983c !important;
         background-color: #cc983c;
+        font-size: 16px !important;
+        margin-left: 2px;
 
     }
 </style>

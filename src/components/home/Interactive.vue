@@ -68,7 +68,9 @@
                                 style="background-color: transparent; height: 100%; overflow-y: scroll"
                                 two-line
                                 id="list">
-                            <v-list-item :key="i" v-for="(h, i) in filteredHotels" style="height: 55px !important; min-height: 55px !important;" @click.stop="showHotelDialog(i)">
+                            <v-list-item :key="i" v-for="(h, i) in filteredHotels"
+                                         style="height: 55px !important; min-height: 55px !important;"
+                                         @click.stop="showHotelDialog(i)">
                                 <v-list-item-content class="list-item">
                                     <v-list-item-title class="list-item-title">
                                         {{h.nombre}}
@@ -108,14 +110,14 @@
                     </v-col>
                     <v-col cols="12" sm="4" md="4" lg="4" xl="4"
                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2">
-                        <v-container fluid class="group-filter-container">
+                        <v-container fluid class="group-filter-container pt-0">
                             <h3 class="group-title">Categoría</h3>
                             <v-checkbox
                                     multiple
                                     v-model="filters.categories"
                                     on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
-                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex pt-0"
                                     :key="c.name"
                                     :value="c.val"
                                     v-for="c in categories">
@@ -127,20 +129,20 @@
                             </v-checkbox>
                             <v-select
                                     color="#cc983c"
-                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none pt-0"
                                     :items="categories"
                                     item-text="name"
                                     item-value="name">
                             </v-select>
                         </v-container>
-                        <v-container fluid>
+                        <v-container fluid class="pt-0">
                             <h3 class="group-title">Operador cubano</h3>
                             <v-checkbox
                                     multiple
                                     v-model="filters.opers_cu"
                                     on-icon="$vuetify.icons.checkboxOff"
                                     color="#cc983c"
-                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex pt-0"
                                     :value="m"
                                     :key="m"
                                     v-for="m in managers">
@@ -152,14 +154,32 @@
                             </v-checkbox>
                             <v-select
                                     color="#cc983c"
-                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
+                                    class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none pt-0"
                                     :items="managers"
                                     item-text="name"
                                     item-value="name">
                             </v-select>
                         </v-container>
-                        <v-container fluid>
+                        <v-container fluid class="pt-0">
                             <h3 class="group-title">Operador extranjero</h3>
+                            <!--                            <v-row class="ml-1">-->
+                            <!--                                <v-checkbox v-model="filters.opers_ext"  :false-value="0"  class="_vcheck mr-4" :true-value="1"-->
+                            <!--                                            on-icon="$vuetify.icons.checkboxOff" color="#cc983c" >-->
+                            <!--                                    <template v-slot:label>-->
+                            <!--                                        <div class="check-label" >-->
+                            <!--                                            Si-->
+                            <!--                                        </div>-->
+                            <!--                                    </template>-->
+                            <!--                                </v-checkbox>-->
+                            <!--                                <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="-1" color="#cc983c"-->
+                            <!--                                            class="_vcheck">-->
+                            <!--                                    <template v-slot:label>-->
+                            <!--                                        <div class="check-label">-->
+                            <!--                                            No-->
+                            <!--                                        </div>-->
+                            <!--                                    </template>-->
+                            <!--                                </v-checkbox>-->
+                            <!--                            </v-row>-->
                             <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="1"
                                         on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
@@ -177,13 +197,13 @@
                                 </template>
                             </v-checkbox>
                         </v-container>
-                        <v-container fluid>
+                        <v-container fluid class="pt-0">
                             <h3 class="group-title">Ubicación</h3>
                             <v-checkbox
                                     multiple
                                     v-model="filters.regions"
                                     on-icon="$vuetify.icons.checkboxOff"
-                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" color="#cc983c"
+                                    class="_vcheck d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex pt-0" color="#cc983c"
                                     :value="r"
                                     :key="r" v-for="r in regions"
                                     :label="r">
@@ -539,8 +559,11 @@
         align-self: center;
         color: #cc983c !important;
         border-radius: 0 !important;
-        width: 14pt;
-        height: 14pt;
+        font-size: 20px !important;
+    }
+
+    ._vcheck .v-input--selection-controls__input{
+        margin-right: 2px !important;
     }
 
     ._vcheck .v-input__slot {
@@ -554,5 +577,6 @@
     ._vcheck.v-input--is-label-active i {
         color: #cc983c !important;
         background-color: #cc983c;
+
     }
 </style>

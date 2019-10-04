@@ -1,11 +1,11 @@
 <template>
     <div>
         <banner></banner>
-        <montecarlo-card style="margin-top: 4in;"></montecarlo-card>
-        <business-card style="margin-top:  2in;"></business-card>
-        <gaesa-card style="margin-top: 3in;"></gaesa-card>
-        <interactive-map style="margin-top: 2in"></interactive-map>
-        <youtube-video style="margin-top: 2in"></youtube-video>
+        <montecarlo-card class="first-card-margin"></montecarlo-card>
+        <business-card class="second-card-margin"></business-card>
+        <gaesa-card class="third-card-margin"></gaesa-card>
+        <interactive-map class="interactive-comp-margin"></interactive-map>
+        <youtube-video class="youtube-comp-margin" style="margin-top: 2in"></youtube-video>
     </div>
 </template>
 
@@ -51,3 +51,61 @@
         }
     }
 </script>
+
+<style scoped>
+    .first-card-margin{
+        margin-top: 4in;
+    }
+    .second-card-margin{
+        margin-top: 2in;
+    }
+    .third-card-margin{
+        margin-top: 2in;
+    }
+    .interactive-comp-margin{
+        margin-top: 2in
+    }
+    @media screen and (max-width: 800px){
+        .first-card-margin{
+            margin-top: 3.5in;
+        }
+        .second-card-margin{
+            margin-top: 1in;
+        }
+        .third-card-margin{
+            margin-top: 1in;
+        }
+        .interactive-comp-margin{
+            margin-top: 1in
+        }
+    }
+
+    @media screen and (max-width: 500px){
+        .first-card-margin{
+            margin-top: 2.5in;
+        }
+        .second-card-margin{
+            margin-top: 50px;
+        }
+        .third-card-margin{
+            margin-top: 50px;
+        }
+        .interactive-comp-margin{
+            margin-top: 50px;
+        }
+    }
+    @media screen and (max-width: 425px){
+        .first-card-margin{
+            margin-top: 3.5in;
+        }
+        .second-card-margin{
+            margin-top: 50px;
+        }
+        .third-card-margin{
+            margin-top: 50px;
+        }
+        .interactive-comp-margin{
+            margin-top: 50px;
+        }
+    }
+</style>

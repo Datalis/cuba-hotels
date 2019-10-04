@@ -230,6 +230,15 @@
             margin-bottom: 10px;
             font-size: 10.3pt;
         }
+
+        .card-title-container {
+
+            margin-left: 10px;
+        }
+
+        .card-text-container{
+            padding-left: 10px;
+        }
     }
 
     @media screen and (max-width: 450px) {

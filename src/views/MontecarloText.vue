@@ -8,7 +8,6 @@
         <v-row id="text-row11" justify="center"  :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col  cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
-                    offset{{this.offset}}scroll{{this.scroll}}
                     <div :key="i" v-for="(t, i) in textos">
                         <p  class="text-justify">
                             {{t}}
@@ -75,8 +74,6 @@
         components: {VideoFrame, Banner},
         data(){
           return{
-              offset: 0,
-              scroll: 0,
               sidebarFixed: false,
               textRowAlignStart: true
           }
@@ -111,11 +108,10 @@
 </script>
 
 <style scoped>
-    .side-bar-fixed{
+    .side-bar-fixed {
         position: fixed;
         top: 0;
     }
-
 
     .card {
         height: max-content;

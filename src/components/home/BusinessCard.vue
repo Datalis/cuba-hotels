@@ -5,6 +5,8 @@
             <v-card color="gray" flat>
                 <v-row no-gutters>
                     <v-col cols="5" sm="5" md="5" lg="5" xl="5">
+                        <div class="gray-panel">
+                        </div>
                         <v-img height="100%" width="7in" :src="require('@/assets/home/business.jpg')">
                         </v-img>
                     </v-col>
@@ -35,8 +37,7 @@
                                 </v-btn>
                             </router-link>
                         </v-card-actions>
-                        <div class="gray-panel">
-                        </div>
+
                     </v-col>
                 </v-row>
             </v-card>
@@ -99,7 +100,7 @@
         height: 100%;
         position: absolute;
         top: 0;
-        right: 50%;
+        left: 10%;
     }
 
     @media screen and (max-width: 1264px) {

@@ -97,4 +97,14 @@
             font-size: 10pt;
         }
     }
+
+    @media screen and (max-width: 200px) {
+        .text-row {
+            margin-top: 3.6in;
+        }
+        .quoted-text {
+            font-size: 8pt;
+        }
+    }
 </style>
+

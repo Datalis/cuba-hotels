@@ -5,18 +5,22 @@
             <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
                 <p class="author text-uppercase" style="margin-bottom: 70px">Julio Batista</p></v-col>
         </v-row>
-        <v-row id="text-row11" justify="center"  :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
+        <v-row id="text-row11" justify="center"
+               :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
-                    <div :key="i" v-for="(t, i) in textos" >
+                    <div :key="i" v-for="(t, i) in textos">
                         <p class="text-justify">
                             {{t}}
                         </p>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===10">¿Cómo se construyen los hoteles en Cuba?</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===10">¿Cómo se construyen
+                            los hoteles en Cuba?</p>
                         <p style="font-style: italic" v-if="i===16">Grafico</p>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===32">Quién invierte realmente en Cuba: el esquema Gaesa</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===32">Quién invierte
+                            realmente en Cuba: el esquema Gaesa</p>
                         <p style="font-style: italic" v-if="i===43">Infografia</p>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===50">¿Para qué construir?</p>
+                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===50">¿Para qué
+                            construir?</p>
                         <p style="font-style: italic" v-if="i===61">grafico</p>
                     </div>
 
@@ -34,7 +38,9 @@
                                         El regreso del lujo
                                     </div>
                                     <div class="sep-line"></div>
-                                    <div class="card-action-text text-uppercase">Leer mas</div>
+                                    <router-link to="/montecarlo/" style="text-decoration: none">
+                                        <div class="card-action-text text-uppercase">Leer mas</div>
+                                    </router-link>
                                 </v-card-title>
                             </v-img>
                         </v-card>
@@ -47,7 +53,10 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <div class="card-action-text text-uppercase">Leer mas</div>
+                                    <router-link class="text-right" to="/negocio/"
+                                                 style="text-decoration: none; width: 100%">
+                                        <div class="card-action-text text-uppercase">Leer mas</div>
+                                    </router-link>
                                 </v-card-title>
                             </v-img>
                         </v-card>
@@ -79,30 +88,30 @@
             })
         },
         components: {VideoFrame, GaesaBanner},
-        data(){
-            return{
+        data() {
+            return {
                 sidebarFixed: false,
                 textRowAlignStart: true
             }
         },
         mounted() {
-            const textRow =  document.getElementById('text-row11')
+            const textRow = document.getElementById('text-row11')
             const sideBarCol = document.getElementById('sidebarCol')
 
             const me = this
             window.addEventListener('scroll', function () {
                 const pixel_tope_fila = textRow.offsetTop
-                const pedazo_texto_recorrido =  window.scrollY - pixel_tope_fila
+                const pedazo_texto_recorrido = window.scrollY - pixel_tope_fila
                 const pedazo_por_recorrer = textRow.offsetHeight - pedazo_texto_recorrido
                 const sidebarheight = sideBarCol.offsetHeight
 
                 const scrollPosition = window.scrollY
 
-                if(scrollPosition >= pixel_tope_fila){
+                if (scrollPosition >= pixel_tope_fila) {
                     if (sidebarheight >= pedazo_por_recorrer) {
                         me.sidebarFixed = false
                         me.textRowAlignStart = false
-                    } else{
+                    } else {
                         me.sidebarFixed = true
                     }
                 } else {

@@ -5,18 +5,19 @@
             <v-col cols="10" sm="8" md="8" lg="8" xl="8" class="pa-0">
                 <p class="author text-uppercase" style="margin-bottom: 70px">Julio Batista</p></v-col>
         </v-row>
-        <v-row id="text-row11" justify="center"  :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
-            <v-col  cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
+        <v-row id="text-row11" justify="center"
+               :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
+            <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container" style="padding-right: 10px;">
                     <div :key="i" v-for="(t, i) in textos">
-                        <p  class="text-justify">
+                        <p class="text-justify">
                             {{t}}
                         </p>
                     </div>
                 </div>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
-            <v-col  cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
+            <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
                 <!--        side bar-->
                 <v-row id="sidebarCol" justify="start" align="start" :class="{'side-bar-fixed': sidebarFixed}">
                     <v-col cols="12" style="height: max-content;">
@@ -27,7 +28,10 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <div class="card-action-text text-uppercase">Leer mas</div>
+                                    <router-link class="text-right" to="/negocio/"
+                                                 style="text-decoration: none; width: 100%">
+                                        <div class="card-action-text text-uppercase">Leer mas</div>
+                                    </router-link>
                                 </v-card-title>
                             </v-img>
                         </v-card>
@@ -40,7 +44,9 @@
                                         El esquema gaesa para construir hoteles
                                     </div>
                                     <div class="sep-line"></div>
-                                    <div class="card-action-text text-uppercase">Leer mas</div>
+                                    <router-link to="/gaesa/" style="text-decoration: none">
+                                        <div class="card-action-text text-uppercase">Leer mas</div>
+                                    </router-link>
                                 </v-card-title>
                             </v-img>
                         </v-card>
@@ -72,30 +78,30 @@
             })
         },
         components: {VideoFrame, Banner},
-        data(){
-          return{
-              sidebarFixed: false,
-              textRowAlignStart: true
-          }
+        data() {
+            return {
+                sidebarFixed: false,
+                textRowAlignStart: true
+            }
         },
         mounted() {
-            const textRow =  document.getElementById('text-row11')
+            const textRow = document.getElementById('text-row11')
             const sideBarCol = document.getElementById('sidebarCol')
 
             const me = this
             window.addEventListener('scroll', function () {
                 const pixel_tope_fila = textRow.offsetTop
-                const pedazo_texto_recorrido =  window.scrollY - pixel_tope_fila
+                const pedazo_texto_recorrido = window.scrollY - pixel_tope_fila
                 const pedazo_por_recorrer = textRow.offsetHeight - pedazo_texto_recorrido
                 const sidebarheight = sideBarCol.offsetHeight
 
                 const scrollPosition = window.scrollY
 
-                if(scrollPosition >= pixel_tope_fila){
+                if (scrollPosition >= pixel_tope_fila) {
                     if (sidebarheight >= pedazo_por_recorrer) {
                         me.sidebarFixed = false
                         me.textRowAlignStart = false
-                    } else{
+                    } else {
                         me.sidebarFixed = true
                     }
                 } else {

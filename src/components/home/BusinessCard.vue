@@ -251,6 +251,10 @@
             flex: 0 0 40%;
             max-width: 40%;
         }
+
+        .gray-panel {
+            width: 55%;
+        }
     }
 
     @media screen and (max-width: 370px) {

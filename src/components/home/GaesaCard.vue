@@ -27,7 +27,6 @@
                                 </h1>
                             </v-card-title>
                         </div>
-
                         <v-divider class="title-divider"></v-divider>
                         <v-card-text class="text-left card-text-container">
                             <v-row>

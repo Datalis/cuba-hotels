@@ -1,14 +1,15 @@
 <template>
     <v-row align="end" justify="start">
-        <v-col cols="1" sm="2" md=2 lg="2" xl="2"
-               class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+        <v-col cols="1" sm="1" md=2 lg="2" xl="2"
+               class="horizontal-line-col d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
             <div class="horizontal-line"></div>
         </v-col>
-        <v-col cols="12" sm="10" md="10" lg="10" xl="10"
+        <v-col cols="12" sm="11" md="10" lg="10" xl="10"
                class="pl-8  pr-0 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
                 <v-row no-gutters style="height: min-content !important;">
-                    <v-col cols="8" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
+                    <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5"
+                           style="height: max-content !important;">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
@@ -23,15 +24,15 @@
                                 <v-col class="card-text">
                                     Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar
                                     hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario
-<!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
+                                    <!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
 
-<!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
-<!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
-<!--                                    consequat</span>...-->
+                                    <!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
+                                    <!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
+                                    <!--                                    consequat</span>...-->
                                 </v-col>
                             </v-row>
                         </v-card-text>
-                        <v-card-actions class="text-left">
+                        <v-card-actions class="btn-container text-left">
                             <router-link to="/montecarlo/" style="text-decoration: none">
                                 <v-btn text class="more-btn">
                                     Leer más
@@ -39,10 +40,11 @@
                             </router-link>
                         </v-card-actions>
                     </v-col>
-                    <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
+                    <v-col class="img-col" cols="6" sm="6" md="6" lg="6" xl="6" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in" aspect-ratio="1"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in"
+                               aspect-ratio="1"
                                :src="require('@/assets/home/montecarlo.jpg')">
                         </v-img>
                     </v-col>
@@ -61,7 +63,6 @@
 <style scoped>
     .horizontal-line {
         width: 80%;
-        /*height: 100%;*/
         border-bottom: 4px solid black;
         border-radius: 4px;
         display: inline-block;
@@ -73,12 +74,10 @@
     }
 
     .card-title {
-        /*margin-bottom: 50px;*/
         font-size: 30pt;
         line-height: 38pt;
         letter-spacing: 2px;
         color: #040404;
-        /*font-weight: 800;*/
         height: max-content;
         font-family: Montserrat-ExtraBold;
     }
@@ -97,10 +96,6 @@
         width: 40%;
         border-bottom: 4px solid var(--primary-color) !important;
         border-radius: 4px
-    }
-
-    .card-text-container {
-        /*margin-top: 20px;*/
     }
 
     .more-btn {
@@ -122,19 +117,26 @@
     }
 
     @media screen and (max-width: 1264px) {
-        .card-title {
-            font-size: 30pt;
-            line-height: 38pt;
-        }
-
         .card-title-container {
-            margin-top: 0.3in;
             margin-bottom: 0;
         }
 
         .more-btn {
             margin-top: 0;
             font-size: 16.3pt;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        .card-title {
+            font-size: 26pt;
+            line-height: 34pt;
+        }
+
+        .card-text {
+            line-height: 18pt;
+            font-size: 14pt;
+            padding-bottom: 0 !important;
         }
     }
 
@@ -150,7 +152,7 @@
         }
 
         .card-text-container {
-            margin-top: 0px;
+            margin-top: 0;
             padding-bottom: 0;
         }
 
@@ -160,15 +162,67 @@
         }
 
         .more-btn {
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 30px;
             font-size: 13.3pt;
         }
     }
 
-    @media screen and (max-width: 599px) {
-        .gray-panel{
-            width: 80%;
+    @media screen and (max-width: 800px) {
+        .card-title-container {
+            padding-left: 0 !important;
+        }
+
+        .card-text {
+            padding-left: 0 !important;
+        }
+
+        .btn-container {
+            padding-left: 0 !important;
+        }
+
+        .title-divider {
+            margin-left: 5px;
+        }
+    }
+
+    @media screen and (max-width: 699px) {
+        .card-col {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+
+        .img-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .card-col {
+            flex: 0 0 55%;
+            max-width: 55%;
+        }
+
+        .img-col {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+
+        .card-title-container {
+            padding-left: 10px !important;
+        }
+
+        .card-text {
+            padding-left: 10px !important;
+        }
+
+        .btn-container {
+            padding-left: 8px !important;
+        }
+
+        .title-divider {
+            margin-left: 10px;
         }
     }
 
@@ -180,30 +234,49 @@
 
         .card-title-container {
             margin-top: 0.236in;
-            margin-bottom: 0.3in;
+            margin-bottom: 10px;
         }
 
         .card-text {
             line-height: 16pt;
             font-size: 12pt;
+            padding-top: 0 !important;
         }
 
         .more-btn {
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 10px;
             font-size: 10.3pt;
         }
     }
 
-    @media screen and (max-width: 360px) {
-        .card-title {
-            font-size: 20.28pt;
-            line-height: 22.28pt;
+    @media screen and (max-width: 450px) {
+        .card-col {
+            flex: 0 0 60%;
+            max-width: 60%;
         }
 
-        .card-title-container {
-            margin-top: 0.236in;
-            margin-bottom: 0.3in;
+        .img-col {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        .card-col {
+            flex: 0 0 66%;
+            max-width: 66%;
+        }
+
+        .img-col {
+            flex: 0 0 34%;
+            max-width: 34%;
+        }
+
+
+        .card-title {
+            font-size: 18.28pt;
+            line-height: 20.28pt;
         }
 
         .card-text {
@@ -211,13 +284,28 @@
             font-size: 12pt;
         }
 
-        .card-title {
-            font-size: 20.28pt;
-            line-height: 20.28pt;
+        .card-title-container {
+            padding-bottom: 0;
         }
 
-        .gray-panel{
+        .gray-panel {
             width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .card-col {
+            flex: 0 0 76%;
+            max-width: 76%;
+        }
+
+        .img-col {
+            flex: 0 0 22%;
+            max-width: 22%;
+        }
+
+        .gray-panel {
+            width: 150%;
         }
     }
 </style>

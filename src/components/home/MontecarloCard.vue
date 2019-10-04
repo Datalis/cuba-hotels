@@ -40,11 +40,10 @@
                             </router-link>
                         </v-card-actions>
                     </v-col>
-                    <v-col class="img-col" cols="6" sm="6" md="6" lg="6" xl="6" style="position: relative;">
+                    <v-col class="img-col" cols="5" sm="5" md="5" lg="5" xl="5" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="6in"
-                               aspect-ratio="1"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%"
                                :src="require('@/assets/home/montecarlo.jpg')">
                         </v-img>
                     </v-col>
@@ -61,13 +60,6 @@
 </script>
 
 <style scoped>
-    .horizontal-line {
-        width: 80%;
-        border-bottom: 4px solid black;
-        border-radius: 4px;
-        display: inline-block;
-    }
-
     .card-title-container {
         margin-top: 0.3in;
         margin-bottom: 0.3in;
@@ -78,7 +70,6 @@
         line-height: 38pt;
         letter-spacing: 2px;
         color: #040404;
-        height: max-content;
         font-family: Montserrat-ExtraBold;
     }
 
@@ -91,6 +82,13 @@
         padding-right: 40px !important
     }
 
+    .horizontal-line {
+        width: 80%;
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
     .title-divider {
         margin-left: 16px;
         width: 40%;
@@ -99,7 +97,6 @@
     }
 
     .more-btn {
-        margin-top: 25px;
         margin-bottom: 50px;
         text-transform: uppercase;
         color: var(--primary-color);
@@ -196,6 +193,10 @@
             flex: 0 0 50%;
             max-width: 50%;
         }
+
+        .gray-panel {
+            width: 50%;
+        }
     }
 
     @media screen and (max-width: 550px) {
@@ -224,6 +225,10 @@
         .title-divider {
             margin-left: 10px;
         }
+
+        .gray-panel {
+            width: 55%;
+        }
     }
 
     @media screen and (max-width: 500px) {
@@ -238,8 +243,8 @@
         }
 
         .card-text {
-            line-height: 16pt;
-            font-size: 12pt;
+            line-height: 13pt;
+            font-size: 10pt;
             padding-top: 0 !important;
         }
 
@@ -260,6 +265,10 @@
             flex: 0 0 40%;
             max-width: 40%;
         }
+
+        .gray-panel {
+            width: 60%;
+        }
     }
 
     @media screen and (max-width: 370px) {
@@ -273,15 +282,9 @@
             max-width: 34%;
         }
 
-
         .card-title {
             font-size: 18.28pt;
             line-height: 20.28pt;
-        }
-
-        .card-text {
-            line-height: 16pt;
-            font-size: 12pt;
         }
 
         .card-title-container {

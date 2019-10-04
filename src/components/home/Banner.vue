@@ -22,7 +22,7 @@
         <v-row justify="end">
             <v-col cols="10" sm="10" md="10" lg="10" xl="10" class="pt-0">
                 <v-row>
-                    <v-img height="7in" width="16.26in" :src="require('@/assets/home/banner.jpg')"/>
+                    <v-img height="7in"  :src="require('@/assets/home/banner.jpg')"/>
                 </v-row>
             </v-col>
         </v-row>
@@ -82,9 +82,9 @@
         }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 425px) {
         .text-row {
-            margin-top: 3.5in;
+            margin-top: 3.4in;
         }
 
         .quoted-text {
@@ -93,18 +93,18 @@
     }
 
     @media screen and (max-width: 320px) {
+        .text-row {
+            margin-top: 4in;
+        }
         .quoted-text {
             font-size: 10pt;
             margin-left: 10px;
         }
     }
 
-    @media screen and (max-width: 200px) {
+    @media screen and (max-width: 270px) {
         .text-row {
-            margin-top: 3.6in;
-        }
-        .quoted-text {
-            font-size: 8pt;
+            margin-top: 4.2in;
         }
     }
 </style>

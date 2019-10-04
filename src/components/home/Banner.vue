@@ -1,13 +1,13 @@
 <template>
     <div style="position: relative">
         <v-row align="end" class="text-row" no-gutters>
-            <v-col cols="1" sm="1" md="4" lg="6" xl="6">
-                <v-img class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="6in" width="8in"
+            <v-col cols="4" sm="5" md="5" lg="6" xl="6">
+                <v-img height="6in" width="8in"
                        :src="require('@/assets/home/banner2.jpg')">
                 </v-img>
             </v-col>
-            <v-col cols="11" sm="11" md="8" lg="6" xl=6 class="quoted-col">
-                <p class="quoted-text text-right">
+            <v-col cols="8" sm="7" md="7" lg="6" xl=6 class="quoted-col">
+                <p class="quoted-text">
                     Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se
                     pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital
                     cubano. ¿Valdrá la pena?
@@ -20,7 +20,7 @@
             </v-col>
         </v-row>
         <v-row justify="end">
-            <v-col cols="12" sm="12" md="12" lg="10" xl="10" class="pt-0">
+            <v-col cols="10" sm="10" md="10" lg="10" xl="10" class="pt-0">
                 <v-row>
                     <v-img height="7in" width="16.26in" :src="require('@/assets/home/banner.jpg')"/>
                 </v-row>
@@ -49,6 +49,7 @@
         font-family: Montserrat-Regular;
         font-size: 16pt;
         color: #4d4d4c;
+        text-align: right;
     }
 
     .quoted-col {
@@ -57,24 +58,43 @@
         padding-bottom: 0;
     }
 
-    @media screen and (max-width: 579px) {
-        .quoted-col {
-            height: 100%;
-            padding-top: 130%;
+    @media screen and (max-width: 1024px) {
+        .quoted-text {
+            font-size: 14pt;
         }
     }
 
-    @media screen and (max-width: 492px) {
-        .quoted-col {
-            height: 100%;
-            padding-top: 130%;
+    @media screen and (max-width: 800px) {
+        .quoted-text {
+            font-size: 13pt;
         }
     }
 
-    @media screen and (max-width: 375px) {
-        .quoted-col {
-            height: 100%;
-            padding-top: 170%;
+    @media screen and (max-width: 700px) {
+        .quoted-text {
+            font-size: 12pt;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .quoted-text {
+            font-size: 11pt;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .text-row {
+            margin-top: 3.5in;
+        }
+
+        .quoted-text {
+            text-align: left !important;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        .quoted-text {
+            font-size: 10pt;
         }
     }
 </style>

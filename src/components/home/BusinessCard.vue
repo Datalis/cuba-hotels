@@ -111,7 +111,7 @@
 
         .card-title-container {
             margin-top: 0.3in;
-            margin-bottom: 0in;
+            margin-bottom: 0;
         }
 
         .more-btn {

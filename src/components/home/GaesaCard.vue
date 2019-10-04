@@ -1,28 +1,28 @@
 <template>
     <v-row align="end" justify="start">
-        <v-col cols="1" sm="2" md=2 lg="2" xl="2"
+        <v-col cols="1" sm="1" md=2 lg="2" xl="2"
                class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
             <div class="horizontal-line"></div>
         </v-col>
-        <v-col cols="12" sm="10" md="10" lg="10" xl="10"
+        <v-col cols="12" sm="11" md="10" lg="10" xl="10"
                class="pl-8  pr-0 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
                 <v-row no-gutters style="height: min-content !important;">
-                    <v-col cols="8" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
+                    <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
                         <div class="card-title-container">
-                            <v-card-title class="text-left pt-6  pb-0">
+                            <v-card-title class="text-left pt-6  pl-0 pb-0">
                                 <h1 class="card-title text-uppercase">
                                     el esquema
                                 </h1>
                             </v-card-title>
-                            <v-card-title class="text-left pt-0">
+                            <v-card-title class="text-left pl-0 pt-0">
                                 <h1 class="card-title text-uppercase">
                                     GAESA
                                 </h1>
-                                <h1 class="card-title text-uppercase">
+                                <h1 class="card-title pl-0 text-uppercase">
                                     para construir
                                 </h1>
-                                <h1 class="card-title text-uppercase">
+                                <h1 class="card-title pl-0 text-uppercase">
                                     hoteles
                                 </h1>
                             </v-card-title>
@@ -46,11 +46,10 @@
                             </router-link>
                         </v-card-actions>
                     </v-col>
-                    <v-col cols="4" sm="6" md="6" lg="6" xl="6" style="position: relative;">
+                    <v-col cols="5" sm="5" md="5" lg="5" xl="5" class="img-col" style="position: relative;">
                         <div class="gray-panel">
                         </div>
-                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%" width="5.4in"
-                               aspect-ratio="1"
+                        <v-img class="d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex" height="100%"
                                :src="require('@/assets/home/gaesa.jpg')">
                         </v-img>
                     </v-col>
@@ -67,26 +66,17 @@
 </script>
 
 <style scoped>
-    .horizontal-line {
-        width: 80%;
-        /*height: 100%;*/
-        border-bottom: 4px solid black;
-        border-radius: 4px;
-        display: inline-block;
-    }
-
     .card-title-container {
         margin-top: 0.3in;
         margin-bottom: 0.3in;
+        padding-left: 12px;
     }
 
     .card-title {
-        /*margin-bottom: 50px;*/
         font-size: 25pt;
         line-height: 30pt;
         letter-spacing: 3px;
         color: #040404;
-        /*font-weight: 800;*/
         height: max-content;
         font-family: Montserrat-ExtraBold;
     }
@@ -100,6 +90,13 @@
         padding-right: 40px !important
     }
 
+    .horizontal-line {
+        width: 80%;
+        border-bottom: 4px solid black;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
     .title-divider {
         margin-left: 16px;
         width: 40%;
@@ -107,12 +104,7 @@
         border-radius: 4px
     }
 
-    .card-text-container {
-        /*margin-top: 20px;*/
-    }
-
     .more-btn {
-        margin-top: 25px;
         margin-bottom: 50px;
         text-transform: uppercase;
         color: var(--primary-color);
@@ -130,13 +122,7 @@
     }
 
     @media screen and (max-width: 1264px) {
-        .card-title {
-            font-size: 30pt;
-            line-height: 38pt;
-        }
-
         .card-title-container {
-            margin-top: 0.3in;
             margin-bottom: 0;
         }
 
@@ -146,10 +132,27 @@
         }
     }
 
+    @media screen and (max-width: 1024px) {
+        .card-title-container {
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 23pt;
+            line-height: 25pt;
+        }
+
+        .card-text {
+            line-height: 18pt;
+            font-size: 14pt;
+            padding-bottom: 0 !important;
+        }
+    }
+
     @media screen and (max-width: 960px) {
         .card-title {
-            font-size: 22.28pt;
-            line-height: 30.28pt;
+            font-size: 23pt;
+            line-height: 25pt;
         }
 
         .card-title-container {
@@ -158,7 +161,7 @@
         }
 
         .card-text-container {
-            margin-top: 0px;
+            margin-top: 0;
             padding-bottom: 0;
         }
 
@@ -168,64 +171,152 @@
         }
 
         .more-btn {
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 30px;
             font-size: 13.3pt;
         }
     }
 
-    @media screen and (max-width: 599px) {
+    @media screen and (max-width: 800px) {
+        .card-title-container {
+            padding-left: 0 !important;
+        }
+
+        .card-text {
+            padding-left: 0 !important;
+        }
+
+        .btn-container {
+            padding-left: 0 !important;
+        }
+
+        .title-divider {
+            margin-left: 5px;
+        }
+    }
+
+    @media screen and (max-width: 699px) {
+        .card-col {
+            flex: 0 0 48%;
+            max-width: 48%;
+        }
+
+        .img-col {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        .card-col {
+            flex: 0 0 55%;
+            max-width: 55%;
+        }
+
+        .img-col {
+            flex: 0 0 45%;
+            max-width: 45%;
+        }
+
+        .card-title-container {
+            padding-left: 10px !important;
+        }
+
+        .card-text {
+            padding-left: 10px !important;
+        }
+
+        .btn-container {
+            padding-left: 8px !important;
+        }
+
+        .title-divider {
+            margin-left: 10px;
+        }
+
         .gray-panel {
-            width: 80%;
+            width: 55%;
         }
     }
 
     @media screen and (max-width: 500px) {
         .card-title {
-            font-size: 20.28pt;
-            line-height: 22.28pt;
+            font-size: 19.28pt;
+            line-height: 21.28pt;
         }
 
         .card-title-container {
             margin-top: 0.236in;
-            margin-bottom: 0.3in;
+            margin-bottom: 10px;
         }
 
         .card-text {
-            line-height: 16pt;
-            font-size: 12pt;
+            line-height: 13pt;
+            font-size: 10pt;
+            padding-top: 0 !important;
         }
 
         .more-btn {
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 10px;
             font-size: 10.3pt;
         }
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 450px) {
+        .card-col {
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+
+        .img-col {
+            flex: 0 0 40%;
+            max-width: 40%;
+        }
+
+        .gray-panel {
+            width: 60%;
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        .card-col {
+            flex: 0 0 66%;
+            max-width: 66%;
+        }
+
+        .img-col {
+            flex: 0 0 34%;
+            max-width: 34%;
+        }
+
         .card-title {
-            font-size: 20.28pt;
-            line-height: 22.28pt;
+            font-size: 15.28pt;
+            line-height: 18.28pt;
         }
 
         .card-title-container {
-            margin-top: 0.236in;
-            margin-bottom: 0.3in;
-        }
-
-        .card-text {
-            line-height: 16pt;
-            font-size: 12pt;
-        }
-
-        .card-title {
-            font-size: 20.28pt;
-            line-height: 20.28pt;
+            padding-bottom: 0;
         }
 
         .gray-panel {
             width: 80%;
+        }
+    }
+
+    @media screen and (max-width: 360px) {
+        .card-col {
+            flex: 0 0 76%;
+            max-width: 76%;
+        }
+
+        .img-col {
+            flex: 0 0 22%;
+            max-width: 22%;
+        }
+
+        .gray-panel {
+            width: 150%;
         }
     }
 </style>

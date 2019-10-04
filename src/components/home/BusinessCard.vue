@@ -208,6 +208,10 @@
             flex: 0 0 45%;
             max-width: 45%;
         }
+
+        .gray-panel {
+            width: 60%;
+        }
     }
     @media screen and (max-width: 500px) {
         .card-title {

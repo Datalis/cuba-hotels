@@ -95,6 +95,7 @@
     @media screen and (max-width: 320px) {
         .quoted-text {
             font-size: 10pt;
+            margin-left: 10px;
         }
     }
 

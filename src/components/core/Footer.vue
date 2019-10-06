@@ -2,7 +2,7 @@
     <v-footer padless class="footer-background">
         <v-row justify="center">
             <v-col cols="12" sm="3" md="3" lg="3" xl="3" class="pa-0" align="center">
-                <v-img class="footer-img" height="100%" :src="require('@/assets/home/footer.png')">
+                <v-img class="footer-img" height="100%" :src="require('@/assets/home/footer.jpg')">
                     <v-row align="center"  class="networks-container pl-sm-4">
                         <v-col cols="12" justify="center">
                             <v-row align="center" justify="center">

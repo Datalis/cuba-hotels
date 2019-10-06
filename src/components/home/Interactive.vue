@@ -255,7 +255,7 @@
         <!--- banner -->
         <v-row class="background-img" align="start">
             <v-col cols="3" sm="3" md="3" lg="4" xl="4">
-                <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.png')"/>
+                <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.jpg')"/>
             </v-col>
             <v-col cols="7" sm="7" md="7" lg="6" xl="6" class="title-component-container">
                 <h1 class="map-title text-uppercase">Hoteles</h1>

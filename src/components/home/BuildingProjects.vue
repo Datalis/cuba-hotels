@@ -49,7 +49,7 @@
             </v-list>
         </v-col>
         <v-col cols="1" sm="5" md="5" lg="5" xl="5" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
-            <v-img height="7in" :src="require('@/assets/home/activep.png')">
+            <v-img height="7in" :src="require('@/assets/home/activep.jpg')">
                 <transition name="slide-fade">
                     <v-card class="text-uppercase" v-show="showDetails"
                             style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">

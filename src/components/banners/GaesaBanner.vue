@@ -2,7 +2,7 @@
     <div style="width: 100%">
         <v-row no-gutters>
             <v-col cols="7">
-                <v-img :src="require('@/assets/banners/banner.png')" min-height="400px" height="100%"></v-img>
+                <v-img :src="require('@/assets/banners/gaesa_banner.jpg')" min-height="400px" height="100%"></v-img>
             </v-col>
             <v-col cols="5" style="position: relative">
                 <v-img :src="require('@/assets/home/gaesa.jpg')" height="60%"></v-img>

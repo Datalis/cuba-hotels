@@ -23,10 +23,23 @@
                     <v-icon color="white" @click="shiftRight">keyboard_arrow_right</v-icon>
                 </v-col>
             </v-row>
-            <span @click="setType('Nuevo')"
-                  :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>
-            <span @click="setType('Ampliación')"
-                  :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones</span>
+            <v-checkbox v-model="ptype" class="gray-check" style="margin-right: 50px; width: max-content; display: inline-block" value="Nuevo">
+                <template v-slot:label>
+                    <div :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">
+                        Nuevos
+                    </div>
+                </template>
+            </v-checkbox>
+            <v-checkbox v-model="ptype" class="gray-check" style="width: max-content; display: inline-block" value="Ampliación">
+                <template v-slot:label>
+                    <div :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación'}">
+                        Ampliaciones / Remodelaciones
+                    </div>
+                </template>
+            </v-checkbox>
+<!--            <span @click="setType('Nuevo')" :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>-->
+<!--            <span @click="setType('Ampliación')"-->
+<!--                  :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones / Remodelaciones</span>-->
             <v-list ref="list" class="project-list pt-0 mt-3" max-height="3.5in" max-width="90%">
                 <div :key="i" :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
                     <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3"
@@ -245,6 +258,12 @@
 </script>
 
 <style scoped>
+    .check-label {
+        font-family: Montserrat-Regular;
+        font-size: 11pt;
+        color: #171716;
+    }
+
     .container-row {
         background-color: #282828;
         margin-top: 150px
@@ -304,7 +323,6 @@
         cursor: pointer;
         font-family: Montserrat-Light;
         color: #4d4d4c;
-        text-decoration: underline;
     }
 
     .filter-span-active {
@@ -363,5 +381,20 @@
         /* .slide-fade-leave-active below version 2.1.8 */
     {
         transform: translateX(-20px);
+    }
+</style>
+<style>
+    .gray-check i {
+        align-self: center;
+        color: #4d4d4c !important;
+        border-radius: 0 !important;
+        font-size: 20px !important;
+    }
+
+    .gray-check.v-input--is-label-active i {
+        color: #cc983c !important;
+        background-color: #cc983c;
+        font-size: 16px !important;
+        margin-left: 2px;
     }
 </style>

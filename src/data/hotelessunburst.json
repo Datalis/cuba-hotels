@@ -1,0 +1,893 @@
+[
+    {
+        "id": "0",
+        "name": "Hoteles de Cuba",
+        "parent": ""
+    },
+    {
+        "id": "1",
+        "name": "Grupo de turismo Gaviota SA",
+        "parent": "0"
+    },
+    {
+        "id": "2",
+        "name": "La Habana",
+        "parent": "1"
+    },
+    {
+        "id": "3",
+        "name": "5E+",
+        "parent": "2",
+        "value": 3
+    },
+    {
+        "id": "48",
+        "name": "4E",
+        "parent": "2",
+        "value": 18
+    },
+    {
+        "id": "51",
+        "name": "3E",
+        "parent": "2",
+        "value": 4
+    },
+    {
+        "id": "105",
+        "name": "5E",
+        "parent": "2",
+        "value": 6
+    },
+    {
+        "id": "318",
+        "name": "2E",
+        "parent": "2",
+        "value": 1
+    },
+    {
+        "id": "5",
+        "name": "Villa Clara",
+        "parent": "1"
+    },
+    {
+        "id": "6",
+        "name": "5E",
+        "parent": "5",
+        "value": 17
+    },
+    {
+        "id": "24",
+        "name": "5E+",
+        "parent": "5",
+        "value": 2
+    },
+    {
+        "id": "141",
+        "name": "4E",
+        "parent": "5",
+        "value": 2
+    },
+    {
+        "id": "180",
+        "name": "3E",
+        "parent": "5",
+        "value": 1
+    },
+    {
+        "id": "14",
+        "name": "Matanzas",
+        "parent": "1"
+    },
+    {
+        "id": "15",
+        "name": "5E",
+        "parent": "14",
+        "value": 14
+    },
+    {
+        "id": "96",
+        "name": "4E",
+        "parent": "14",
+        "value": 2
+    },
+    {
+        "id": "38",
+        "name": "Ciego de Ávila",
+        "parent": "1"
+    },
+    {
+        "id": "39",
+        "name": "5E",
+        "parent": "38",
+        "value": 5
+    },
+    {
+        "id": "42",
+        "name": "4E",
+        "parent": "38",
+        "value": 3
+    },
+    {
+        "id": "186",
+        "name": "3E",
+        "parent": "38",
+        "value": 1
+    },
+    {
+        "id": "44",
+        "name": "Holguín",
+        "parent": "1"
+    },
+    {
+        "id": "45",
+        "name": "5E",
+        "parent": "44",
+        "value": 3
+    },
+    {
+        "id": "57",
+        "name": "4E",
+        "parent": "44",
+        "value": 6
+    },
+    {
+        "id": "147",
+        "name": "5E+",
+        "parent": "44",
+        "value": 1
+    },
+    {
+        "id": "219",
+        "name": "2E",
+        "parent": "44",
+        "value": 1
+    },
+    {
+        "id": "167",
+        "name": "Pinar del Río",
+        "parent": "1"
+    },
+    {
+        "id": "168",
+        "name": "3E",
+        "parent": "167",
+        "value": 2
+    },
+    {
+        "id": "188",
+        "name": "Sancti Spíritus",
+        "parent": "1"
+    },
+    {
+        "id": "189",
+        "name": "4E",
+        "parent": "188",
+        "value": 1
+    },
+    {
+        "id": "192",
+        "name": "3E",
+        "parent": "188",
+        "value": 2
+    },
+    {
+        "id": "198",
+        "name": "2E",
+        "parent": "188",
+        "value": 2
+    },
+    {
+        "id": "221",
+        "name": "Santiago de Cuba",
+        "parent": "1"
+    },
+    {
+        "id": "222",
+        "name": "3E",
+        "parent": "221",
+        "value": 2
+    },
+    {
+        "id": "227",
+        "name": "Guantánamo",
+        "parent": "1"
+    },
+    {
+        "id": "228",
+        "name": "4E",
+        "parent": "227",
+        "value": 1
+    },
+    {
+        "id": "231",
+        "name": "3E",
+        "parent": "227",
+        "value": 5
+    },
+    {
+        "id": "246",
+        "name": "1E",
+        "parent": "227",
+        "value": 1
+    },
+    {
+        "id": "319",
+        "name": "Grupo empresarial Islazul SA",
+        "parent": "0"
+    },
+    {
+        "id": "320",
+        "name": "Camagüey",
+        "parent": "319"
+    },
+    {
+        "id": "321",
+        "name": "3E",
+        "parent": "320",
+        "value": 2
+    },
+    {
+        "id": "375",
+        "name": "2E",
+        "parent": "320",
+        "value": 5
+    },
+    {
+        "id": "492",
+        "name": "SE",
+        "parent": "320",
+        "value": 2
+    },
+    {
+        "id": "504",
+        "name": "1E",
+        "parent": "320",
+        "value": 2
+    },
+    {
+        "id": "326",
+        "name": "Pinar del Río",
+        "parent": "319"
+    },
+    {
+        "id": "327",
+        "name": "3E",
+        "parent": "326",
+        "value": 2
+    },
+    {
+        "id": "330",
+        "name": "2E",
+        "parent": "326",
+        "value": 1
+    },
+    {
+        "id": "332",
+        "name": "Matanzas",
+        "parent": "319"
+    },
+    {
+        "id": "333",
+        "name": "3E",
+        "parent": "332",
+        "value": 4
+    },
+    {
+        "id": "342",
+        "name": "2E",
+        "parent": "332",
+        "value": 4
+    },
+    {
+        "id": "354",
+        "name": "1E",
+        "parent": "332",
+        "value": 2
+    },
+    {
+        "id": "423",
+        "name": "SE",
+        "parent": "332",
+        "value": 4
+    },
+    {
+        "id": "356",
+        "name": "Villa Clara",
+        "parent": "319"
+    },
+    {
+        "id": "357",
+        "name": "3E",
+        "parent": "356",
+        "value": 1
+    },
+    {
+        "id": "360",
+        "name": "2E",
+        "parent": "356",
+        "value": 2
+    },
+    {
+        "id": "365",
+        "name": "Sancti Spíritus",
+        "parent": "319"
+    },
+    {
+        "id": "366",
+        "name": "4E",
+        "parent": "365",
+        "value": 3
+    },
+    {
+        "id": "372",
+        "name": "2E",
+        "parent": "365",
+        "value": 3
+    },
+    {
+        "id": "477",
+        "name": "3E",
+        "parent": "365",
+        "value": 1
+    },
+    {
+        "id": "383",
+        "name": "Granma",
+        "parent": "319"
+    },
+    {
+        "id": "384",
+        "name": "2E",
+        "parent": "383",
+        "value": 5
+    },
+    {
+        "id": "525",
+        "name": "4E",
+        "parent": "383",
+        "value": 2
+    },
+    {
+        "id": "531",
+        "name": "3E",
+        "parent": "383",
+        "value": 1
+    },
+    {
+        "id": "389",
+        "name": "Santiago de Cuba",
+        "parent": "319"
+    },
+    {
+        "id": "390",
+        "name": "3E",
+        "parent": "389",
+        "value": 4
+    },
+    {
+        "id": "549",
+        "name": "2E",
+        "parent": "389",
+        "value": 5
+    },
+    {
+        "id": "395",
+        "name": "La Habana",
+        "parent": "319"
+    },
+    {
+        "id": "396",
+        "name": "3E",
+        "parent": "395",
+        "value": 5
+    },
+    {
+        "id": "399",
+        "name": "2E",
+        "parent": "395",
+        "value": 14
+    },
+    {
+        "id": "618",
+        "name": "1E",
+        "parent": "395",
+        "value": 4
+    },
+    {
+        "id": "419",
+        "name": "Artemisa",
+        "parent": "319"
+    },
+    {
+        "id": "420",
+        "name": "2E",
+        "parent": "419",
+        "value": 1
+    },
+    {
+        "id": "440",
+        "name": "Cienfuegos",
+        "parent": "319"
+    },
+    {
+        "id": "441",
+        "name": "2E",
+        "parent": "440",
+        "value": 3
+    },
+    {
+        "id": "449",
+        "name": "Ciego de Ávila",
+        "parent": "319"
+    },
+    {
+        "id": "450",
+        "name": "2E",
+        "parent": "449",
+        "value": 6
+    },
+    {
+        "id": "468",
+        "name": "1E",
+        "parent": "449",
+        "value": 2
+    },
+    {
+        "id": "485",
+        "name": "Las Tunas",
+        "parent": "319"
+    },
+    {
+        "id": "486",
+        "name": "3E",
+        "parent": "485",
+        "value": 1
+    },
+    {
+        "id": "489",
+        "name": "2E",
+        "parent": "485",
+        "value": 1
+    },
+    {
+        "id": "509",
+        "name": "Holguín",
+        "parent": "319"
+    },
+    {
+        "id": "510",
+        "name": "3E",
+        "parent": "509",
+        "value": 3
+    },
+    {
+        "id": "519",
+        "name": "2E",
+        "parent": "509",
+        "value": 2
+    },
+    {
+        "id": "563",
+        "name": "Guantánamo",
+        "parent": "319"
+    },
+    {
+        "id": "564",
+        "name": "3E",
+        "parent": "563",
+        "value": 2
+    },
+    {
+        "id": "570",
+        "name": "2E",
+        "parent": "563",
+        "value": 4
+    },
+    {
+        "id": "628",
+        "name": "Grupo empresarial Palco",
+        "parent": "0"
+    },
+    {
+        "id": "629",
+        "name": "La Habana",
+        "parent": "628"
+    },
+    {
+        "id": "630",
+        "name": "4E",
+        "parent": "629",
+        "value": 1
+    },
+    {
+        "id": "631",
+        "name": "Grupo hotelero Cubanacán SA",
+        "parent": "0"
+    },
+    {
+        "id": "632",
+        "name": "Matanzas",
+        "parent": "631"
+    },
+    {
+        "id": "633",
+        "name": "4E",
+        "parent": "632",
+        "value": 9
+    },
+    {
+        "id": "654",
+        "name": "5E",
+        "parent": "632",
+        "value": 4
+    },
+    {
+        "id": "657",
+        "name": "3E",
+        "parent": "632",
+        "value": 1
+    },
+    {
+        "id": "774",
+        "name": "SE",
+        "parent": "632",
+        "value": 1
+    },
+    {
+        "id": "786",
+        "name": "2E",
+        "parent": "632",
+        "value": 4
+    },
+    {
+        "id": "638",
+        "name": "La Habana",
+        "parent": "631"
+    },
+    {
+        "id": "639",
+        "name": "4E",
+        "parent": "638",
+        "value": 7
+    },
+    {
+        "id": "642",
+        "name": "3E",
+        "parent": "638",
+        "value": 4
+    },
+    {
+        "id": "696",
+        "name": "5E",
+        "parent": "638",
+        "value": 3
+    },
+    {
+        "id": "945",
+        "name": "2E",
+        "parent": "638",
+        "value": 2
+    },
+    {
+        "id": "650",
+        "name": "Mayabeque",
+        "parent": "631"
+    },
+    {
+        "id": "651",
+        "name": "4E",
+        "parent": "650",
+        "value": 1
+    },
+    {
+        "id": "659",
+        "name": "Sancti Spíritus",
+        "parent": "631"
+    },
+    {
+        "id": "660",
+        "name": "4E",
+        "parent": "659",
+        "value": 3
+    },
+    {
+        "id": "663",
+        "name": "3E",
+        "parent": "659",
+        "value": 4
+    },
+    {
+        "id": "675",
+        "name": "5E",
+        "parent": "659",
+        "value": 1
+    },
+    {
+        "id": "738",
+        "name": "2E",
+        "parent": "659",
+        "value": 3
+    },
+    {
+        "id": "671",
+        "name": "Ciego de Ávila",
+        "parent": "631"
+    },
+    {
+        "id": "672",
+        "name": "4E",
+        "parent": "671",
+        "value": 4
+    },
+    {
+        "id": "677",
+        "name": "Holguín",
+        "parent": "631"
+    },
+    {
+        "id": "678",
+        "name": "4E",
+        "parent": "677",
+        "value": 7
+    },
+    {
+        "id": "744",
+        "name": "3E",
+        "parent": "677",
+        "value": 2
+    },
+    {
+        "id": "686",
+        "name": "Santiago de Cuba",
+        "parent": "631"
+    },
+    {
+        "id": "687",
+        "name": "4E",
+        "parent": "686",
+        "value": 9
+    },
+    {
+        "id": "753",
+        "name": "3E",
+        "parent": "686",
+        "value": 4
+    },
+    {
+        "id": "698",
+        "name": "Villa Clara",
+        "parent": "631"
+    },
+    {
+        "id": "699",
+        "name": "4E",
+        "parent": "698",
+        "value": 9
+    },
+    {
+        "id": "822",
+        "name": "3E",
+        "parent": "698",
+        "value": 3
+    },
+    {
+        "id": "725",
+        "name": "Pinar del Río",
+        "parent": "631"
+    },
+    {
+        "id": "726",
+        "name": "3E",
+        "parent": "725",
+        "value": 4
+    },
+    {
+        "id": "765",
+        "name": "4E",
+        "parent": "725",
+        "value": 1
+    },
+    {
+        "id": "734",
+        "name": "Artemisa",
+        "parent": "631"
+    },
+    {
+        "id": "735",
+        "name": "3E",
+        "parent": "734",
+        "value": 1
+    },
+    {
+        "id": "771",
+        "name": "4E",
+        "parent": "734",
+        "value": 1
+    },
+    {
+        "id": "740",
+        "name": "Las Tunas",
+        "parent": "631"
+    },
+    {
+        "id": "741",
+        "name": "4E",
+        "parent": "740",
+        "value": 1
+    },
+    {
+        "id": "857",
+        "name": "Camagüey",
+        "parent": "631"
+    },
+    {
+        "id": "858",
+        "name": "4E",
+        "parent": "857",
+        "value": 7
+    },
+    {
+        "id": "879",
+        "name": "3E",
+        "parent": "857",
+        "value": 3
+    },
+    {
+        "id": "902",
+        "name": "Granma",
+        "parent": "631"
+    },
+    {
+        "id": "903",
+        "name": "3E",
+        "parent": "902",
+        "value": 2
+    },
+    {
+        "id": "909",
+        "name": "2E",
+        "parent": "902",
+        "value": 1
+    },
+    {
+        "id": "949",
+        "name": "Grupo hotelero Gran Caribe SA",
+        "parent": "0"
+    },
+    {
+        "id": "950",
+        "name": "Ciego de Ávila",
+        "parent": "949"
+    },
+    {
+        "id": "951",
+        "name": "5E",
+        "parent": "950",
+        "value": 3
+    },
+    {
+        "id": "981",
+        "name": "4E",
+        "parent": "950",
+        "value": 4
+    },
+    {
+        "id": "953",
+        "name": "Matanzas",
+        "parent": "949"
+    },
+    {
+        "id": "954",
+        "name": "5E",
+        "parent": "953",
+        "value": 2
+    },
+    {
+        "id": "957",
+        "name": "4E",
+        "parent": "953",
+        "value": 11
+    },
+    {
+        "id": "1050",
+        "name": "3E",
+        "parent": "953",
+        "value": 3
+    },
+    {
+        "id": "971",
+        "name": "La Habana",
+        "parent": "949"
+    },
+    {
+        "id": "972",
+        "name": "3E",
+        "parent": "971",
+        "value": 10
+    },
+    {
+        "id": "990",
+        "name": "4E",
+        "parent": "971",
+        "value": 7
+    },
+    {
+        "id": "993",
+        "name": "5E",
+        "parent": "971",
+        "value": 2
+    },
+    {
+        "id": "998",
+        "name": "Isla de la Juventud",
+        "parent": "949"
+    },
+    {
+        "id": "999",
+        "name": "4E",
+        "parent": "998",
+        "value": 5
+    },
+    {
+        "id": "1062",
+        "name": "3E",
+        "parent": "998",
+        "value": 4
+    },
+    {
+        "id": "1107",
+        "name": "2E",
+        "parent": "998",
+        "value": 3
+    },
+    {
+        "id": "1001",
+        "name": "Cienfuegos",
+        "parent": "949"
+    },
+    {
+        "id": "1002",
+        "name": "5E",
+        "parent": "1001",
+        "value": 1
+    },
+    {
+        "id": "1005",
+        "name": "4E",
+        "parent": "1001",
+        "value": 5
+    },
+    {
+        "id": "1065",
+        "name": "3E",
+        "parent": "1001",
+        "value": 2
+    },
+    {
+        "id": "1082",
+        "name": "Mayabeque",
+        "parent": "949"
+    },
+    {
+        "id": "1083",
+        "name": "3E",
+        "parent": "1082",
+        "value": 2
+    },
+    {
+        "id": "1141",
+        "name": "Servicios Médicos cubanos",
+        "parent": "0"
+    },
+    {
+        "id": "1142",
+        "name": "La Habana",
+        "parent": "1141"
+    },
+    {
+        "id": "1143",
+        "name": "3E",
+        "parent": "1142",
+        "value": 1
+    }
+]

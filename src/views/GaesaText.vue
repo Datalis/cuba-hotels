@@ -21,7 +21,7 @@
                         <p style="font-style: italic" v-if="i===43">Infografia</p>
                         <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===50">¿Para qué
                             construir?</p>
-                        <p style="font-style: italic" v-if="i===61">grafico</p>
+                        <ocupacion-habitaciones v-if="i===61"></ocupacion-habitaciones>
                     </div>
 
                 </div>
@@ -79,6 +79,8 @@
     import GaesaBanner from '@/components/banners/GaesaBanner'
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
+    import OcupacionHabitaciones from "@/components/graphics/OcupacionHabitaciones";
+
 
     export default {
         name: "GaesaText",
@@ -87,7 +89,7 @@
                 textos: 'gaesa'
             })
         },
-        components: {VideoFrame, GaesaBanner},
+        components: {VideoFrame, GaesaBanner, OcupacionHabitaciones},
         data() {
             return {
                 sidebarFixed: false,

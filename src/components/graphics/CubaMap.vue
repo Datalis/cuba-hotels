@@ -1,9 +1,8 @@
 <template>
     <div>
-        <div class="map-date">
-            Agosto 2019
-        </div>
-        <Highmaps style="margin-top: -50px" ref="mapChartCuba" :options="chartOptions"/>
+
+        <Highmaps class="map" style=" margin-top: -50px; min-width: 500px !important;" ref="mapChartCuba"
+                  :options="chartOptions"/>
     </div>
 </template>
 
@@ -113,7 +112,7 @@
                         ["cu-vc", this.hotels.filter(h => h.provincia.nombre === 'Villa Clara').length],
                         // ["cu-5812",999],
                         ["cu-ij", this.hotels.filter(h => h.provincia.nombre === 'Isla de la Juventud').length],
-                        ["cu-ss",this.hotels.filter(h => h.provincia.nombre === 'Sancti Spíritus').length],
+                        ["cu-ss", this.hotels.filter(h => h.provincia.nombre === 'Sancti Spíritus').length],
                         ["cu-ca", this.hotels.filter(h => h.provincia.nombre === 'Ciego de Ávila').length],
                         ["cu-cm", this.hotels.filter(h => h.provincia.nombre === 'Camagüey').length],
                         ["cu-ch", this.hotels.filter(h => h.provincia.nombre === 'La Habana').length],
@@ -121,7 +120,7 @@
                         ["cu-gu", this.hotels.filter(h => h.provincia.nombre === 'Guantánamo').length],
                         ["cu-gr", this.hotels.filter(h => h.provincia.nombre === 'Granma').length],
                         ["cu-lt", this.hotels.filter(h => h.provincia.nombre === 'Las Tunas').length],
-                        ["cu-sc",this.hotels.filter(h => h.provincia.nombre === 'Santiago de Cuba').length],
+                        ["cu-sc", this.hotels.filter(h => h.provincia.nombre === 'Santiago de Cuba').length],
                         ["cu-mq", this.hotels.filter(h => h.provincia.nombre === 'Mayabeque').length],
                         ["cu-pr", this.hotels.filter(h => h.provincia.nombre === 'Pinar del Río').length]
 
@@ -152,62 +151,7 @@
         color: #42b983;
     }
 
-    .map-date {
-        font-family: Montserrat-Light;
-        font-size: 27.93pt;
-        left: 78%;
-        position: relative;
-    }
 
-    @media screen and (max-width: 1024px) {
-        .map-date {
-            left: 70%;
-        }
-    }
-
-    @media screen and (max-width: 960px) {
-        .map-date {
-            left: 60%;
-        }
-    }
-
-    @media screen and (max-width: 600px) {
-        .map-date {
-            font-size: 22.93pt;
-            margin-bottom: -40px;
-            left: 70%;
-        }
-    }
-
-    @media screen and (max-width: 500px) {
-        .map-date {
-            margin-bottom: -100px;
-            font-size: 20.93pt;
-            left: 40%;
-        }
-    }
-
-    @media screen and (max-width: 450px) {
-        .map-date {
-            left: 30%;
-        }
-    }
-
-    @media screen and (max-width: 400px) {
-        .map-date {
-            margin-bottom: -100px;
-            font-size: 21.93pt;
-            /*left: 15%;*/
-        }
-    }
-
-    @media screen and (max-width: 320px) {
-        .map-date {
-            margin-bottom: -100px;
-            font-size: 15.93pt;
-            /*left: 20%;*/
-        }
-    }
 
 </style>
 

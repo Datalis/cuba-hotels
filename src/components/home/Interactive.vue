@@ -11,6 +11,11 @@
             <v-col cols="8" sm="10" md="8" lg="8" xl="8" class="main-container">
                 <v-row>
                     <v-col cols="12">
+                        <div class="map-date">
+                            Agosto 2019
+                        </div>
+                    </v-col>
+                    <v-col cols="12" class="map-col">
                         <cuba-map class="cuba-map"></cuba-map>
                     </v-col>
                 </v-row>
@@ -450,6 +455,13 @@
         display: none;
     }
 
+    .map-date {
+        font-family: Montserrat-Light;
+        font-size: 27.93pt;
+        left: 78%;
+        position: relative;
+    }
+
     @media screen and (max-width: 1024px) {
         .content-row {
             margin-top: 180px;
@@ -471,6 +483,10 @@
         .filters-title {
             font-size: 12pt;
         }
+
+        .map-date {
+            left: 70%;
+        }
     }
 
     @media screen and (max-width: 960px) {
@@ -491,6 +507,11 @@
             line-height: 19pt;
             letter-spacing: 2px;
         }
+
+        .map-date {
+            left: 60%;
+        }
+
     }
 
     @media screen and (max-width: 800px) {
@@ -552,6 +573,12 @@
         .group-title {
             font-size: 11pt;
         }
+
+        .map-date {
+            font-size: 22.93pt;
+            margin-bottom: -40px;
+            left: 70%;
+        }
     }
 
     @media screen and (max-width: 599px) {
@@ -571,76 +598,74 @@
             padding-left: 24px;
         }
 
-    }
-
-    @media screen and (max-width: 500px) {
-        .group-filter-container {
-            padding-bottom: 0;
+        .map-col{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            height: 300px;
         }
 
-        .group-title {
-            font-size: 12pt;
-        }
-
-        .check-label {
-            font-size: 9pt;
-        }
-
-        .map-title {
-            letter-spacing: 2px;
-            font-size: 21.98pt;
-        }
-
-        .content-row {
-            margin-top: 140px;
-        }
-
-        .statistics-value {
-            font-size: 30.04pt;
-            letter-spacing: 3px;
-            line-height: 1.2pt;
-        }
-
-        .statistics-title {
-            font-size: 13.71pt;
-            letter-spacing: 1px;
+        .map-date {
+            font-size: 19.93pt;
+            margin-bottom: -40px;
+            left: 70%;
         }
 
         .statistics-title-row {
-            margin-top: -100px;
+            margin-top: 10px;
+        }
+    }
+
+    @media screen and (max-width: 500px) {
+        .map-title {
+            font-size: 19.28pt;
+            line-height: 21.28pt;
+            letter-spacing: 1px;
         }
 
-        .cuba-map {
-            left: 50px;
+        .content-row {
+            margin-top: 100px;
+        }
+
+        .title-component-container{
+            padding-left: 0 !important;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        .map-date {
+            font-size: 15.93pt;
+            margin-bottom: -40px;
+            left: 70%;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .statistics-title {
+            font-size: 10pt;
+            line-height: 11pt;
+            letter-spacing: 1px;
+        }
+
+        .statistics-value {
+            font-size: 20pt;
+            line-height: 20pt;
+            letter-spacing: 8px;
+            color: #cc983c;
+        }
+
+        .cat-icon {
+            font-size: 15px;
+        }
+
+        .map-date {
+            font-size: 13.93pt;
         }
     }
 
     @media screen and (max-width: 320px) {
-        .title-component-container {
-            padding-left: 0 !important;
+        .cat-icon {
+            font-size: 12px;
         }
-
-        .map-title {
-            letter-spacing: 1px;
-            font-size: 16.98pt;
-        }
-
-        .content-row {
-            margin-top: 110px;
-        }
-
-        .statistics-value {
-            font-size: 20.04pt;
-            letter-spacing: 3px;
-            line-height: 1.2pt;
-        }
-
-        .statistics-title {
-            font-size: 10.71pt;
-            letter-spacing: 1px;
-        }
-
-
     }
 </style>
 <style>

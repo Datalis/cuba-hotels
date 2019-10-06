@@ -95,26 +95,27 @@
                                 v-model="showInfoDialog"
                                 width="max-content"
                                 attach="#list">
-                            <v-card style="padding: 60px 32px 60px ; background-color: #cc983c; width: 400px; border-radius:0;">
+                            <v-card style="padding: 20px 32px 10px ; background-color: #cc983c; width: 400px; border-radius:0;">
                                 <v-icon style="margin-left: 88%" color="black" @click="showInfoDialog=false">clear
+
                                 </v-icon>
-                                <v-card-title class="text-uppercase">
-                                    <div style="width: 100%; font-family: Montserrat-Bold">
-                                        {{hotel.nombre}}
-                                    </div>
-                                </v-card-title>
-                                <v-card-text class="text-uppercase" style="font-family: Montserrat-Light;">
-                                    <p> {{hotel.habitaciones}} habitaciones /
-                                        {{hotel.provincia.nombre}} /
-                                        {{hotel.polo}} /
-                                        {{hotel.oper_cu}} /
-                                        {{hotel.oper_ext}} / {{hotel.modalidad}}</p>
-                                </v-card-text>
                                 <v-card-actions>
                                     <div style="width: max-content; margin-left: auto; margin-right: auto">
                                         <stars color="white" :stars="getCat(hotel)" :plus="hotel.cat.plus"></stars>
                                     </div>
                                 </v-card-actions>
+                                <v-card-title class="text-uppercase text-center">
+                                    <div style="width: 100%; font-family: Montserrat-Bold; font-size: 13pt !important; line-height: 16pt">
+                                        {{hotel.nombre}}
+                                    </div>
+                                    <p class="text-center mb-0" style="width: 100%; font-family: Montserrat-Light; font-size: 13pt !important;  line-height: 16pt"> {{hotel.habitaciones}} habitaciones</p>
+                                    <p class="text-center" style="width: 100%; font-family: Montserrat-Light; font-size: 13pt !important;  line-height: 16pt"> {{hotel.modalidad}}</p>
+                                </v-card-title>
+                                <v-card-text style="font-family: Montserrat-Bold; color: #000;">
+                                    <p style="font-size: 13pt !important;  line-height: 16pt"><span style="font-family: Montserrat-Regular">Ubicación:</span> {{hotel.provincia.nombre}} / {{hotel.polo}} </p>
+                                    <p style="font-size: 13pt !important;  line-height: 16pt"><span style="font-family: Montserrat-Regular">A cargo de:</span> {{hotel.oper_cu}} / {{hotel.oper_ext}}</p>
+                                </v-card-text>
+
                             </v-card>
                         </v-dialog>
                     </v-col>

@@ -37,9 +37,6 @@
                     </div>
                 </template>
             </v-checkbox>
-<!--            <span @click="setType('Nuevo')" :class="{'filter-span': true, 'filter-span-active': ptype==='Nuevo'}">Nuevos</span>-->
-<!--            <span @click="setType('Ampliación')"-->
-<!--                  :class="{'filter-span': true, 'filter-span-active': ptype==='Ampliación', 'ml-2': true}">Ampliaciones / Remodelaciones</span>-->
             <v-list ref="list" class="project-list pt-0 mt-3" max-height="3.5in" max-width="90%">
                 <div :key="i" :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
                     <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3"
@@ -65,33 +62,36 @@
             <v-img height="7in" :src="require('@/assets/home/activep.jpg')">
                 <transition name="slide-fade">
                     <v-card class="text-uppercase" v-show="showDetails"
-                            style="margin-top: 150px; padding: 60px 32px 60px ; background-color: #cc983c; width: 400px;border-radius:0;">
+                            style="margin-top: 150px; padding: 25px 32px 25px ; background-color: #cc983c; width: 400px;border-radius:0;">
                         <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
                         <v-card-text class="pt-0"
                                      style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
-                            <stars :stars="getCat(hotel)" color="white"></stars>
-                            <p class="mb-3"
-                               style="font-style: italic; text-transform: none; font-family: Montserrat-Regular">
+                            <stars class="text-center" :stars="getCat(hotel)" color="white"></stars>
+                            <p class="mb-0 text-uppercase text-center"
+                               style="text-transform: none; font-family: Montserrat-Bold;">
                                 {{hotel.habitaciones}} habitaciones</p>
+                            <p class="mb-9 text-uppercase text-center"
+                               style="text-transform: none; font-family: Montserrat-Bold">
+                                $ {{hotel.costo}}</p>
+
+                            <p class="mb-0"
+                               style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                                <span style="font-family: Montserrat-Regular">Ubicación: </span>{{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
+                            <p class="mb-0"
+                               style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                                <span style="font-family: Montserrat-Regular">A cargo de: </span>{{hotel.cadena}}</p>
+
+                            <p class="mb-0"
+                               style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                                <span style="font-family: Montserrat-Regular">Previsto para: </span>{{hotel.fecha_fin}}</p>
+
                             <p class="mb-3"
-                               style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;">
-                                {{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
-                            <p class="mb-0" style="font-family: Montserrat-Bold"><span
-                                    style="font-style: italic; text-transform: none; font-family: Montserrat-Regular;"> A cargo de: </span>{{hotel.cadena}}
-                            </p>
-                            <p class="mb-0"><span
-                                    style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Previsto para </span>
-                                {{hotel.fecha_fin}}</p>
-                            <p class="mb-3"><span
-                                    style="font-style: italic; font-family: Montserrat-Regular; text-transform: none; "> Costo: </span>
-                                {{hotel.costo}}</p>
-                            <p style="font-family: Montserrat-Bold"><span
-                                    style="font-style: italic; text-transform: none;"> Inversión: </span>{{hotel.est_inv}}
-                            </p>
+                               style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                                <span style="font-family: Montserrat-Regular">Estado de la obra: </span>{{hotel.est_inv}}</p>
                         </v-card-text>
                         <v-card-actions>
                             <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
-                                En Construcción
+                                {{hotel.tipo}}
                             </div>
                         </v-card-actions>
                     </v-card>
@@ -396,5 +396,13 @@
         background-color: #cc983c;
         font-size: 16px !important;
         margin-left: 2px;
+    }
+
+    .gray-check .v-messages {
+        display: none !important;
+    }
+
+    .gray-check .v-input__slot {
+        margin-bottom: 0 !important;
     }
 </style>

@@ -97,7 +97,6 @@
                                 attach="#list">
                             <v-card style="padding: 20px 32px 10px ; background-color: #cc983c; width: 400px; border-radius:0;">
                                 <v-icon style="margin-left: 88%" color="black" @click="showInfoDialog=false">clear
-
                                 </v-icon>
                                 <v-card-actions>
                                     <div style="width: max-content; margin-left: auto; margin-right: auto">

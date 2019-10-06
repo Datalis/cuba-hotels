@@ -36,7 +36,6 @@
                                     <router-link to="/montecarlo/" style="text-decoration: none">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
-
                                 </v-card-title>
                             </v-img>
                         </v-card>

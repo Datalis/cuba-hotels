@@ -6,15 +6,12 @@
             color="rgba(0, 0, 0, 0.76)"
     >
         <v-row class="pt-3">
-            <v-col cols="2" class="pt-6 pl-0 pr-5" align="center">
-                <!-- todo: put icon-->
-<!--                <v-app-bar-nav-icon color="rgb(255, 255, 255)"></v-app-bar-nav-icon>-->
-                <v-icon size="25px" class="mr-2" color="#ffffffde" dense>mdi-facebook</v-icon>
-                <v-icon size="25px" class="mr-3" color="#ffffffde">mdi-twitter</v-icon>
-                <v-icon size="25px" class="mr-2" color="#ffffffde">mdi-instagram</v-icon>
-
+            <v-col cols="2" class="pt-0 pt-sm-0 pt-md-6 pt-lg-6 pt-xl-6 pl-0 pr-5" align="center">
+                <v-icon class="toolbar-social-icon mr-2" color="#ffffffde" dense>mdi-facebook</v-icon>
+                <v-icon class="toolbar-social-icon second mr-2" color="#ffffffde">mdi-twitter</v-icon>
+                <v-icon class="toolbar-social-icon third mr-2" color="#ffffffde">mdi-instagram</v-icon>
             </v-col>
-            <v-col cols="8" class="pl-5" style="width: max-content">
+            <v-col cols="8" class="pl-0 pl-sm-0 pl-md-5 pl--lg-5 pl-xl-5" style="width: max-content">
                 <router-link to="/" style="text-decoration: none">
                     <p class="mb-0 text-uppercase bar-title">
                         La apuesta hotelera
@@ -45,23 +42,55 @@
         color: var(--primary-color);
     }
 
-    @media screen and (max-width: 550px) {
+    .toolbar-social-icon {
+        font-size: 25px;
+    }
+
+    @media screen and (max-width: 768px) {
         .bar-title {
-            font-size: 23px;
+            font-size: 22px;
+        }
+
+        .toolbar-social-icon {
+            width: 100%;
+            font-size: 20px !important;
+            margin-top: -5px;
+        }
+
+        .second{
+            margin-top: -20px;
+        }
+
+        .third{
+            margin-top: -30px;
         }
     }
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 600px) {
         .bar-title {
-            font-size: 23px;
-            letter-spacing: 3px;
+            font-size: 20px;
+            letter-spacing: 4px;
+        }
+
+        .toolbar-social-icon {
+            width: 100%;
+            font-size: 15px !important;
+            margin-top: 0;
+        }
+
+        .second{
+            margin-top: -25px;
+        }
+
+        .third{
+            margin-top: -50px;
         }
     }
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 500px) {
         .bar-title {
-            font-size: 19px;
-            letter-spacing: 0px;
+            font-size: 15px;
+            letter-spacing: 4px;
         }
     }
 </style>

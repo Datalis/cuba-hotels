@@ -96,7 +96,7 @@
                                 // format: "{point.name}"
                             },
                             borderColor: '#000000', // line separator between regions
-                            borderWidth: 3,
+                            borderWidth: 2,
                         }
                     ]
                 }
@@ -151,7 +151,12 @@
         color: #42b983;
     }
 
-
+@media screen and (min-width: 960px){
+    .map{
+        max-width: 800px;
+        max-height: 340px;
+    }
+}
 
 </style>
 

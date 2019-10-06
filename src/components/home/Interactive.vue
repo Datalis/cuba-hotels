@@ -447,7 +447,8 @@
 
     .cuba-map {
         position: relative;
-        left: 100px;
+        margin-top: -125px;
+        margin-left: 50px;
     }
 
     .title-component-container {
@@ -474,14 +475,13 @@
             line-height: 28pt;
         }
 
-        .cuba-map {
-            left: 70px;
-        }
-
         .filters-title {
             font-size: 12pt;
         }
 
+        .map-date {
+            font-size: 18pt;
+        }
     }
 
     @media screen and (max-width: 960px) {
@@ -520,8 +520,6 @@
             letter-spacing: 8px;
             color: #cc983c;
         }
-
-
     }
 
     @media screen and (max-width: 600px) {

@@ -45,9 +45,9 @@
     }
 
     .quoted-text {
-        margin-right: 18px;
+        line-height: 18pt;
+        font-size: 14pt;
         font-family: Montserrat-Regular;
-        font-size: 16pt;
         color: #4d4d4c;
         text-align: right;
     }

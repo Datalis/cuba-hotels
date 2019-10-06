@@ -10,37 +10,39 @@
             </v-col>
             <v-col cols="8" sm="10" md="8" lg="8" xl="8" class="main-container">
                 <v-row>
-                    <v-col cols="12">
+                    <v-col cols="9">
+                        <v-row class="statistics-title-row" justify="center">
+                            <v-col cols="5" class="pb-0 pl-sm-0 pr-sm-0">
+                                <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
+                            </v-col>
+                            <v-col cols="5" class="pb-0 pr-sm-0">
+                                <h3 class="statistics-title" style="text-align: center">Hoteles
+                                    <p class="divider ma-0"></p>
+                                    <v-icon class="primary-color cat-icon">star</v-icon>
+                                    <v-icon class="primary-color cat-icon">star</v-icon>
+                                    <v-icon class="primary-color cat-icon">star</v-icon>
+                                    <v-icon class="primary-color cat-icon">star</v-icon>
+                                    <v-icon class="primary-color cat-icon">star</v-icon>
+                                </h3>
+
+                            </v-col>
+                        </v-row>
+                        <v-row class="statistics-row" justify="center">
+                            <v-col cols="5" class="pt-0">
+                                <h1 style="text-align: center" class="statistics-value">381</h1>
+                            </v-col>
+                            <v-col cols="5" class="pt-0">
+                                <h1 class="statistics-value" style="text-align: center">67</h1>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                    <v-col cols="3">
                         <div class="map-date">
                             Octubre 2019
                         </div>
                     </v-col>
                     <v-col cols="12" class="map-col">
                         <cuba-map class="cuba-map"></cuba-map>
-                    </v-col>
-                </v-row>
-                <v-row class="statistics-title-row" justify="center">
-                    <v-col cols="5" class="pb-0 pl-sm-0 pr-sm-0">
-                        <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
-                    </v-col>
-                    <v-col cols="5" class="pb-0 pr-sm-0">
-                        <h3 class="statistics-title" style="text-align: center">Hoteles
-                            <p class="divider ma-0"></p>
-                            <v-icon class="primary-color cat-icon">star</v-icon>
-                            <v-icon class="primary-color cat-icon">star</v-icon>
-                            <v-icon class="primary-color cat-icon">star</v-icon>
-                            <v-icon class="primary-color cat-icon">star</v-icon>
-                            <v-icon class="primary-color cat-icon">star</v-icon>
-                        </h3>
-
-                    </v-col>
-                </v-row>
-                <v-row class="statistics-row" justify="center">
-                    <v-col cols="5">
-                        <h1 style="text-align: center" class="statistics-value">381</h1>
-                    </v-col>
-                    <v-col cols="5">
-                        <h1 class="statistics-value" style="text-align: center">67</h1>
                     </v-col>
                 </v-row>
                 <v-row justify="center">
@@ -355,8 +357,8 @@
     }
 
     .statistics-title {
-        font-size: 16.71pt;
-        line-height: 20pt;
+        font-size: 12.71pt;
+        line-height: 14pt;
         letter-spacing: 3px;
         color: #000000;
         font-family: Montserrat-ExtraBold;
@@ -364,13 +366,16 @@
     }
 
     .statistics-value {
-        font-size: 35.04pt;
-        line-height: 36pt;
+        font-size: 20.04pt;
+        line-height: 22pt;
         letter-spacing: 12px;
         color: #cc983c;
         font-family: Montserrat-ExtraBold;
     }
 
+    .cat-icon{
+        font-size: 15px;
+    }
     .statistics-row {
         margin-bottom: 0.4in;
     }
@@ -455,8 +460,7 @@
 
     .map-date {
         font-family: Montserrat-Light;
-        font-size: 27.93pt;
-        left: 78%;
+        font-size: 20.93pt;
         position: relative;
     }
 
@@ -474,17 +478,10 @@
             left: 70px;
         }
 
-        .statistics-title-row {
-            margin-top: -50px;
-        }
-
         .filters-title {
             font-size: 12pt;
         }
 
-        .map-date {
-            left: 70%;
-        }
     }
 
     @media screen and (max-width: 960px) {
@@ -503,13 +500,9 @@
         }
 
         .statistics-title {
-            font-size: 15.71pt;
-            line-height: 19pt;
+            font-size: 12.71pt;
+            line-height: 14pt;
             letter-spacing: 2px;
-        }
-
-        .map-date {
-            left: 60%;
         }
 
     }
@@ -517,20 +510,18 @@
     @media screen and (max-width: 720px) {
         .statistics-title {
             font-size: 12.71pt;
-            line-height: 15pt;
+            line-height: 14pt;
             letter-spacing: 2px;
         }
 
         .statistics-value {
-            font-size: 28.04pt;
-            line-height: 28pt;
+            font-size: 20.04pt;
+            line-height: 22pt;
             letter-spacing: 8px;
             color: #cc983c;
         }
 
-        .statistics-title-row {
-            margin-top: -80px;
-        }
+
     }
 
     @media screen and (max-width: 600px) {
@@ -540,7 +531,7 @@
         }
 
         .cat-icon {
-            font-size: 20px;
+            font-size: 15px;
         }
 
         .list-item-title {
@@ -563,9 +554,8 @@
         }
 
         .map-date {
-            font-size: 22.93pt;
+            font-size: 15.93pt;
             margin-bottom: -40px;
-            left: 70%;
         }
     }
 
@@ -593,14 +583,10 @@
         }
 
         .map-date {
-            font-size: 19.93pt;
+            font-size: 15.93pt;
             margin-bottom: -40px;
-            left: 70%;
         }
 
-        .statistics-title-row {
-            margin-top: 10px;
-        }
     }
 
     @media screen and (max-width: 500px) {
@@ -623,7 +609,6 @@
         .map-date {
             font-size: 15.93pt;
             margin-bottom: -40px;
-            left: 70%;
         }
     }
 

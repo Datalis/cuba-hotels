@@ -7,14 +7,14 @@
         <v-col cols="12" sm="11" md="10" lg="10" xl="10"
                class="pl-8  pr-0 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
-                <v-row no-gutters style="height: min-content !important;">
-                    <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5"
+                <v-row class="content-row" no-gutters>
+                    <v-col class="card-col " cols="6" sm="5" md="5" lg="5" xl="5"
                            style="height: max-content !important;">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
-                                    <p class="pt-0 mb-0 card-title text-uppercase">El regreso</p>
-                                    <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>
+                                    <p class="pt-0 mb-0 card-title text-uppercase">El regreso del lujo</p>
+<!--                                    <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>-->
                                 </v-col>
                             </v-row>
                         </v-card-title>
@@ -60,22 +60,31 @@
 </script>
 
 <style scoped>
+    .content-row{
+        height: 500px;
+    }
+    .card-col {
+        height: max-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     .card-title-container {
         margin-top: 0.3in;
         margin-bottom: 0.3in;
     }
 
     .card-title {
-        font-size: 30pt;
-        line-height: 38pt;
+        font-size: 22pt;
+        line-height: 28pt;
         letter-spacing: 2px;
         color: #040404;
         font-family: Montserrat-ExtraBold;
     }
 
     .card-text {
-        line-height: 20pt;
-        font-size: 16pt;
+        line-height: 18pt;
+        font-size: 14pt;
         letter-spacing: 1px;
         color: #4d4d4c;
         font-family: Montserrat-Regular;
@@ -125,22 +134,15 @@
     }
 
     @media screen and (max-width: 1024px) {
-        .card-title {
-            font-size: 26pt;
-            line-height: 34pt;
-        }
-
         .card-text {
-            line-height: 18pt;
-            font-size: 14pt;
             padding-bottom: 0 !important;
         }
     }
 
     @media screen and (max-width: 960px) {
         .card-title {
-            font-size: 22.28pt;
-            line-height: 30.28pt;
+            font-size: 22pt;
+            line-height: 25pt;
         }
 
         .card-title-container {
@@ -163,6 +165,7 @@
             margin-bottom: 30px;
             font-size: 13.3pt;
         }
+
     }
 
     @media screen and (max-width: 800px) {
@@ -233,8 +236,8 @@
 
     @media screen and (max-width: 500px) {
         .card-title {
-            font-size: 20.28pt;
-            line-height: 22.28pt;
+            font-size: 19.28pt;
+            line-height: 21.28pt;
         }
 
         .card-title-container {
@@ -252,6 +255,10 @@
             margin-top: 0;
             margin-bottom: 10px;
             font-size: 10.3pt;
+        }
+
+        .content-row{
+            height: 400px;
         }
     }
 
@@ -283,8 +290,8 @@
         }
 
         .card-title {
-            font-size: 18.28pt;
-            line-height: 20.28pt;
+            font-size: 15.28pt;
+            line-height: 18.28pt;
         }
 
         .card-title-container {
@@ -293,6 +300,10 @@
 
         .gray-panel {
             width: 80%;
+        }
+
+        .content-row{
+            height: 350px;
         }
     }
 

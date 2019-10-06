@@ -1,14 +1,14 @@
 <template>
     <v-row align="end" justify="start">
         <v-col cols="1" sm="1" md=2 lg="2" xl="2"
-               class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">
+               class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex" style="height: 100%">
             <div class="horizontal-line"></div>
         </v-col>
         <v-col cols="12" sm="11" md="10" lg="10" xl="10"
                class="pl-8  pr-0 pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
-                <v-row no-gutters style="height: min-content !important;">
-                    <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5" style="height: max-content !important;">
+                <v-row class="content-row"  no-gutters>
+                    <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5">
                         <div class="card-title-container">
                             <v-card-title class="text-left pt-6  pl-0 pb-0">
                                 <h1 class="card-title text-uppercase">
@@ -65,6 +65,15 @@
 </script>
 
 <style scoped>
+    .content-row{
+        height: 500px;
+    }
+    .card-col {
+        height: max-content;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
     .card-title-container {
         margin-top: 0.3in;
         margin-bottom: 0.3in;
@@ -72,8 +81,8 @@
     }
 
     .card-title {
-        font-size: 25pt;
-        line-height: 30pt;
+        font-size: 22pt;
+        line-height: 28pt;
         letter-spacing: 3px;
         color: #040404;
         height: max-content;
@@ -81,8 +90,8 @@
     }
 
     .card-text {
-        line-height: 20pt;
-        font-size: 16pt;
+        line-height: 18pt;
+        font-size: 14pt;
         letter-spacing: 1px;
         color: #4d4d4c;
         font-family: Montserrat-Regular;
@@ -136,21 +145,14 @@
             margin-bottom: 10px;
         }
 
-        .card-title {
-            font-size: 23pt;
-            line-height: 25pt;
-        }
-
         .card-text {
-            line-height: 18pt;
-            font-size: 14pt;
             padding-bottom: 0 !important;
         }
     }
 
     @media screen and (max-width: 960px) {
         .card-title {
-            font-size: 23pt;
+            font-size: 22pt;
             line-height: 25pt;
         }
 
@@ -260,6 +262,10 @@
             margin-bottom: 10px;
             font-size: 10.3pt;
         }
+
+        .content-row{
+            height: 400px;
+        }
     }
 
     @media screen and (max-width: 450px) {
@@ -300,6 +306,10 @@
 
         .gray-panel {
             width: 80%;
+        }
+
+        .content-row{
+            height: 350px;
         }
     }
 

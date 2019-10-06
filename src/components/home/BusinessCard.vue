@@ -3,14 +3,14 @@
         <v-col cols="1" sm="1" md=2 lg="2" xl="2" class="space-col d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"/>
         <v-col cols="12" sm="11" md="10" lg="10" xl="10" class="pl-0 pr-8 pt-8 pb-8pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
-                <v-row no-gutters>
+                <v-row class="content-row"  no-gutters>
                     <v-col cols="5" sm="5" md="5" lg="5" xl="5" class="img-col">
                         <div class="gray-panel">
                         </div>
                         <v-img height="100%" :src="require('@/assets/home/business.jpg')">
                         </v-img>
                     </v-col>
-                    <v-col cols="6" sm="5" md="5" lg="5" xl="5" class="card-col" style="position: relative;">
+                    <v-col cols="6" sm="5" md="5" lg="5" xl="5" class="card-col pr-0" style="position: relative;">
                         <div class="card-title-container text-left">
                             <v-card-title class="text-left pt-6  pb-0">
                                 <v-row align="center">
@@ -24,7 +24,7 @@
                         <v-card-text class="card-text-container text-left">
                             <v-row>
                                 <v-col class="card-text">
-                                    En manos del grupo Gaviota, de la Fuerzas Armadas, y de un conjunto cada vez más
+                                    En manos del grupo Gaviota, de las Fuerzas Armadas, y de un conjunto cada vez más
                                     amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba
                                 </v-col>
                             </v-row>
@@ -50,8 +50,13 @@
 </script>
 
 <style scoped>
+    .content-row{
+        height: 500px;
+    }
     .card-col {
-        padding-right: 20px;
+        height: max-content;
+        margin-top: auto;
+        margin-bottom: auto;
     }
 
     .card-title-container {
@@ -61,16 +66,16 @@
     }
 
     .card-title {
-        font-size: 30pt;
-        line-height: 38pt;
+        font-size: 22pt;
+        line-height: 28pt;
         letter-spacing: 2px;
         color: #040404;
         font-family: Montserrat-ExtraBold;
     }
 
     .card-text {
-        line-height: 20pt;
-        font-size: 16pt;
+        line-height: 18pt;
+        font-size: 14pt;
         letter-spacing: 1px;
         color: #4d4d4c;
         margin-left: 0.2in;
@@ -116,22 +121,15 @@
     }
 
     @media screen and (max-width: 1024px) {
-        .card-title {
-            font-size: 26pt;
-            line-height: 34pt;
-        }
-
         .card-text {
-            line-height: 18pt;
-            font-size: 14pt;
             padding-bottom: 0 !important;
         }
     }
 
     @media screen and (max-width: 960px) {
         .card-title {
-            font-size: 22.28pt;
-            line-height: 30.28pt;
+            font-size: 22pt;
+            line-height: 25pt;
         }
 
         .card-title-container {
@@ -215,8 +213,8 @@
     }
     @media screen and (max-width: 500px) {
         .card-title {
-            font-size: 20.28pt;
-            line-height: 22.28pt;
+            font-size: 19.28pt;
+            line-height: 21.28pt;
         }
 
         .card-text {
@@ -238,6 +236,10 @@
 
         .card-text-container{
             padding-left: 10px;
+        }
+
+        .content-row{
+            height: 400px;
         }
     }
 
@@ -269,14 +271,17 @@
         }
 
         .card-title {
-            font-size: 18.28pt;
-            line-height: 20.28pt;
+            font-size: 15.28pt;
+            line-height: 18.28pt;
         }
 
         .card-title-container {
             padding-bottom: 0;
         }
 
+        .content-row{
+            height: 350px;
+        }
     }
 
     @media screen and (max-width: 320px) {

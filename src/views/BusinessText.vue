@@ -13,6 +13,7 @@
                             {{t}}
                         </p>
                         <evolucion-hoteles v-if="i===5"></evolucion-hoteles>
+                        <sunburts-hoteles v-if="i===12"></sunburts-hoteles>
                         <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===9">¿Quienes controlan el mercado?</p>
                         <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===22">De los males, el menor</p>
                         <bubble-habitaciones v-if="i===28"></bubble-habitaciones>
@@ -76,6 +77,7 @@
     import {mapGetters} from 'vuex'
     import BubbleHabitaciones from "@/components/graphics/BubbleHabitaciones";
     import EvolucionHoteles from "@/components/graphics/EvolucionHoteles";
+    import SunburtsHoteles from "@/components/graphics/SunburtsHoteles";
 
     export default {
         name: "Building",
@@ -84,7 +86,7 @@
                 textos: 'business'
             })
         },
-        components: {VideoFrame, BusinessBanner, BubbleHabitaciones, EvolucionHoteles},
+        components: {VideoFrame, BusinessBanner, BubbleHabitaciones, EvolucionHoteles,SunburtsHoteles},
         data(){
             return{
                 sidebarFixed: false,

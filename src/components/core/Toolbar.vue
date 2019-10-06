@@ -23,7 +23,8 @@
             </v-col>
             <v-col cols="2" class="pt-4">
                 <a href="#" style="text-decoration: none;">
-                    <v-img src="@/assets/home/logos/eltoque.png" max-width="1.50in"></v-img>
+                    <v-img class="lg-screen" src="@/assets/home/logos/eltoque.png" max-width="1.50in"></v-img>
+                    <v-img class="small-screen" src="@/assets/logo.png" max-width="1.50in"></v-img>
                 </a>
             </v-col>
         </v-row>
@@ -44,6 +45,10 @@
 
     .toolbar-social-icon {
         font-size: 25px;
+    }
+
+    .small-screen{
+        display: none;
     }
 
     @media screen and (max-width: 768px) {
@@ -91,6 +96,14 @@
         .bar-title {
             font-size: 15px;
             letter-spacing: 4px;
+        }
+
+        .lg-screen{
+            display: none;
+        }
+
+        .small-screen{
+            display: flex;
         }
     }
 </style>

@@ -5,27 +5,29 @@
             </v-col>
         </v-row>
         <v-row class="content-row">
-            <v-col cols="2" style="padding-bottom: 0">
+            <v-col cols="2" sm="1" md="2" lg="2" xl="2" style="padding-bottom: 0">
                 <div class="horizontal-black-line"></div>
             </v-col>
-            <v-col cols="8" class="main-container">
+            <v-col cols="8" sm="10" md="8" lg="8" xl="8" class="main-container">
                 <v-row>
                     <v-col cols="12">
                         <cuba-map class="cuba-map"></cuba-map>
                     </v-col>
                 </v-row>
                 <v-row class="statistics-title-row" justify="center">
-                    <v-col cols="5">
+                    <v-col cols="5" class="pb-0 pl-sm-0 pr-sm-0">
                         <h3 style="text-align: center" class="statistics-title">Total de Hoteles</h3>
                     </v-col>
-                    <v-col cols="5">
+                    <v-col cols="5" class="pb-0 pr-sm-0">
                         <h3 class="statistics-title" style="text-align: center">Hoteles
-                            <v-icon class="primary-color">star</v-icon>
-                            <v-icon class="primary-color">star</v-icon>
-                            <v-icon class="primary-color">star</v-icon>
-                            <v-icon class="primary-color">star</v-icon>
-                            <v-icon class="primary-color">star</v-icon>
+                            <p class="divider ma-0"></p>
+                            <v-icon class="primary-color cat-icon">star</v-icon>
+                            <v-icon class="primary-color cat-icon">star</v-icon>
+                            <v-icon class="primary-color cat-icon">star</v-icon>
+                            <v-icon class="primary-color cat-icon">star</v-icon>
+                            <v-icon class="primary-color cat-icon">star</v-icon>
                         </h3>
+
                     </v-col>
                 </v-row>
                 <v-row class="statistics-row" justify="center">
@@ -69,6 +71,7 @@
                                 two-line
                                 id="list">
                             <v-list-item :key="i" v-for="(h, i) in filteredHotels"
+                                         class="pl-1"
                                          style="height: 55px !important; min-height: 55px !important;"
                                          @click.stop="showHotelDialog(i)">
                                 <v-list-item-content class="list-item">
@@ -109,6 +112,7 @@
                         </v-dialog>
                     </v-col>
                     <v-col cols="12" sm="4" md="4" lg="4" xl="4"
+                           class="pr-0"
                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2">
                         <v-container fluid class="group-filter-container pt-0">
                             <h3 class="group-title">Categoría</h3>
@@ -128,11 +132,25 @@
                                 </template>
                             </v-checkbox>
                             <v-select
+                                    v-model="filters.categories"
                                     color="#cc983c"
                                     class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none pt-0"
                                     :items="categories"
                                     item-text="name"
-                                    item-value="name">
+                                    item-value="val"
+                                    multiple
+                                    chips
+                                    deletable-chips>
+                                <template v-slot:item="{ item }">
+                                    <div class="check-label">
+                                        {{item.name}}
+                                    </div>
+                                </template>
+                                <!--                                <template v-slot:selection="{ item, index }">-->
+                                <!--                                    <div class="check-label" style="margin-right: 2px">-->
+                                <!--                                        {{item.name}}-->
+                                <!--                                    </div>-->
+                                <!--                                </template>-->
                             </v-select>
                         </v-container>
                         <v-container fluid class="pt-0">
@@ -153,33 +171,24 @@
                                 </template>
                             </v-checkbox>
                             <v-select
+                                    v-model="filters.opers_cu"
                                     color="#cc983c"
                                     class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none pt-0"
                                     :items="managers"
-                                    item-text="name"
-                                    item-value="name">
+                                    item-text="item"
+                                    item-value="item"
+                                    multiple
+                                    chips
+                                    deletable-chips>
+                                <template v-slot:item="{ item }">
+                                    <div class="check-label">
+                                        {{item}}
+                                    </div>
+                                </template>
                             </v-select>
                         </v-container>
                         <v-container fluid class="pt-0">
                             <h3 class="group-title">Operador extranjero</h3>
-                            <!--                            <v-row class="ml-1">-->
-                            <!--                                <v-checkbox v-model="filters.opers_ext"  :false-value="0"  class="_vcheck mr-4" :true-value="1"-->
-                            <!--                                            on-icon="$vuetify.icons.checkboxOff" color="#cc983c" >-->
-                            <!--                                    <template v-slot:label>-->
-                            <!--                                        <div class="check-label" >-->
-                            <!--                                            Si-->
-                            <!--                                        </div>-->
-                            <!--                                    </template>-->
-                            <!--                                </v-checkbox>-->
-                            <!--                                <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="-1" color="#cc983c"-->
-                            <!--                                            class="_vcheck">-->
-                            <!--                                    <template v-slot:label>-->
-                            <!--                                        <div class="check-label">-->
-                            <!--                                            No-->
-                            <!--                                        </div>-->
-                            <!--                                    </template>-->
-                            <!--                                </v-checkbox>-->
-                            <!--                            </v-row>-->
                             <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="1"
                                         on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
                                 <template v-slot:label>
@@ -214,17 +223,26 @@
                                 </template>
                             </v-checkbox>
                             <v-select
+                                    v-model="filters.regions"
                                     color="#cc983c"
                                     class="_vselect d-flex d-sm-none d-md-none d-lg-none d-xl-none"
                                     :items="regions"
-                                    item-text="name"
-                                    item-value="name">
+                                    item-text="item"
+                                    item-value="item"
+                                    multiple
+                                    chips
+                                    deletable-chips>
+                                <template v-slot:item="{ item }">
+                                    <div class="check-label">
+                                        {{item}}
+                                    </div>
+                                </template>
                             </v-select>
                         </v-container>
                     </v-col>
                 </v-row>
             </v-col>
-            <v-col cols="2" style="padding-top: 0">
+            <v-col cols="2" sm="1" md="2" lg="2" xl="2" style="padding-top: 0">
                 <div class="horizontal-black-line-up"></div>
             </v-col>
         </v-row>
@@ -317,16 +335,41 @@
 
 <style scoped>
     .content-row {
-        margin-top: 240px;
+        margin-top: 215px;
     }
 
-    .col-hotel-list {
-        height: 10.5in;
+    .map-title {
+        letter-spacing: 3px;
+        font-size: 34.98pt;
+        line-height: 40pt;
+        color: #040404;
+        font-family: Montserrat-ExtraBold;
     }
 
     .main-container {
         background-color: #eeeeed;
         height: max-content;
+    }
+
+    .statistics-title {
+        font-size: 16.71pt;
+        line-height: 20pt;
+        letter-spacing: 3px;
+        color: #000000;
+        font-family: Montserrat-ExtraBold;
+        text-transform: uppercase;
+    }
+
+    .statistics-value {
+        font-size: 35.04pt;
+        line-height: 36pt;
+        letter-spacing: 12px;
+        color: #cc983c;
+        font-family: Montserrat-ExtraBold;
+    }
+
+    .statistics-row {
+        margin-bottom: 0.4in;
     }
 
     .horizontal-black-line {
@@ -343,33 +386,8 @@
         margin-left: auto;
     }
 
-    .map-title {
-        letter-spacing: 3px;
-        font-size: 34.98pt;
-        color: #040404;
-        font-family: Montserrat-ExtraBold;
-    }
-
-
-    .statistics-title {
-        font-size: 16.71pt;
-        letter-spacing: 3px;
-        color: #000000;
-        font-family: Montserrat-ExtraBold;
-        text-transform: uppercase;
-    }
-
-    .statistics-value {
-        font-size: 35.04pt;
-        line-height: 20pt;
-        letter-spacing: 12px;
-        color: #cc983c;
-        font-family: Montserrat-ExtraBold;
-        font-weight: 800;
-    }
-
-    .statistics-row {
-        margin-bottom: 0.4in;
+    .col-hotel-list {
+        height: 10.5in;
     }
 
     .primary-color {
@@ -428,64 +446,135 @@
         margin-top: 1in;
     }
 
+    .divider {
+        display: none;
+    }
+
     @media screen and (max-width: 1024px) {
+        .content-row {
+            margin-top: 180px;
+        }
+
+        .map-title {
+            font-size: 26.98pt;
+            line-height: 32pt;
+        }
+
         .cuba-map {
             left: 70px;
         }
 
-        .statistics-value {
-            font-size: 55.04pt;
-            letter-spacing: 3px;
+        .statistics-title-row {
+            margin-top: -50px;
         }
 
         .filters-title {
             font-size: 12pt;
         }
-
-        .check-label {
-            font-size: 12pt;
-        }
     }
 
     @media screen and (max-width: 960px) {
-        .cuba-map {
-            left: 70px;
+        .content-row {
+            margin-top: 150px;
         }
 
         .map-title {
             letter-spacing: 2px;
-            font-size: 28.98pt;
         }
 
         .title-component-container {
             margin-top: 0.5in;
         }
 
-        .content-row {
-            margin-top: 180px;
+        .statistics-title {
+            font-size: 15.71pt;
+            line-height: 19pt;
+            letter-spacing: 2px;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .map-title {
+            font-size: 22.98pt;
+            line-height: 25pt;
+            letter-spacing: 2px;
         }
 
-        .check-label {
-            font-size: 11pt;
+        .content-row {
+            margin-top: 125px;
+        }
+    }
+
+    @media screen and (max-width: 720px) {
+        .statistics-title {
+            font-size: 12.71pt;
+            line-height: 15pt;
+            letter-spacing: 2px;
+        }
+
+        .statistics-value {
+            font-size: 28.04pt;
+            line-height: 28pt;
+            letter-spacing: 8px;
+            color: #cc983c;
+        }
+
+        .statistics-title-row {
+            margin-top: -80px;
         }
     }
 
     @media screen and (max-width: 600px) {
-
-        .statistics-value {
-            font-size: 45.04pt;
-            letter-spacing: 3px;
+        .cuba-map {
+            position: relative;
+            left: 0;
         }
 
-        .statistics-title-row {
-            margin-top: -60px;
+        .cat-icon {
+            font-size: 20px;
+        }
+
+        .list-item-title {
+            font-size: 11pt;
+            letter-spacing: .2px;
+        }
+
+        .filters-title {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            font-size: 12pt;
+        }
+
+        .check-label {
+            font-size: 10pt;
+        }
+
+        .group-title {
+            font-size: 11pt;
+        }
+    }
+
+    @media screen and (max-width: 599px) {
+        .divider {
+            display: block;
+        }
+
+        .search-box {
+            margin-bottom: 30px !important;
+        }
+
+        .col-hotel-list {
+            height: 5in;
+        }
+
+        .col-hotel-list {
+            padding-left: 24px;
         }
 
     }
 
     @media screen and (max-width: 500px) {
         .group-filter-container {
-
             padding-bottom: 0;
         }
 
@@ -562,7 +651,7 @@
         font-size: 20px !important;
     }
 
-    ._vcheck .v-input--selection-controls__input{
+    ._vcheck .v-input--selection-controls__input {
         margin-right: 2px !important;
     }
 
@@ -581,4 +670,11 @@
         margin-left: 2px;
 
     }
+
+    ._vselect .v-chip__content {
+        font-family: Montserrat-Regular;
+        font-size: 10pt;
+        color: #171716;
+    }
+
 </style>

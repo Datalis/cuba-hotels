@@ -167,7 +167,7 @@
 
     @media screen and (max-width: 960px) {
         .map-date {
-            left: 52%;
+            left: 60%;
         }
     }
 
@@ -175,7 +175,7 @@
         .map-date {
             font-size: 22.93pt;
             margin-bottom: -40px;
-            left: 46%;
+            left: 70%;
         }
     }
 

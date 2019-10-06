@@ -181,7 +181,6 @@
                 } else {
                     return cat
                 }
-
             },
             showPopup(h) {
                 this.hotel = h

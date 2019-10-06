@@ -12,7 +12,7 @@
                 <v-row>
                     <v-col cols="12">
                         <div class="map-date">
-                            Agosto 2019
+                            Octubre 2019
                         </div>
                     </v-col>
                     <v-col cols="12" class="map-col">
@@ -258,11 +258,9 @@
                 <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.jpg')"/>
             </v-col>
             <v-col cols="7" sm="7" md="7" lg="6" xl="6" class="title-component-container">
-                <h1 class="map-title text-uppercase">Hoteles</h1>
-                <h1 class="map-title text-uppercase">Existentes</h1>
+                <h1 class="map-title text-uppercase">Hoteles Existentes</h1>
             </v-col>
         </v-row>
-
         <building-projects></building-projects>
     </div>
 </template>
@@ -340,13 +338,13 @@
 
 <style scoped>
     .content-row {
-        margin-top: 215px;
+        margin-top: 125px;
     }
 
     .map-title {
         letter-spacing: 3px;
-        font-size: 34.98pt;
-        line-height: 40pt;
+        font-size: 22pt;
+        line-height: 28pt;
         color: #040404;
         font-family: Montserrat-ExtraBold;
     }
@@ -464,12 +462,12 @@
 
     @media screen and (max-width: 1024px) {
         .content-row {
-            margin-top: 180px;
+            margin-top: 125px;
         }
 
         .map-title {
-            font-size: 26.98pt;
-            line-height: 32pt;
+            font-size: 22pt;
+            line-height: 28pt;
         }
 
         .cuba-map {
@@ -491,10 +489,12 @@
 
     @media screen and (max-width: 960px) {
         .content-row {
-            margin-top: 150px;
+            margin-top: 75px;
         }
 
         .map-title {
+            font-size: 22pt;
+            line-height: 25pt;
             letter-spacing: 2px;
         }
 
@@ -512,18 +512,6 @@
             left: 60%;
         }
 
-    }
-
-    @media screen and (max-width: 800px) {
-        .map-title {
-            font-size: 22.98pt;
-            line-height: 25pt;
-            letter-spacing: 2px;
-        }
-
-        .content-row {
-            margin-top: 125px;
-        }
     }
 
     @media screen and (max-width: 720px) {
@@ -598,7 +586,7 @@
             padding-left: 24px;
         }
 
-        .map-col{
+        .map-col {
             overflow-x: scroll;
             overflow-y: hidden;
             height: 300px;
@@ -626,7 +614,7 @@
             margin-top: 100px;
         }
 
-        .title-component-container{
+        .title-component-container {
             padding-left: 0 !important;
         }
     }

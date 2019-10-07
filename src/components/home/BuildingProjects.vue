@@ -353,13 +353,14 @@
         }
     }
 
+    @media screen and (max-width: 450px) {
+        .item-title {
+            font-size: 11pt
+        }
+    }
     @media screen and (max-width: 400px) {
         .card-title {
             font-size: 18pt
-        }
-
-        .item-title {
-            font-size: 15pt
         }
 
         .period {

@@ -6,6 +6,7 @@
         <gaesa-card class="third-card-margin"></gaesa-card>
         <interactive-map class="interactive-comp-margin"></interactive-map>
         <youtube-video class="youtube-comp-margin" style="margin-top: 2in"></youtube-video>
+<!--        <comment category="11"></comment>-->
     </div>
 </template>
 
@@ -16,6 +17,7 @@
     import BusinessCard from '@/components/home/BusinessCard'
     import GaesaCard from '@/components/home/GaesaCard'
     import InteractiveMap from "@/components/home/Interactive";
+    import Comment from "@/components/home/Comment.vue";
 
     export default {
         name: "Home",
@@ -25,7 +27,8 @@
             MontecarloCard,
             BusinessCard,
             YoutubeVideo,
-            GaesaCard
+            GaesaCard,
+            Comment
         },
         data() {
             return {

@@ -26,6 +26,9 @@
                     title: {
                         text: 'Empresas cubanas a cargo de los hoteles'
                     },
+                    subtitle: {
+                        text: 'Fuente: Elaboración a partir de base de datos propia'
+                    },
                     series: [{
                         type: "sunburst",
                         data: data,

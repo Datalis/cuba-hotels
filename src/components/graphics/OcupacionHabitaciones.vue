@@ -33,7 +33,10 @@
                         type: 'column'
                     },
                     title: {
-                        text: 'Tasa de ocupación 2006-2018'
+                        text: 'Ocupación de habitaciones en Cuba'
+                    },
+                    subtitle: {
+                        text: 'Fuente: Ministerio de Turismo / Oficina Nacional de Estadística e Información'
                     },
                     xAxis: {
                         categories: [

@@ -16,17 +16,17 @@
                 Highcharts: Highcharts,
                 chartOptions: {
                     title: {
-                        text: 'Llegada de visitantes, 2000-2018'
+                        text: 'Llegada de visitantes a Cuba'
                     },
                     subtitle: {
-                        text: 'Fuente: '
+                        text: 'Fuente: Ministerio de Turismo'
                     },
                     chart: {
                         type: 'area'
                     },
                     xAxis: {
                         categories: ['2000', '2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018'],
-                        tickmarkPlacement: 'on',
+                        // tickmarkPlacement: 'on',
                         title: {
                             enabled: false
                         }
@@ -43,10 +43,13 @@
                         area: {
                             stacking: 'normal',
                             lineColor: '#ffffff',
-                            lineWidth: 1,
+                            lineWidth: 0,
                             marker: {
-                                lineWidth: 1,
-                                lineColor: '#ffffff'
+                                enabled: false,
+                                lineWidth: 0,
+                                radius: 1,
+                                lineColor: '#ffffff',
+                                symbol: 'circle'
                             }
                         }
                     },

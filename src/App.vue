@@ -42,7 +42,7 @@
     }
 
     :root {
-        --primary-color: #dd9526;
+        --primary-color: #cc983c;
         --secundary-color: rgba(0, 0, 0, 0.76);
     }
 

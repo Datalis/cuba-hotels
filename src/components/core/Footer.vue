@@ -31,7 +31,7 @@
                     </v-row>
                 </v-img>
             </v-col>
-            <v-col cols="12" sm="9" md="9" lg="9" xl="9" class="pl-8" style="background-color: rgb(222, 153, 49)">
+            <v-col cols="12" sm="9" md="9" lg="9" xl="9" class="pl-8 pr-12 pr-sm-8 pr-md-8 pr-lg-8 pr-xl-8 " style="background-color: rgb(222, 153, 49)">
                 <v-row align="center" justify="center" style="height: 100%;">
                     <v-col cols="12" sm="12" md="6" lg="7" xl="7" class="credits pt-12 pb-8 pl-12">
                         <div class="text-uppercase credits-title">Créditos</div>
@@ -97,11 +97,11 @@
 
 <style scoped>
     .footer-background {
-        background-color: rgb(222, 153, 49) !important;
+        background-color: var(--primary-color) !important;
     }
 
     .credits {
-        font-size: 16px;
+        font-size: 10pt;
         font-family: Montserrat-Regular;
         color: #fffefc;
         letter-spacing: 1px;
@@ -109,12 +109,16 @@
 
     .credits-title {
         margin-bottom: 16px;
+        font-family: Montserrat-Bold;
+        color: #fffefc;
+        font-size: 12pt;
+        letter-spacing: 4px;
     }
 
     .method {
         font-family: Montserrat-Bold;
         color: #fffefc;
-        font-size: 14pt;
+        font-size: 12pt;
         letter-spacing: 4px;
     }
     .networks-container{

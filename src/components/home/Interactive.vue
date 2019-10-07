@@ -601,6 +601,8 @@
         .title-component-container {
             padding-left: 0 !important;
         }
+
+
     }
 
     @media screen and (max-width: 450px) {
@@ -608,24 +610,47 @@
             font-size: 15.93pt;
             margin-bottom: -40px;
         }
-    }
 
-    @media screen and (max-width: 400px) {
+        .cat-icon {
+            font-size: 12px;
+        }
+
         .statistics-title {
-            font-size: 10pt;
-            line-height: 11pt;
+            font-size: 8pt;
+            line-height: 10pt;
             letter-spacing: 1px;
         }
 
         .statistics-value {
-            font-size: 20pt;
+            font-size: 16pt;
+            line-height: 20pt;
+            letter-spacing: 8px;
+            color: #cc983c;
+        }
+
+        .map-col {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            height: 220px;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .statistics-title {
+            font-size: 8pt;
+            line-height: 10pt;
+            letter-spacing: 1px;
+        }
+
+        .statistics-value {
+            font-size: 16pt;
             line-height: 20pt;
             letter-spacing: 8px;
             color: #cc983c;
         }
 
         .cat-icon {
-            font-size: 15px;
+            font-size: 10px;
         }
 
         .map-date {
@@ -634,9 +659,9 @@
     }
 
     @media screen and (max-width: 320px) {
-        .cat-icon {
-            font-size: 12px;
-        }
+        /*.cat-icon {*/
+        /*    font-size: 12px;*/
+        /*}*/
     }
 </style>
 <style>

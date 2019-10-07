@@ -1,8 +1,6 @@
 <template>
     <div>
-
-        <Highmaps class="map" style=" margin-top: -50px; min-width: 500px !important;" ref="mapChartCuba"
-                  :options="chartOptions"/>
+        <Highmaps class="map" ref="mapChartCuba" :options="chartOptions"/>
     </div>
 </template>
 
@@ -151,17 +149,22 @@
         color: #42b983;
     }
 
-@media screen and (min-width: 960px){
-    .map{
-        max-width: 800px;
-        max-height: 340px;
+    @media screen and (min-width: 960px) {
+        .map {
+            max-width: 800px;
+            max-height: 340px;
+        }
     }
-}
 
 </style>
 
 <style>
     .black-tooltip {
         background-color: rgba(0, 0, 0, .2);
+    }
+
+    .map {
+        margin-top: -50px;
+        min-width: 500px !important;
     }
 </style>

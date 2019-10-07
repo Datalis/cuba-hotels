@@ -89,6 +89,13 @@
 
         .quoted-text {
             text-align: left !important;
+            font-size: 10pt;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        .text-row {
+            margin-top: 3.6in;
         }
     }
 

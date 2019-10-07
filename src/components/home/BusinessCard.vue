@@ -3,9 +3,9 @@
         <v-col cols="1" sm="1" md=2 lg="2" xl="2" class="space-col d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"/>
         <v-col cols="12" sm="11" md="10" lg="10" xl="10" class="pl-0 pr-8 pt-8 pb-8pa-sm-3 pa-md-3 pa-lg-3 pa-xl-3">
             <v-card color="gray" flat>
-                <v-row class="content-row"  no-gutters>
+                <v-row class="content-row" style="height: 100%" no-gutters>
                     <v-col cols="5" sm="5" md="5" lg="5" xl="5" class="img-col">
-                        <div class="gray-panel">
+                        <div class="gray-panel" style="height: 100%">
                         </div>
                         <v-img height="100%" :src="require('@/assets/home/business.jpg')">
                         </v-img>
@@ -103,7 +103,7 @@
     .gray-panel {
         background-color: rgba(58, 58, 58, 0.2);
         width: 50%;
-        height: 100%;
+        height: 100% !important;
         position: absolute;
         top: 0;
         left: 10%;

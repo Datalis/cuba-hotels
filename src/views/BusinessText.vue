@@ -14,9 +14,31 @@
                         </p>
                         <evolucion-hoteles v-if="i===5"></evolucion-hoteles>
                         <sunburts-hoteles v-if="i===12"></sunburts-hoteles>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===9">¿Quienes controlan el mercado?</p>
-                        <p style="font-family: Montserrat-Bold; font-style: italic" v-if="i===22">De los males, el menor</p>
+                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===9">¿Quienes controlan el mercado?</p>
+                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===22">De los males, el menor</p>
                         <bubble-habitaciones v-if="i===28"></bubble-habitaciones>
+
+                        <v-carousel
+                                v-if="i===20"
+                                cycle
+                                height="400"
+                                hide-delimiter-background
+                                show-arrows-on-hover
+                                style="margin-bottom: 30px; margin-top: 20px"
+                        >
+                            <v-carousel-item>
+                                <v-img width="100%" src="@/assets/2/1.jpg"></v-img>
+                            </v-carousel-item>
+
+                            <v-carousel-item
+                            >
+                                <v-img width="100%" src="@/assets/2/2.jpg"></v-img>
+                            </v-carousel-item>
+                            <v-carousel-item
+                            >
+                                <v-img width="100%" src="@/assets/2/3.jpg"></v-img>
+                            </v-carousel-item>
+                        </v-carousel>
                     </div>
 
                 </div>
@@ -27,7 +49,7 @@
                 <v-row id="sidebarCol" justify="start" align="start" :class="{'side-bar-fixed': sidebarFixed}">
                     <v-col cols="12" style="height: max-content;">
                         <v-card class="card first-card" width="max-content">
-                            <v-img :src="require('@/assets/home/business.jpg')" width="250px" height="2in">
+                            <v-img :src="require('@/assets/home/montecarlo.jpg')" width="250px" height="2in">
                                 <v-card-title class="card-title  pb-0 pt-1">
                                     <div class="card-title-text text-uppercase">
                                         El regreso del lujo

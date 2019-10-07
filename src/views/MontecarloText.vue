@@ -13,6 +13,11 @@
                         <p class="text-justify">
                             {{t}}
                         </p>
+
+                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===8" src="@/assets/1/3.jpg">
+                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===18" src="@/assets/1/2.jpg">
+                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===28" src="@/assets/1/1.jpg">
+
                     </div>
                 </div>
             </v-col>

@@ -6,11 +6,30 @@
             color="rgba(0, 0, 0, 0.76)"
     >
         <v-row class="pt-3">
-            <v-col cols="2" class="pt-0 pt-sm-0 pt-md-6 pt-lg-6 pt-xl-6 pl-0 pr-5" align="center">
-                <v-icon class="toolbar-social-icon mr-2" color="#ffffffde" dense>mdi-facebook</v-icon>
-                <v-icon class="toolbar-social-icon second mr-2" color="#ffffffde">mdi-twitter</v-icon>
-                <v-icon class="toolbar-social-icon third mr-2" color="#ffffffde">mdi-instagram</v-icon>
-            </v-col>
+            <social-sharing url="https://dogcalas.github.io/cuba-hotels/#/"
+                            title="La apuesta hotelera en Cuba"
+                            description="Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital cubano. ¿Valdrá la pena?"
+                            quote="Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital cubano. ¿Valdrá la pena?"
+                            hashtags="HotelesEnCuba"
+                            inline-template>
+                <div data-v-b9a2390a="" align="center" class="pt-0 pt-sm-0 pt-md-6 pt-lg-6 pt-xl-6 pl-0 pr-5 col col-2">
+                    <network network="facebook">
+                        <i aria-hidden="true"
+                           class="v-icon notranslate toolbar-social-icon mr-2 v-icon--dense mdi mdi-facebook theme--light"
+                           style="color: rgba(255, 255, 255, 0.87); caret-color: rgba(255, 255, 255, 0.87);"></i>
+                    </network>
+                    <network network="twitter">
+                        <i aria-hidden="true"
+                           class="v-icon notranslate toolbar-social-icon second mr-2 mdi mdi-twitter theme--light"
+                           style="color: rgba(255, 255, 255, 0.87); caret-color: rgba(255, 255, 255, 0.87);"></i>
+                    </network>
+                    <network network="telegram">
+                        <i aria-hidden="true"
+                           class="v-icon notranslate toolbar-social-icon mr-2 v-icon--dense mdi mdi-telegram theme--light"
+                           style="color: rgba(255, 255, 255, 0.87); caret-color: rgba(255, 255, 255, 0.87);"></i>
+                    </network>
+                </div>
+            </social-sharing>
             <v-col cols="8" class="pl-0 pl-sm-0 pl-md-5 pl--lg-5 pl-xl-5" style="width: max-content">
                 <router-link to="/" style="text-decoration: none">
                     <p class="mb-0 text-uppercase bar-title">
@@ -47,7 +66,7 @@
         font-size: 25px;
     }
 
-    .small-screen{
+    .small-screen {
         display: none;
     }
 
@@ -62,11 +81,11 @@
             margin-top: -5px;
         }
 
-        .second{
+        .second {
             margin-top: -20px;
         }
 
-        .third{
+        .third {
             margin-top: -30px;
         }
     }
@@ -83,11 +102,11 @@
             margin-top: 0;
         }
 
-        .second{
+        .second {
             margin-top: -25px;
         }
 
-        .third{
+        .third {
             margin-top: -50px;
         }
     }
@@ -98,11 +117,11 @@
             letter-spacing: 4px;
         }
 
-        .lg-screen{
+        .lg-screen {
             display: none;
         }
 
-        .small-screen{
+        .small-screen {
             display: flex;
         }
     }

@@ -10,25 +10,21 @@
                 <v-row class="content-row" no-gutters>
                     <v-col class="card-col " cols="6" sm="5" md="5" lg="5" xl="5"
                            style="height: max-content !important;">
+                        <router-link to="/montecarlo/" style="text-decoration: none">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
                                     <p class="pt-0 mb-0 card-title text-uppercase">El regreso del lujo</p>
-<!--                                    <p class="pt-0 mb-0 card-title text-uppercase">del lujo</p>-->
                                 </v-col>
                             </v-row>
                         </v-card-title>
+                        </router-link>
                         <v-divider class="title-divider"></v-divider>
                         <v-card-text class="text-left card-text-container">
                             <v-row>
                                 <v-col class="card-text">
                                     Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar
                                     hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario
-                                    <!--                                    ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod-->
-
-                                    <!--                                    <span class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex">tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</span>-->
-                                    <!--                                    <span class="d-none d-sm-none d-md-none d-lg-flex d-xl-flex"> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo-->
-                                    <!--                                    consequat</span>...-->
                                 </v-col>
                             </v-row>
                         </v-card-text>

@@ -38,18 +38,19 @@
                         <div>Investigación, datos y textos: Jessica Dominguez y Julio Batista</div>
                         <div>Programación: Amelia Zulueta Contreras y Abraham Calás</div>
                         <div>Diseño: Wendy Valladares y Janet Aguilar</div>
-                        <div>Fotografía: Jans Sosa, Jorge Beltrán y Fidel Alejandro</div>
+                        <div>Fotografía: Jans Sosa, Jorge Beltrán y Alejandro Basulto</div>
+                        <div>Redes Sociales: Beatriz Valdés y Enrique Torres</div>
                         <div class="method text-uppercase pt-8">Metodología</div>
                         <div class="method text-uppercase pt-4 pb-6">Base de Datos</div>
                     </v-col>
                     <v-col cols="12" sm="12" md="4" lg="5" xl="5" align="center">
-                        <a href="#" style="text-decoration: none;">
+                        <a href="https://eltoque.com/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/eltoque.png" max-width="1.45in"></v-img>
                         </a>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="https://www.connectas.org/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/connectas.png" max-width="1.80in" class="mt-2 ml-3"></v-img>
                         </a>
-                        <a href="#" style="text-decoration: none;">
+                        <a href="https://www.icfj.org/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/icfb.png" max-width="0.50in" class="mt-6"></v-img>
                         </a>
                     </v-col>

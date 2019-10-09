@@ -21,22 +21,19 @@
                         <v-carousel
                                 v-if="i===20"
                                 cycle
-                                height="400"
                                 hide-delimiter-background
                                 show-arrows-on-hover
-                                style="margin-bottom: 30px; margin-top: 20px"
+                                class="my-carousel"
+                                style="margin-top: 20px; margin-bottom: 20px;  height: max-content !important;"
                         >
-                            <v-carousel-item>
+                            <v-carousel-item style="height: min-content!important;">
                                 <v-img width="100%" src="@/assets/2/1.jpg"></v-img>
                             </v-carousel-item>
-
-                            <v-carousel-item
-                            >
+                            <v-carousel-item style="height: min-content!important;">
                                 <v-img width="100%" src="@/assets/2/2.jpg"></v-img>
                             </v-carousel-item>
-                            <v-carousel-item
-                            >
-                                <v-img width="100%" src="@/assets/2/3.jpg"></v-img>
+                            <v-carousel-item style="height: min-content!important;">
+                                <v-img width="100%"  src="@/assets/2/3.jpg"></v-img>
                             </v-carousel-item>
                         </v-carousel>
                     </div>
@@ -213,6 +210,15 @@
 
         }
     }
+</style>
 
+<style>
+    .v-carousel__controls {
+        display: none !important;
+    }
+
+    .my-carousel .v-responsive{
+        height: min-content !important;
+    }
 
 </style>

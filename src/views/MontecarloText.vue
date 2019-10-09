@@ -33,8 +33,7 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link class="text-right" to="/negocio/"
-                                                 style="text-decoration: none; width: 100%">
+                                    <router-link class="text-right" to="/negocio/" style="text-decoration: none;">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>

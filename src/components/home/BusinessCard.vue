@@ -12,6 +12,7 @@
                     </v-col>
                     <v-col cols="6" sm="5" md="5" lg="5" xl="5" class="card-col pr-0" style="position: relative;">
                         <div class="card-title-container text-left">
+                            <router-link to="/negocio/" style="text-decoration: none;">
                             <v-card-title class="text-left pt-6  pb-0">
                                 <v-row align="center">
                                     <v-col cols="12">
@@ -19,6 +20,7 @@
                                     </v-col>
                                 </v-row>
                             </v-card-title>
+                            </router-link>
                         </div>
                         <v-divider class="title-divider"></v-divider>
                         <v-card-text class="card-text-container text-left">

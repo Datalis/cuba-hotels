@@ -47,32 +47,18 @@
                 </v-row>
                 <v-row justify="center">
                     <v-col
-                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1"
+                            class="col-hotel-list"
                             cols="12" sm="7" md="7" lg="7" xl="7"
-                            style="height: max-content;">
+                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-text-field
                                 v-model="filters.text"
                                 class="search-box"
                                 filled
                                 label="Buscar"
                                 prepend-inner-icon="search"
-                                style="height: 40px;"
+                                style="height: 70px;"
                                 color="#cc983c"
                         ></v-text-field>
-                    </v-col>
-                    <v-col
-                            class="d-none d-sm-flex d-md-flex d-lg-flex d-xl-flex"
-                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2"
-                            cols="12" sm="4" md="4" lg="4" xl="4"
-                            style="height: max-content;">
-                        <h3 class="filters-title text-uppercase">Filtros</h3>
-                    </v-col>
-                </v-row>
-                <v-row justify="center">
-                    <v-col
-                            class="col-hotel-list"
-                            cols="12" sm="7" md="7" lg="7" xl="7"
-                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
                         <v-list
                                 style="background-color: transparent; height: 100%; overflow-y: scroll"
                                 two-line
@@ -123,6 +109,7 @@
                            order="1" order-sm="2" order-md="2" order-lg="2" order-xl="2">
                         <v-container fluid class="group-filter-container pt-0">
                             <h3 class="group-title">Categoría</h3>
+                            <v-row class="pl-2" justify="space-around">
                             <v-checkbox
                                     multiple
                                     v-model="filters.categories"
@@ -133,11 +120,13 @@
                                     :value="c.val"
                                     v-for="c in categories">
                                 <template v-slot:label>
-                                    <div class="check-label">
+                                    <div class="check-label category">
                                         {{c.name}}
                                     </div>
                                 </template>
                             </v-checkbox>
+                            </v-row>
+
                             <v-select
                                     v-model="filters.categories"
                                     color="#cc983c"
@@ -153,11 +142,6 @@
                                         {{item.name}}
                                     </div>
                                 </template>
-                                <!--                                <template v-slot:selection="{ item, index }">-->
-                                <!--                                    <div class="check-label" style="margin-right: 2px">-->
-                                <!--                                        {{item.name}}-->
-                                <!--                                    </div>-->
-                                <!--                                </template>-->
                             </v-select>
                         </v-container>
                         <v-container fluid class="pt-0">
@@ -196,22 +180,24 @@
                         </v-container>
                         <v-container fluid class="pt-0">
                             <h3 class="group-title">Operador extranjero</h3>
-                            <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="1"
-                                        on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck">
-                                <template v-slot:label>
-                                    <div class="check-label">
-                                        Si
-                                    </div>
-                                </template>
-                            </v-checkbox>
-                            <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="-1" color="#cc983c"
-                                        class="_vcheck">
-                                <template v-slot:label>
-                                    <div class="check-label">
-                                        No
-                                    </div>
-                                </template>
-                            </v-checkbox>
+                            <v-row class="pl-3" justify="start">
+                                <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="1"
+                                            on-icon="$vuetify.icons.checkboxOff" color="#cc983c" class="_vcheck mr-6">
+                                    <template v-slot:label>
+                                        <div class="check-label">
+                                            Si
+                                        </div>
+                                    </template>
+                                </v-checkbox>
+                                <v-checkbox v-model="filters.opers_ext" :false-value="0" :true-value="-1" color="#cc983c"
+                                            class="_vcheck">
+                                    <template v-slot:label>
+                                        <div class="check-label">
+                                            No
+                                        </div>
+                                    </template>
+                                </v-checkbox>
+                            </v-row>
                         </v-container>
                         <v-container fluid class="pt-0">
                             <h3 class="group-title">Ubicación</h3>
@@ -257,7 +243,7 @@
         <!--- banner -->
         <v-row class="background-img" align="start">
             <v-col cols="3" sm="3" md="3" lg="4" xl="4">
-                <v-img height="14.324in" width="7.907in" :src="require('@/assets/home/background.jpg')"/>
+                <v-img height="11.324in" width="7.907in" :src="require('@/assets/home/background.jpg')"/>
             </v-col>
             <v-col cols="7" sm="7" md="7" lg="6" xl="6" class="title-component-container">
                 <h1 class="map-title text-uppercase">Hoteles Existentes</h1>
@@ -339,6 +325,10 @@
 </script>
 
 <style scoped>
+    .category{
+        margin-left: -5px !important;
+        margin-bottom: 3px !important;
+    }
     .content-row {
         margin-top: 125px;
     }
@@ -395,7 +385,7 @@
     }
 
     .col-hotel-list {
-        height: 10.5in;
+        height: 7.2in;
     }
 
     .primary-color {

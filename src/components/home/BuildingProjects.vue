@@ -62,7 +62,7 @@
             <v-img height="7in" :src="require('@/assets/home/activep.jpg')">
                 <transition name="slide-fade">
                     <v-card class="text-uppercase" v-show="showDetails"
-                            style="margin-top: 150px; padding: 25px 32px 25px ; background-color: #cc983c; width: 400px;border-radius:0;">
+                            style="margin-top: 150px; padding: 25px 32px 25px ; background-color: #cc983c; width: 400px;border-radius:0; height: 400px">
                         <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
                         <v-card-text class="pt-0"
                                      style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
@@ -144,7 +144,7 @@
             filteredProjects() {
                 return this.projects.filter(p => {
                     if (this.ptype === 'Ampliación') {
-                        return p.tipo === 'Ampliación'
+                        return p.tipo !== 'Nuevo'
                     } else if (this.ptype === 'Nuevo') {
                         return p.tipo === 'Nuevo'
                     } else {

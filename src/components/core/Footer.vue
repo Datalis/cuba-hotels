@@ -44,13 +44,13 @@
                         <div class="method text-uppercase pt-4 pb-6">Base de Datos</div>
                     </v-col>
                     <v-col cols="12" sm="12" md="4" lg="5" xl="5" align="center">
-                        <a href="https://www.connectas.org/" style="text-decoration: none;">
+                        <a href="https://eltoque.com/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/eltoque.png" max-width="1.45in"></v-img>
                         </a>
-                        <a href="https://www.icfj.org/" style="text-decoration: none;">
+                        <a href="https://www.connectas.org/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/connectas.png" max-width="1.80in" class="mt-2 ml-3"></v-img>
                         </a>
-                        <a href="https://eltoque.com/" style="text-decoration: none;">
+                        <a href="https://www.icfj.org/" style="text-decoration: none;">
                         <v-img src="@/assets/home/logos/icfb.png" max-width="0.50in" class="mt-6"></v-img>
                         </a>
                     </v-col>

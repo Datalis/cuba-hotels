@@ -20,6 +20,8 @@
 
                     </div>
                 </div>
+
+                <comment style="margin-top: 40px" category="11"></comment>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
             <v-col cols="2" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex">
@@ -72,6 +74,8 @@
 <script>
     import Banner from '@/components/banners/MontecarloBanner'
     import VideoFrame from '@/components/videoFrame'
+    import Comment from "@/components/Comment.vue";
+
     import {mapGetters} from 'vuex'
 
     export default {
@@ -81,7 +85,7 @@
                 textos: 'montecarlo'
             })
         },
-        components: {VideoFrame, Banner},
+        components: {VideoFrame, Banner,Comment},
         data() {
             return {
                 sidebarFixed: false,

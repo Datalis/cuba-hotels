@@ -6,7 +6,6 @@
         <gaesa-card class="third-card-margin"></gaesa-card>
         <interactive-map class="interactive-comp-margin"></interactive-map>
         <youtube-video class="youtube-comp-margin" style="margin-top: 2in"></youtube-video>
-<!--        <comment category="11"></comment>-->
     </div>
 </template>
 
@@ -17,7 +16,6 @@
     import BusinessCard from '@/components/home/BusinessCard'
     import GaesaCard from '@/components/home/GaesaCard'
     import InteractiveMap from "@/components/home/Interactive";
-    import Comment from "@/components/home/Comment.vue";
 
     export default {
         name: "Home",
@@ -27,8 +25,7 @@
             MontecarloCard,
             BusinessCard,
             YoutubeVideo,
-            GaesaCard,
-            Comment
+            GaesaCard
         },
         data() {
             return {
@@ -56,58 +53,72 @@
 </script>
 
 <style scoped>
-    .first-card-margin{
+    .first-card-margin {
         margin-top: 4in;
     }
-    .second-card-margin{
+
+    .second-card-margin {
         margin-top: 2in;
     }
-    .third-card-margin{
+
+    .third-card-margin {
         margin-top: 2in;
     }
-    .interactive-comp-margin{
+
+    .interactive-comp-margin {
         margin-top: 2in
     }
-    @media screen and (max-width: 800px){
-        .first-card-margin{
+
+    @media screen and (max-width: 800px) {
+        .first-card-margin {
             margin-top: 3.5in;
         }
-        .second-card-margin{
+
+        .second-card-margin {
             margin-top: 1in;
         }
-        .third-card-margin{
+
+        .third-card-margin {
             margin-top: 1in;
         }
-        .interactive-comp-margin{
+
+        .interactive-comp-margin {
             margin-top: 1in
         }
     }
 
-    @media screen and (max-width: 500px){
-        .first-card-margin{
+    @media screen and (max-width: 500px) {
+        .first-card-margin {
             margin-top: 2.5in;
         }
-        .second-card-margin{
+
+        .second-card-margin {
             margin-top: 50px;
         }
-        .third-card-margin{
+
+        .third-card-margin {
             margin-top: 50px;
         }
-        .interactive-comp-margin{
+
+        .interactive-comp-margin {
             margin-top: 50px;
         }
     }
-    @media screen and (max-width: 425px){
-        .first-card-margin{
+
+    @media screen and (max-width: 425px) {
+        .first-card-margin {
             margin-top: 3.5in;
         }
-        .second-card-margin{
+
+        .second-card-margin {
             margin-top: 50px;
         }
-        .third-card-margin{
+
+        .third-card-margin {
             margin-top: 50px;
         }
-        .interactive-comp-margin{
+
+        .interactive-comp-margin {
             margin-top: 50px;
         }
     }

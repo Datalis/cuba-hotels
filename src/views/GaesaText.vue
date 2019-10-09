@@ -13,22 +13,28 @@
                         <p class="text-justify" v-if="i!==70 && i!==69 && i!==68">
                             {{t}}
                         </p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/7.jpg"  v-if="i===5"></v-img>
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===10">¿Cómo se construyen
+                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/7.jpg"
+                               v-if="i===5"></v-img>
+                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===10">¿Cómo se
+                            construyen
                             los hoteles en Cuba?</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/3.jpg"  v-if="i===10"></v-img>
+                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/3.jpg"
+                               v-if="i===10"></v-img>
 
                         <p style="font-style: italic" v-if="i===16">Grafico</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/8.jpg"  v-if="i===25"></v-img>
+                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/8.jpg"
+                               v-if="i===25"></v-img>
                         <p class="text-uppercase" style="font-family: Montserrat-Bold; " v-if="i===32">Quién invierte
                             realmente en Cuba: el esquema Gaesa</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/5.jpg"  v-if="i===32"></v-img>
-                        <v-img width="100%" src="@/assets/3/INFOG-02.jpg"  v-if="i===43"></v-img>
+                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/5.jpg"
+                               v-if="i===32"></v-img>
+                        <v-img width="100%" src="@/assets/3/INFOG-02.jpg" v-if="i===43"></v-img>
 
                         <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===50">¿Para qué
                             construir?</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/1.jpg"  v-if="i===50"></v-img>
-                        <v-img style="margin-top: 20px" width="100%" src="@/assets/3/4.jpg"  v-if="i===67"></v-img>
+                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/1.jpg"
+                               v-if="i===50"></v-img>
+                        <v-img style="margin-top: 20px" width="100%" src="@/assets/3/4.jpg" v-if="i===67"></v-img>
 
                         <ocupacion-habitaciones v-if="i===61"></ocupacion-habitaciones>
                     </div>
@@ -62,8 +68,7 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link class="text-right" to="/negocio/"
-                                                 style="text-decoration: none; width: 100%">
+                                    <router-link class="text-right" to="/negocio/" style="text-decoration: none;">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>

@@ -8,7 +8,7 @@
         <v-row id="text-row11" justify="center"
                :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
-                <div class="info-container" style="padding-right: 10px;">
+                <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
                         <p class="text-justify">
                             {{t}}
@@ -20,7 +20,6 @@
 
                     </div>
                 </div>
-
                 <comment style="margin-top: 40px" category="11"></comment>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>

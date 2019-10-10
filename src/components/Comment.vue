@@ -1,144 +1,160 @@
 <template>
-    <section class="box-comment" :id="`commentbox${this.category}`">
+    <section :id="`commentbox${this.category}`">
         <h3>Deja tu comentario, duda o pregunta</h3>
-
-        <form class="needs-validation" novalidate>
+        <v-form ref="form" :value="valid">
             <v-row class="ma-0" style="width: 100%">
                 <v-col cols="12" sm="6" class="pl-0 pb-0">
                     <v-text-field
-                            v-model="nombre"
+                            v-model="name"
+                            :rules="rules.name"
                             color="#cc983c"
                             label="Nombre"
                             required
-                            id="validationTooltip01"
                     ></v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6" class="pl-0 pb-0">
                     <v-text-field
-                            v-model="nombre"
+                            v-model="email"
+                            :rules="rules.email"
                             color="#cc983c"
                             label="Correo"
                             required
-                            id="validationTooltipUsername"
                     ></v-text-field>
                 </v-col>
                 <v-col cols="12" class="pl-0 pt-0">
                     <v-textarea
                             class="pl-0"
                             color="#cc983c"
-                            v-model="comentario"
+                            v-model="text"
                             label="Comenario"
                             required
+                            :rules="rules.text"
                             :auto-grow="false"
                             no-resize
                     ></v-textarea>
+
+                </v-col>
+                <v-col cols="12" class="pl-0 pt-0">
+                    <v-alert
+                            v-if="state<0"
+                            text
+                            type="error"
+                            icon="mdi-cloud-alert"
+                    >
+                        Hubo un error al enviar su comentario. Por favor intentelo más tarde.
+                    </v-alert>
+
+                    <v-alert
+                            v-if="state>0"
+                            text
+                            type="success"
+                            icon="mdi-information"
+                    >
+                        Su comentario ha sido enviado a moderación, muchas gracias.
+                    </v-alert>
+
+                    <div>
+                        <v-btn color="#cc983c" :loading="sending" :disabled="sending" tile @click="comment()">
+                            Comentar
+                            <template v-slot:loader>
+                                <span>Enviando...</span>
+                            </template>
+                        </v-btn>
+                    </div>
                 </v-col>
             </v-row>
-        </form>
+        </v-form>
+        <v-row class="mx-0" style="width:100%">
+            <v-col cols="12" class="pl-0 pt-0">
+                <div v-if="comments.length > 0" class="mt-8">
+                    <template v-for="(comment,i) in comments">
+                        <div :key="'comment'+i" class="comment-box pa-4 mt-4">
+                            <p>Rosa dijo:</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deserunt eaque
+                                earum eius
+                                enim
+                                expedita explicabo, fuga fugiat ipsum, libero mollitia nisi ratione reprehenderit
+                                tempore
+                                tenetur!
+                                Itaque labore nulla
+                            </p>
+                        </div>
+                    </template>
+                </div>
+                <div v-else class="message-nocomment mt-8 text-center">
+                    No existen comentarios. Sé el primero en comentar.
+                </div>
+            </v-col>
+        </v-row>
 
-        <div class="send text-right">
-            <v-btn
-                    v-model="fab"
-                    class="ma-2"
-                    color="#cc983c"
-                    :loading="loading2"
-                    :disabled="loading2"
-                    tile
-                    @click="comment()">
-               Comentar
 
-                <template v-slot:loader>
-                    <span>Loading...</span>
-                </template>
-            </v-btn>
-        </div>
-
-        <div class="template">
-            <p>Fulano dijo:</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt, fuga fugiat hic ipsam iste minus pariatur quisquam quos sed sit suscipit, voluptate voluptatum. Ad corporis, deserunt eaque esse facere <voluptatem class=""></voluptatem></p>
-
-        </div>
-
-        <div class="list-comments">
-            <div v-if="comments.length>0">
-                <template v-for="comment in comments">
-                    <div class="author">{{comment.nickname}}:</div>
-                    <div class="comments">{{comment.content}}</div>
-                </template>
-            </div>
-<!--            <div class="message-nocomment text-center" v-else>-->
-<!--                No existen comentarios. Sé el primero en comentar.-->
-<!--            </div>-->
-        </div>
 
     </section>
 </template>
 
 <script>
-    import {library} from '@fortawesome/fontawesome-svg-core'
-    import {faPaperPlane, faAd} from '@fortawesome/free-solid-svg-icons'
-    import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome'
-
-    library.add(faPaperPlane)
-    library.add(faAd)
-    import axios from 'axios';
+    import {submitComment, getComments} from "@/api/comments";
 
     export default {
-        components: {
-            FontAwesomeIcon
-        },
         props: ['category'],
         name: "Comment",
         data() {
             return {
-                loading2: false,
-                fab: false,
-                correo: "",
-                comentario: "",
-                nombre: "",
-                comments: []
+                valid: true,
+                state: 0,
+                sending: false,
+                email: "",
+                text: "",
+                name: "",
+                comments: [],
+                errors: [],
+                rules: {
+                    name: [v => !!v.trim() || 'El nombre es obligatorio'],
+                    text: [v => !!v.trim() || 'Escriba su comentario'],
+                    email: [
+                        v => !!v.trim() || 'El correo es obligatorio y no será compartido',
+                        v => /\S+@\S+\.\S+/.test(v) || 'Debe especificar un correo válido'
+                    ]
+                }
             }
         },
         methods: {
+            resetForm() {
+                this.name = ""
+                this.email = ""
+                this.text = ""
+                this.errors = []
+            },
+            resetValidation() {
+                this.$refs.form.resetValidation()
+            },
             comment: function () {
-                var me = this;
-                axios.post('https://rssblog.herokuapp.com/comment', {
-                    "nickname": this.nombre,
-                    "email": this.correo,
-                    "content": this.comentario,
-                    "category": this.category
-                })
-                    .then(function (response) {
-                        console.log(response.status)
-                        if (response.status == 200) {
-                            me.$toast.open({
-                                message: 'Comentario enviado!',
-                                position: 'is-bottom',
-                                type: 'is-success',
-                            })
-                            me.nombre = "";
-                            me.correo = "";
-                            me.comentario = "";
-                        } else {
-                            me.$toast.open({
-                                message: 'Ocurrió un error al enviar el comentario!',
-                                position: 'is-bottom',
-                                type: 'is-error'
-                            })
-                        }
+                if (this.$refs.form.validate()) {
+                    const me = this;
+                    me.sending = true
 
-                    })
-                    .catch(function (error) {
-                        me.$toast.open({
-                            message: 'Ocurrió un error al enviar el comentario!',
-                            position: 'is-bottom',
-                            type: 'is-error'
-                        })
+                    submitComment({
+                        "nickname": this.name.trim(),
+                        "email": this.email.trim(),
+                        "content": this.text.trim(),
+                        "category": this.category
+                    }).then(response => {
+                        me.resetForm()
+                        me.resetValidation()
+                        me.state = 1
+                        setTimeout(() => (me.state = 0), 5000)
+                    }).catch(error => {
+                        console.log(error)
+                        me.state = -1
+                        setTimeout(() => (me.state = 0), 5000)
+                    }).finally(() => {
+                        me.sending = false
                     });
+                }
             }
         },
-        created() {
-            axios.get(`https://rssblog.herokuapp.com/comment?category=${this.category}`)
+        mounted() {
+            getComments({'category': this.category})
                 .then(response => {
                     // JSON responses are automatically parsed.
                     this.comments = response.data
@@ -151,100 +167,7 @@
 </script>
 
 <style scoped>
-
-    /*@media (max-width: 800px) {*/
-    /*    .box-comment {*/
-    /*        padding: 40px 5% !important;*/
-    /*    }*/
-    /*}*/
-
-    /*.icon {*/
-    /*    color: red;*/
-    /*}*/
-
-    /*.send {*/
-    /*    margin-top: -80px;*/
-    /*}*/
-
-    /*.box-comment {*/
-    /*    padding: 40px 20%;*/
-    /*    background-color: #f2f2f2;*/
-
-    /*}*/
-
-    /*.list-comments {*/
-    /*    max-height: 300px;*/
-    /*    overflow-y: scroll;*/
-    /*}*/
-
-    /*.message-nocomment {*/
-    /*    font-family: TradeGothicLTStd-Bold;*/
-    /*    font-size: 21px;*/
-    /*    color: #a09e9e;*/
-    /*    padding-bottom: 20px;*/
-    /*    text-transform: uppercase;*/
-    /*}*/
-
-    /*.author {*/
-    /*    font-family: TradeGothicLTStd;*/
-    /*    font-size: 21px;*/
-    /*    font-weight: normal;*/
-    /*    font-style: normal;*/
-    /*    font-stretch: normal;*/
-    /*    line-height: normal;*/
-    /*    letter-spacing: 0.5px;*/
-    /*    text-align: left;*/
-    /*    color: #ec2d45;*/
-    /*}*/
-
-    /*.comments {*/
-    /*    padding-bottom: 15px;*/
-    /*    font-family: TradeGothicLTStd;*/
-    /*    font-size: 18px;*/
-    /*    font-weight: normal;*/
-    /*    font-style: normal;*/
-    /*    font-stretch: normal;*/
-    /*    line-height: normal;*/
-    /*    letter-spacing: normal;*/
-    /*    margin: 0px 10px 0px 0px;*/
-    /*    text-align: justify;*/
-    /*    color: rgba(64, 62, 62, 0.85);*/
-    /*}*/
-
-    /*h3 {*/
-    /*    padding: 10px 0px;*/
-
-    /*    font-family: TradeGothicLTStd-Bold;*/
-    /*    text-transform: uppercase;*/
-    /*    font-size: 24px;*/
-    /*    font-weight: bold;*/
-    /*    font-style: normal;*/
-    /*    font-stretch: normal;*/
-    /*    line-height: normal;*/
-    /*    letter-spacing: 2px;*/
-    /*    text-align: center;*/
-    /*    color: #ec2c44;*/
-    /*}*/
-
-    /*input {*/
-    /*    height: 36px;*/
-    /*}*/
-
-    /*input::placeholder, textarea::placeholder {*/
-    /*    color: rgba(255, 0, 0, .5);*/
-    /*    font-size: 16px;*/
-
-    /*}*/
-
-    /*input, textarea {*/
-    /*    border-radius: 0px;*/
-    /*    border: 0px;*/
-    /*    margin: 5px;*/
-    /*    font-size: 16px;*/
-    /*    color: red;*/
-    /*}*/
-
-    /*.text-comment {*/
-    /*    height: 100px;*/
-    /*}*/
+    .comment-box {
+        background-color: #f4f2f0;
+    }
 </style>

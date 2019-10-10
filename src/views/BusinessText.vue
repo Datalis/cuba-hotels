@@ -7,7 +7,7 @@
         </v-row>
         <v-row id="text-row11" justify="center"  :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
-                <div class="info-container" style="padding-right: 10px;">
+                <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
                         <p class="text-justify">
                             {{t}}
@@ -37,7 +37,7 @@
                             </v-carousel-item>
                         </v-carousel>
                     </div>
-
+                    <comment style="margin-top: 40px" category="12"></comment>
                 </div>
             </v-col>
             <v-col cols="1" class="pa-0 d-none d-sm-none d-md-flex d-lg-flex d-xl-flex"></v-col>
@@ -96,6 +96,7 @@
     import BubbleHabitaciones from "@/components/graphics/BubbleHabitaciones";
     import EvolucionHoteles from "@/components/graphics/EvolucionHoteles";
     import SunburtsHoteles from "@/components/graphics/SunburtsHoteles";
+    import Comment from "@/components/Comment.vue";
 
     export default {
         name: "Building",
@@ -104,7 +105,7 @@
                 textos: 'business'
             })
         },
-        components: {VideoFrame, BusinessBanner, BubbleHabitaciones, EvolucionHoteles,SunburtsHoteles},
+        components: {VideoFrame, BusinessBanner, BubbleHabitaciones, EvolucionHoteles,SunburtsHoteles, Comment},
         data(){
             return{
                 sidebarFixed: false,

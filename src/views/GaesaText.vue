@@ -8,7 +8,7 @@
         <v-row id="text-row11" justify="center"
                :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
-                <div class="info-container" style="padding-right: 10px;">
+                <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
                         <p class="text-justify" v-if="i!==70 && i!==69 && i!==68">
                             {{t}}
@@ -38,6 +38,8 @@
 
                         <ocupacion-habitaciones v-if="i===61"></ocupacion-habitaciones>
                     </div>
+
+                    <comment style="margin-top: 40px" category="13"></comment>
 
                 </div>
             </v-col>
@@ -94,6 +96,7 @@
     import VideoFrame from '@/components/videoFrame'
     import {mapGetters} from 'vuex'
     import OcupacionHabitaciones from "@/components/graphics/OcupacionHabitaciones";
+    import Comment from "@/components/Comment.vue";
 
 
     export default {
@@ -103,7 +106,7 @@
                 textos: 'gaesa'
             })
         },
-        components: {VideoFrame, GaesaBanner, OcupacionHabitaciones},
+        components: {VideoFrame, GaesaBanner, OcupacionHabitaciones, Comment},
         data() {
             return {
                 sidebarFixed: false,

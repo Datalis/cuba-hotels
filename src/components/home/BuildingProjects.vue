@@ -18,7 +18,7 @@
                 <v-col cols="3" :class="{period: true, handhover:true, active:isActive(last_year),'pb-0': true}"
                        @click="setActiveYear(last_year)">{{getYear(last_year)}}
                 </v-col>
-                <v-col cols="1" class="pb-0 mb-n1">
+                <v-col cols="1" class="pb-0 pt-4 pl-1 mb-n1">
                     <v-icon color="white" @click="shiftLeft">keyboard_arrow_left</v-icon>
                     <v-icon color="white" @click="shiftRight">keyboard_arrow_right</v-icon>
                 </v-col>
@@ -39,8 +39,13 @@
             </v-checkbox>
             <v-list ref="list" class="project-list pt-0 mt-3" max-height="3.5in" max-width="90%">
                 <div :key="i" :class="'y'+i" :ref="'y'+i" v-for="(y,i) in years">
-                    <v-divider v-if="i>0" :key="'y'+i" color="#3b3b3b" class="mt-3"
-                               style="boder: none !important;"></v-divider>
+                    <div v-if="i>0" :key="'y'+i">
+                        <v-divider  color="#3b3b3b" class="mt-3 mr-2" style="width: 85%; boder: none !important; float: left">
+
+                        </v-divider>
+                        <span style="color: #4d4d4c;">{{y}}</span>
+                    </div>
+
                     <v-list-item
                             style="min-height: 42px !important;"
                             :key="h.nombre"

@@ -47,9 +47,9 @@
                 </v-row>
                 <v-row justify="center">
                     <v-col
-                            class="col-hotel-list"
+                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1"
                             cols="12" sm="7" md="7" lg="7" xl="7"
-                            order="2" order-sm="1" order-md="1" order-lg="1" order-xl="1">
+                            style="height: max-content;">
                         <v-text-field
                                 v-model="filters.text"
                                 class="search-box"
@@ -60,8 +60,9 @@
                                 color="#cc983c"
                         ></v-text-field>
                         <v-list
-                                style="background-color: transparent; height: 100%; overflow-y: scroll"
+                                style="background-color: transparent; overflow-y: scroll"
                                 two-line
+                                class="col-hotel-list"
                                 id="list">
                             <v-list-item :key="i" v-for="(h, i) in filteredHotels"
                                          class="pl-1"
@@ -557,10 +558,7 @@
         }
 
         .col-hotel-list {
-            height: 5in;
-        }
-
-        .col-hotel-list {
+            height: 4in;
             padding-left: 24px;
         }
 
@@ -574,7 +572,6 @@
             font-size: 15.93pt;
             margin-bottom: -40px;
         }
-
     }
 
     @media screen and (max-width: 500px) {

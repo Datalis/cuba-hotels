@@ -1,6 +1,6 @@
 <template>
     <section :id="`commentbox${this.category}`">
-        <h3>Deja tu comentario, duda o pregunta</h3>
+        <h3 style="font-size: 15pt; letter-spacing: .5px;" class="text-uppercase">Deja tu comentario, duda o pregunta</h3>
         <v-form ref="form" :value="valid">
             <v-row class="ma-0" style="width: 100%">
                 <v-col cols="12" sm="6" class="pl-0 pb-0">
@@ -10,7 +10,9 @@
                             color="#cc983c"
                             label="Nombre"
                             required
-                    ></v-text-field>
+                    >
+
+                    </v-text-field>
                 </v-col>
                 <v-col cols="12" sm="6" class="pl-0 pb-0">
                     <v-text-field
@@ -69,21 +71,15 @@
                 <div v-if="comments.length > 0" class="mt-8">
                     <template v-for="(comment,i) in comments">
                         <div :key="'comment'+i" class="comment-box pa-4 mt-4">
-                            <p>Rosa dijo:</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur deserunt eaque
-                                earum eius
-                                enim
-                                expedita explicabo, fuga fugiat ipsum, libero mollitia nisi ratione reprehenderit
-                                tempore
-                                tenetur!
-                                Itaque labore nulla
+                            <p class="nickname">{{comment.nickname}} dijo:</p>
+                            <p class="comment-text">{{comment.content}}
                             </p>
                         </div>
                     </template>
                 </div>
-                <div v-else class="message-nocomment mt-8 text-center">
-                    No existen comentarios. Sé el primero en comentar.
-                </div>
+<!--                <div v-else class="message-nocomment mt-8 text-center">-->
+<!--                    No existen comentarios. Sé el primero en comentar.-->
+<!--                </div>-->
             </v-col>
         </v-row>
 
@@ -167,6 +163,11 @@
 </script>
 
 <style scoped>
+    .nickname{
+        font-weight: bold;
+    }
+    .comment-text{
+    }
     .comment-box {
         background-color: #f4f2f0;
     }

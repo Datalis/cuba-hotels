@@ -98,6 +98,47 @@
                 </transition>
             </v-img>
         </v-col>
+
+        <v-dialog
+                width="max-content"
+                v-if="$vuetify.breakpoint.xs || $vuetify.breakpoint.sm"
+                v-model="showDetails"
+        style="border-radius: 0!important;">
+            <v-card class="text-uppercase" v-show="showDetails"
+                    style="padding: 25px 32px 25px ; background-color: #cc983c; width: 400px;border-radius:0 !important; height: 400px">
+                <v-icon style="margin-left: 88%" color="black" @click="hidePopup()">clear</v-icon>
+                <v-card-text class="pt-0"
+                             style="font-family: Montserrat-ExtraBold; color:#171716; font-size: 11pt; letter-spacing: 1px">
+                    <stars class="text-center" :stars="getCat(hotel)" color="white"></stars>
+                    <p class="mb-0 text-uppercase text-center"
+                       style="text-transform: none; font-family: Montserrat-Bold;">
+                        {{hotel.habitaciones}} habitaciones</p>
+                    <p class="mb-9 text-uppercase text-center"
+                       style="text-transform: none; font-family: Montserrat-Bold">
+                        $ {{hotel.costo}}</p>
+
+                    <p class="mb-0"
+                       style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                        <span style="font-family: Montserrat-Regular">Ubicación: </span>{{hotel.localizacion}}. {{hotel.provincia.nombre}}</p>
+                    <p class="mb-0"
+                       style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                        <span style="font-family: Montserrat-Regular">A cargo de: </span>{{hotel.cadena}}</p>
+
+                    <p class="mb-0"
+                       style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                        <span style="font-family: Montserrat-Regular">Previsto para: </span>{{hotel.fecha_fin}}</p>
+
+                    <p class="mb-3"
+                       style="text-transform: none; font-family: Montserrat-Bold; letter-spacing: 0">
+                        <span style="font-family: Montserrat-Regular">Estado de la obra: </span>{{hotel.est_inv}}</p>
+                </v-card-text>
+                <v-card-actions>
+                    <div style="font-family: Montserrat-Light; color:#ffffff; font-size: 10pt; width: max-content; margin-left: auto; margin-right: auto">
+                        {{hotel.tipo}}
+                    </div>
+                </v-card-actions>
+            </v-card>
+        </v-dialog>
     </v-row>
 </template>
 
@@ -155,6 +196,7 @@
         },
 
         mounted() {
+            console.log(this.$vuetify.breakpoint)
             const me = this
             this.$refs.list.$el.addEventListener('scroll', function () {
                 const year = me.getActiveIYear()

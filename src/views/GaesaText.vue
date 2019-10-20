@@ -101,6 +101,46 @@
 
     export default {
         name: "GaesaText",
+        metaInfo: {
+            // Children can override the title.
+            title: 'LA APUESTA HOTELERA EN CUBA',
+            titleTemplate: '%s ← EL ESQUEMA GAESA PARA CONSTRUIR HOTELES',
+            // Define meta tags here.
+            meta: [
+                {'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8'},
+                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                {
+                    name: 'description',
+                    content: 'En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir 244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar GAE S.A.'
+                },
+                {name: 'tags', content: 'cuba, hoteles, turismo, eltoque'},
+                {name: 'author', content: 'Abraham Calas <dogcalas@gmail.com>'},
+                // OpenGraph data (Most widely used)
+                {property: 'og:title', content: 'EL ESQUEMA GAESA PARA CONSTRUIR HOTELES'},
+                {property: 'og:site_name', content: 'LA APUESTA HOTELERA EN CUBA'},
+                // The list of types is available here: http://ogp.me/#types
+                {property: 'og:type', content: 'website'},
+                // Should the the same as your canonical link, see below.
+                {property: 'og:url', content: 'https://hoteles.eltoque.com/gaesa'},
+                {property: 'og:image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+                // Often the same as your meta description, but not always.
+                {property: 'og:description', content: 'En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir 244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar GAE S.A.'},
+
+                // Twitter card
+                {name: 'twitter:card', content: 'summary'},
+                {name: 'twitter:site', content: 'https://hoteles.eltoque.com/gaesa'},
+                {name: 'twitter:title', content: 'EL ESQUEMA GAESA PARA CONSTRUIR HOTELES'},
+                {name: 'twitter:description', content: 'En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir 244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar GAE S.A.'},
+                // Your twitter handle, if you have one.
+                {name: 'twitter:creator', content: '@eltoquecom'},
+                {name: 'twitter:image:src', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+
+                // Google / Schema.org markup:
+                {itemprop: 'name', content: 'EL ESQUEMA GAESA PARA CONSTRUIR HOTELES'},
+                {itemprop: 'description', content: 'En la próxima década Cuba proyecta duplicar la cifra actual de habitaciones y abrir 244 nuevos hoteles. A la cabeza de estas construcciones está el consorcio militar GAE S.A.'},
+                {itemprop: 'image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'}
+            ]
+        },
         computed: {
             ...mapGetters({
                 textos: 'gaesa'

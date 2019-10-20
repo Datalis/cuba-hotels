@@ -79,6 +79,46 @@
 
     export default {
         name: "MontecarloText",
+        metaInfo: {
+            // Children can override the title.
+            title: 'LA APUESTA HOTELERA EN CUBA',
+            titleTemplate: '%s ← EL REGRESO DEL LUJO',
+            // Define meta tags here.
+            meta: [
+                {'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8'},
+                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                {
+                    name: 'description',
+                    content: 'Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario'
+                },
+                {name: 'tags', content: 'cuba, hoteles, turismo, eltoque'},
+                {name: 'author', content: 'Abraham Calas <dogcalas@gmail.com>'},
+                // OpenGraph data (Most widely used)
+                {property: 'og:title', content: 'EL REGRESO DEL LUJO'},
+                {property: 'og:site_name', content: 'LA APUESTA HOTELERA EN CUBA'},
+                // The list of types is available here: http://ogp.me/#types
+                {property: 'og:type', content: 'website'},
+                // Should the the same as your canonical link, see below.
+                {property: 'og:url', content: 'https://hoteles.eltoque.com/montecarlo'},
+                {property: 'og:image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+                // Often the same as your meta description, but not always.
+                {property: 'og:description', content: 'Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario'},
+
+                // Twitter card
+                {name: 'twitter:card', content: 'summary'},
+                {name: 'twitter:site', content: 'https://hoteles.eltoque.com/montecarlo'},
+                {name: 'twitter:title', content: 'EL REGRESO DEL LUJO'},
+                {name: 'twitter:description', content: 'Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario'},
+                // Your twitter handle, if you have one.
+                {name: 'twitter:creator', content: '@eltoquecom'},
+                {name: 'twitter:image:src', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+
+                // Google / Schema.org markup:
+                {itemprop: 'name', content: 'EL REGRESO DEL LUJO'},
+                {itemprop: 'description', content: 'Hoteles de lujo, campos de golf, marinas… las autoridades cubanas parecen apostar hoy por la idea que tenían las familias mafiosas antes del triunfo revolucionario'},
+                {itemprop: 'image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'}
+            ]
+        },
         computed: {
             ...mapGetters({
                 textos: 'montecarlo'

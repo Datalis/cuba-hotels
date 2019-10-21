@@ -29,6 +29,7 @@
                     subtitle: {
                         text: 'Fuente: Elaboración a partir de base de datos propia'
                     },
+                    colors: ['#ec6c5e', '#89cabd', '#575756', '#3a3d59', '#f6ab68', '#6d889b', '#3a3d59', '#f6ab68'],
                     series: [{
                         type: "sunburst",
                         data: data,

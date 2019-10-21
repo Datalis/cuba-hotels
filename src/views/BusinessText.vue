@@ -109,6 +109,46 @@
 
     export default {
         name: "Building",
+        metaInfo: {
+            // Children can override the title.
+            title: 'LA APUESTA HOTELERA EN CUBA',
+            titleTemplate: '%s ← EL REGRESO DEL LUJO',
+            // Define meta tags here.
+            meta: [
+                {'http-equiv': 'Content-Type', content: 'text/html; charset=utf-8'},
+                {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+                {
+                    name: 'description',
+                    content: 'En manos del grupo Gaviota, de las Fuerzas Armadas, y de un conjunto cada vez más amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba'
+                },
+                {name: 'tags', content: 'cuba, hoteles, turismo, eltoque'},
+                {name: 'author', content: 'Abraham Calas <dogcalas@gmail.com>'},
+                // OpenGraph data (Most widely used)
+                {property: 'og:title', content: 'EL NEGOCIO HOTELERO'},
+                {property: 'og:site_name', content: 'LA APUESTA HOTELERA EN CUBA'},
+                // The list of types is available here: http://ogp.me/#types
+                {property: 'og:type', content: 'website'},
+                // Should the the same as your canonical link, see below.
+                {property: 'og:url', content: 'https://hoteles.eltoque.com/negocio'},
+                {property: 'og:image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+                // Often the same as your meta description, but not always.
+                {property: 'og:description', content: 'En manos del grupo Gaviota, de las Fuerzas Armadas, y de un conjunto cada vez más amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba'},
+
+                // Twitter card
+                {name: 'twitter:card', content: 'summary'},
+                {name: 'twitter:site', content: 'https://hoteles.eltoque.com/negocio'},
+                {name: 'twitter:title', content: 'EL NEGOCIO HOTELERO'},
+                {name: 'twitter:description', content: 'En manos del grupo Gaviota, de las Fuerzas Armadas, y de un conjunto cada vez más amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba'},
+                // Your twitter handle, if you have one.
+                {name: 'twitter:creator', content: '@eltoquecom'},
+                {name: 'twitter:image:src', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'},
+
+                // Google / Schema.org markup:
+                {itemprop: 'name', content: 'EL NEGOCIO HOTELERO'},
+                {itemprop: 'description', content: 'En manos del grupo Gaviota, de las Fuerzas Armadas, y de un conjunto cada vez más amplio de actores extranjeros se encuentra el próspero negocio hotelero de Cuba'},
+                {itemprop: 'image', content: 'https://res.cloudinary.com/hmhkzirji/image/upload/v1570644605/eltoque/banner.jpg'}
+            ]
+        },
         computed: {
             ...mapGetters({
                 textos: 'business'

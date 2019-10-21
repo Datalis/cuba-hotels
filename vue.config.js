@@ -1,3 +1,1 @@
-module.exports = {
-    publicPath: '/cuba-hotels/'
-}
+module.exports = {}

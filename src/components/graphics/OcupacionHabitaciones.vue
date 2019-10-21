@@ -35,6 +35,7 @@
                     title: {
                         text: 'Ocupación de habitaciones en Cuba'
                     },
+                    colors: ['#ec6c5e', '#3a3d59', '#f6ab68', '#4c2b37', '#9c8986', '#6d889b', '#eb6375', '#f19384', '#4f2d54', '#ec6c5e', '#89cabd', '#575756', '#3a3d59', '#f6ab68', '#6d889b', '#3a3d59', '#f6ab68'],
                     subtitle: {
                         text: 'Fuente: Ministerio de Turismo / Oficina Nacional de Estadística e Información'
                     },

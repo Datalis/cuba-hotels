@@ -1,26 +1,24 @@
 <template>
     <div style="position: relative">
         <v-row justify="end">
-            <v-col cols="9" class="container-panel" align="center">
+            <v-col cols="9" class="container-panel">
             </v-col>
         </v-row>
-        <v-row no-gutters align="center" style="position: absolute; top: 0;">
-            <v-col class="video-col" align="end" justify="end">
+        <v-row class="content-row" justify="center" align="center">
+            <v-col cols="11" sm="6" md="6" lg="6" xl="6" class="video-col">
                 <video-frame :width="width" :height="height" class="video-frame"></video-frame>
             </v-col>
-            <v-col style="padding-top: 40px">
+            <v-col cols="8" sm="5" md="5" lg="4" xl="4" class="text-col" style="width: max-content">
                 <v-card class="card" flat>
                     <v-card-title class="card-title text-left text-uppercase">
-                        Video
+                        Hoteles en Cuba
                     </v-card-title>
                     <v-card-title class="card-title pt-0 text-left text-uppercase">
-                        Resumen
+                        ¿Quién paga el paraíso?
                     </v-card-title>
                     <v-card-text class="summary text-left">
-                        ...ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat...
+                        Más de 19 mil millones proyecta invertir el gobierno para asegurar el desarrollo turístico en
+                        Cuba. Una apuesta arriesgada, para un sector que hoy ya posee 72 mil habitaciones.
                     </v-card-text>
                 </v-card>
             </v-col>
@@ -48,29 +46,29 @@
                     case 'lg':
                         return '450px'
                     case 'md':
-                        return '350px'
+                        return '450px'
                     case 'sm':
                         return '270px'
                     case 'xs':
-                        return '200px'
+                        return '350px'
                     default:
-                        return '450px'
+                        return '350'
                 }
             },
             width() {
                 switch (this.$vuetify.breakpoint.name) {
                     case 'xl':
-                        return '600px'
+                        return '100%'
                     case 'lg':
-                        return '600px'
+                        return '100%'
                     case 'md':
-                        return '500px'
+                        return '100%'
                     case 'sm':
-                        return '420px'
+                        return '100%'
                     case 'xs':
-                        return '70%'
+                        return '100%'
                     default:
-                        return '500px'
+                        return '100%'
                 }
             }
         }
@@ -78,20 +76,28 @@
 </script>
 
 <style scoped>
+    .content-row {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .card-title {
-        font-family: Montserrat-ExtraBold;
-        font-size: 43.28pt;
-        line-height: 44.28pt;
         letter-spacing: 3px;
+        font-size: 22pt;
+        line-height: 28pt;
         color: #de9931;
+        font-family: Montserrat-ExtraBold;
     }
 
     .summary {
+        margin-top: 25px;
+        line-height: 18pt;
+        font-size: 14pt;
+        letter-spacing: 1px;
+        color: #9a9997 !important;;
         font-family: Montserrat-Regular;
-        font-size: 15pt;
-        color: #9a9997 !important;
-        margin-top: 50px;
-        line-height: 19pt;
     }
 
     .container-panel {
@@ -101,140 +107,83 @@
 
     .card {
         background-color: inherit !important;
-        /*margin: 12em 4em 12em 18em;*/
-        max-width: 496px;
-        padding-left: 50px;
     }
 
     .video-col {
-        padding-top: 100px
+
     }
 
     .video-frame {
-        margin-left: 80px;
+
     }
 
-    @media screen and (max-width: 1140px) {
-        .card {
-            padding-left: 20px;
-        }
-    }
-
-    @media screen and (max-width: 1100px) {
-        .card {
-            padding-left: 10px;
-            max-width: 400px;
-            padding-top: 40px;
-        }
-
+    @media screen and (max-width: 960px) {
         .card-title {
-            font-size: 30.28pt;
-            line-height: 30.28pt;
+            font-size: 22pt;
+            line-height: 25pt;
+        }
+
+        .card {
+            min-width: 110% !important;
         }
 
         .summary {
-            font-size: 14pt;
+            line-height: 16pt;
+            font-size: 13pt;
+        }
+    }
+
+
+    @media screen and (max-width: 900px) {
+        .card-title {
+            font-size: 18pt;
+            line-height: 20pt;
+        }
+
+        .summary {
             line-height: 14pt;
+            font-size: 12pt;
         }
     }
 
-    @media screen and (max-width: 1000px) {
-        .summary {
+    @media screen and (max-width: 720px) {
+        .card-title {
             font-size: 14pt;
-            line-height: 14pt;
-            margin-top: 20px;
-        }
-    }
-
-    @media screen and (max-width: 980px) {
-        .card-title {
-            font-size: 25.28pt;
-            line-height: 25.28pt;
+            line-height: 16pt;
+            padding-bottom: 5px !important;
         }
 
         .summary {
-            font-size: 12pt;
             line-height: 12pt;
+            font-size: 11pt;
         }
     }
 
-    @media screen and (max-width: 860px) {
-        .card-title {
-            font-size: 20.28pt;
-            line-height: 20.28pt;
-        }
-
-        .summary {
-            font-size: 12pt;
-            line-height: 12pt;
-        }
-    }
-
-    @media screen and (max-width: 800px) {
-        .video-frame {
-            margin-left: 30px;
-        }
-
-    }
-
-    @media screen and (max-width: 760px) {
-        .card-title {
-            font-size: 20.28pt;
-            line-height: 20.28pt;
-
-        }
-
-        .summary {
-            font-size: 10pt;
-            line-height: 10pt;
-        }
-    }
-
-    @media screen and (max-width: 738px) {
-        .card {
-            display: none;
+    @media screen and (max-width: 599px) {
+        .text-col {
+            margin-left: auto;
+            margin-right: 20px;
         }
 
         .video-col {
-            padding-top: 130px;
+            padding-top: 60px;
+            margin-left: auto;
+        }
+
+        .content-row {
+            /*height: 110%;*/
         }
 
         .container-panel {
-            height: 600px;
+            height: 700px;
         }
     }
 
-    @media screen and (max-width: 680px) {
-        .card-title {
-            font-size: 15.28pt;
-            line-height: 15.28pt;
-        }
-
-        .summary {
-
-            margin-top: 5px;
-        }
+    @media screen and (max-width: 399px) {
 
         .container-panel {
-            height: 550px;
+            height: 800px;
         }
     }
-
-    @media screen and (max-width: 680px) {
-        .card-title {
-            font-size: 15.28pt;
-            line-height: 15.28pt;
-        }
-
-        .summary {
-
-            margin-top: 5px;
-        }
-
-        .container-panel {
-            height: 550px;
-        }
-    }
-
 
 </style>

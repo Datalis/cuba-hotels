@@ -35,6 +35,15 @@
                             <v-carousel-item style="height: min-content!important;">
                                 <v-img width="100%"  src="@/assets/2/3.jpg"></v-img>
                             </v-carousel-item>
+                            <v-carousel-item style="height: min-content!important;">
+                                <v-img width="100%"  src="@/assets/2/4.jpg"></v-img>
+                            </v-carousel-item>
+                            <v-carousel-item style="height: min-content!important;">
+                                <v-img width="100%"  src="@/assets/2/5.jpg"></v-img>
+                            </v-carousel-item>
+                            <v-carousel-item style="height: min-content!important;">
+                                <v-img width="100%"  src="@/assets/2/6.jpg"></v-img>
+                            </v-carousel-item>
                         </v-carousel>
                     </div>
                     <comment style="margin-top: 40px" category="12"></comment>

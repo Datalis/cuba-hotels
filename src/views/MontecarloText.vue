@@ -10,14 +10,21 @@
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
-                        <p class="text-justify">
-                            {{t}}
+                        <p class="text-justify" v-html="t">
+<!--                            {{t}}-->
                         </p>
-
-                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===8" src="@/assets/1/3.jpg">
-                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===18" src="@/assets/1/1.jpg">
-                        <img style="margin-bottom: 30px; margin-top: 20px" width="100%" v-if="i===28" src="@/assets/1/2.jpg">
-
+                        <div v-if="i===8" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/1/3.jpg"/>
+                            <div class="img-footer">Convertir a la Habana en un destino atractivo para el sector adinerado ha sido una de las mayores apuestas del sector hotelero en Cuba. FOTO: Jorge Beltrán</div>
+                        </div>
+                        <div v-if="i===20" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/1/1.jpg">
+                            <div class="img-footer">El Iberostar Packard tardó cuatro años en construirse y es hoy uno de los seis hoteles de lujo de Cuba, todos operados por Gaviota S.A. junto a empresas extranjeras. FOTO: Jans Sosa</div>
+                        </div>
+                        <div v-if="i===26" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/1/2.jpg">
+                            <div class="img-footer">Sesenta años después de la salida de la mafia italonorteamericana de Cuba, el gobierno cubano parece rescatar el viejo sueño del Proyecto Montecarlo. FOTO: Jorge Beltrán</div>
+                        </div>
                     </div>
                 </div>
                 <comment style="margin-top: 40px" category="11"></comment>
@@ -161,6 +168,17 @@
 </script>
 
 <style scoped>
+    .img-footer{
+        margin-top: 2px;
+        /*font-family: Montserrat-Thin;*/
+        font-size: 8pt;
+        /*letter-spacing: 2px;*/
+        line-height: 9pt;
+    }
+    .lightbox {
+        box-shadow: 0 0 20px inset rgba(0, 0, 0, 0.2);
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, transparent 72px);
+    }
     .side-bar-fixed {
         position: fixed;
         top: 0;

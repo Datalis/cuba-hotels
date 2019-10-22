@@ -11,7 +11,7 @@
 
                 <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
-                        <p :class="{'text-justify': true, 'text-subtitle': i===7 || i===31 || i===52}" v-html="t">
+                        <p :class="{'text-justify': true, 'text-subtitle': i===7 || i===30 || i===51}" v-html="t">
                         </p>
                         <div v-if="i===3" style="margin-bottom: 30px; margin-top: 20px">
                             <img width="100%" src="@/assets/3/7.jpg"/>
@@ -21,24 +21,28 @@
                             <img width="100%" src="@/assets/3/3.jpg">
                             <div class="img-footer">Construir hoteles en Cuba es una madeja burocrática que debe sortear los inversionistas cubanos y extranjeros. FOTO: Jans Sosa</div>
                         </div>
-                        <div v-if="i===23" style="margin-bottom: 30px; margin-top: 20px">
+                        <div v-if="i===13" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/info.jpg">
+                        </div>
+
+                        <div v-if="i===22" style="margin-bottom: 30px; margin-top: 20px">
                             <img width="100%" src="@/assets/3/8.jpg">
                             <div class="img-footer">Con la aplicación de la Resolución 310/2014 del MEP, los primeros trabajos podrían comenzar como máximo en 90 días. FOTO: Jans Sosa</div>
                         </div>
-                        <div v-if="i===32" style="margin-bottom: 30px; margin-top: 20px">
+                        <div v-if="i===30" style="margin-bottom: 30px; margin-top: 20px">
                             <img width="100%" src="@/assets/3/5.jpg"/>
                             <div class="img-footer">Las empresas de las FAR aportarán más del 66% de la inversión del país para construir hoteles en la próxima década. FOTO: Jans Sosa</div>
                         </div>
-                        <v-img style="margin-bottom: 30px;" width="100%" v-if="i===43" src="@/assets/3/INFOG-02.jpg"></v-img>
-                        <div v-if="i===52" style="margin-bottom: 30px; margin-top: 20px">
+                        <v-img style="margin-bottom: 30px;" width="100%" v-if="i===42" src="@/assets/3/INFOG-02.jpg"></v-img>
+                        <div v-if="i===51" style="margin-bottom: 30px; margin-top: 20px">
                             <img width="100%" src="@/assets/3/1.jpg"/>
                             <div class="img-footer">Solo en La Habana el Plan de Desarrollo del Mintur prevé la construcción de 42 nuevos hoteles para 2025. FOTO: Alejandro Basulto</div>
                         </div>
-                        <div v-if="i===69" style="margin-bottom: 30px; margin-top: 20px">
+                        <div v-if="i===68" style="margin-bottom: 30px; margin-top: 20px">
                             <img width="100%" src="@/assets/3/4.jpg"/>
                             <div class="img-footer">De cumplirse los planes, para 2030 Gaviota S.A. podría controlar el 60 % de la capacidad hotelera de Cuba. FOTO: Jans Sosa</div>
                         </div>
-                        <ocupacion-habitaciones v-if="i===63"></ocupacion-habitaciones>
+                        <ocupacion-habitaciones v-if="i===62"></ocupacion-habitaciones>
                     </div>
 
                     <comment style="margin-top: 40px" category="13"></comment>

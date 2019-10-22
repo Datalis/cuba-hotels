@@ -9,14 +9,14 @@
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
                 <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
-                        <p class="text-justify">
-                            {{t}}
+                        <p :class="{'text-justify': true, 'text-subtitle': i===10||i===23}" v-html="t">
+<!--                            {{t}}-->
                         </p>
                         <evolucion-hoteles v-if="i===5"></evolucion-hoteles>
-                        <sunburts-hoteles v-if="i===12"></sunburts-hoteles>
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===9">¿Quienes controlan el mercado?</p>
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===22">De los males, el menor</p>
-                        <bubble-habitaciones v-if="i===28"></bubble-habitaciones>
+                        <sunburts-hoteles v-if="i===14"></sunburts-hoteles>
+<!--                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===9">¿Quienes controlan el mercado?</p>-->
+<!--                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===22">De los males, el menor</p>-->
+                        <bubble-habitaciones v-if="i===29"></bubble-habitaciones>
 
                         <v-carousel
                                 v-if="i===20"
@@ -191,6 +191,10 @@
 </script>
 
 <style scoped>
+    .text-subtitle{
+        text-transform: uppercase !important;
+        font-family: Montserrat-ExtraBold !important;
+    }
     .side-bar-fixed {
         position: fixed;
         top: 0;

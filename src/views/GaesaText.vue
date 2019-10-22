@@ -8,35 +8,37 @@
         <v-row id="text-row11" justify="center"
                :class="{'align-end': !textRowAlignStart, 'align-start': textRowAlignStart}">
             <v-col cols="10" sm="8" md="5" lg="5" xl="5" class="pa-0">
+
                 <div class="info-container">
                     <div :key="i" v-for="(t, i) in textos">
-                        <p class="text-justify" v-if="i!==70 && i!==69 && i!==68">
-                            {{t}}
+                        <p :class="{'text-justify': true, 'text-subtitle': i===7 || i===31 || i===52}" v-html="t">
                         </p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/7.jpg"
-                               v-if="i===5"></v-img>
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===10">¿Cómo se
-                            construyen
-                            los hoteles en Cuba?</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/3.jpg"
-                               v-if="i===10"></v-img>
-
-                        <p style="font-style: italic" v-if="i===16">Grafico</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/8.jpg"
-                               v-if="i===25"></v-img>
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold; " v-if="i===32">Quién invierte
-                            realmente en Cuba: el esquema Gaesa</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/5.jpg"
-                               v-if="i===32"></v-img>
-                        <v-img width="100%" src="@/assets/3/INFOG-02.jpg" v-if="i===43"></v-img>
-
-                        <p class="text-uppercase" style="font-family: Montserrat-Bold;" v-if="i===50">¿Para qué
-                            construir?</p>
-                        <v-img style="margin-bottom: 30px; margin-top: 20px" width="100%" src="@/assets/3/1.jpg"
-                               v-if="i===50"></v-img>
-                        <v-img style="margin-top: 20px" width="100%" src="@/assets/3/4.jpg" v-if="i===67"></v-img>
-
-                        <ocupacion-habitaciones v-if="i===61"></ocupacion-habitaciones>
+                        <div v-if="i===3" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/7.jpg"/>
+                            <div class="img-footer">Frente al Malecón habanero crecen hoy las dos torres del nuevo hotel que debe concluirse en 2021 y tendrá 600 habitaciones y un costo de 81 millones. FOTO: Jans Sosa</div>
+                        </div>
+                        <div v-if="i===7" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/3.jpg">
+                            <div class="img-footer">Construir hoteles en Cuba es una madeja burocrática que debe sortear los inversionistas cubanos y extranjeros. FOTO: Jans Sosa</div>
+                        </div>
+                        <div v-if="i===23" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/8.jpg">
+                            <div class="img-footer">Con la aplicación de la Resolución 310/2014 del MEP, los primeros trabajos podrían comenzar como máximo en 90 días. FOTO: Jans Sosa</div>
+                        </div>
+                        <div v-if="i===32" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/5.jpg"/>
+                            <div class="img-footer">Las empresas de las FAR aportarán más del 66% de la inversión del país para construir hoteles en la próxima década. FOTO: Jans Sosa</div>
+                        </div>
+                        <v-img style="margin-bottom: 30px;" width="100%" v-if="i===43" src="@/assets/3/INFOG-02.jpg"></v-img>
+                        <div v-if="i===52" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/1.jpg"/>
+                            <div class="img-footer">Solo en La Habana el Plan de Desarrollo del Mintur prevé la construcción de 42 nuevos hoteles para 2025. FOTO: Alejandro Basulto</div>
+                        </div>
+                        <div v-if="i===69" style="margin-bottom: 30px; margin-top: 20px">
+                            <img width="100%" src="@/assets/3/4.jpg"/>
+                            <div class="img-footer">De cumplirse los planes, para 2030 Gaviota S.A. podría controlar el 60 % de la capacidad hotelera de Cuba. FOTO: Jans Sosa</div>
+                        </div>
+                        <ocupacion-habitaciones v-if="i===63"></ocupacion-habitaciones>
                     </div>
 
                     <comment style="margin-top: 40px" category="13"></comment>
@@ -49,7 +51,7 @@
                 <v-row id="sidebarCol" justify="start" align="start" :class="{'side-bar-fixed': sidebarFixed}">
                     <v-col cols="12" style="height: max-content;">
                         <v-card class="card first-card" width="max-content">
-                            <v-img :src="require('@/assets/home/business.jpg')" width="250px" height="2in">
+                            <v-img :src="require('@/assets/home/montecarlo.jpg')" width="250px" height="2in">
                                 <v-card-title class="card-title  pb-0 pt-1">
                                     <div class="card-title-text text-uppercase">
                                         El regreso del lujo
@@ -64,7 +66,7 @@
                     </v-col>
                     <v-col cols="12" style="height: max-content;">
                         <v-card class="card first-card" width="max-content">
-                            <v-img :src="require('@/assets/home/gaesa.jpg')" width="250px" height="2in">
+                            <v-img :src="require('@/assets/home/business.jpg')" width="250px" height="2in">
                                 <v-card-title class="card-title pb-0 pt-1">
                                     <div class="card-title-text text-uppercase">
                                         El negocio hotelero
@@ -183,6 +185,17 @@
 </script>
 
 <style scoped>
+    .text-subtitle{
+        text-transform: uppercase !important;
+        font-family: Montserrat-ExtraBold !important;
+    }
+    .img-footer{
+        margin-top: 2px;
+        /*font-family: Montserrat-Thin;*/
+        font-size: 8pt;
+        /*letter-spacing: 2px;*/
+        line-height: 9pt;
+    }
     .side-bar-fixed {
         position: fixed;
         top: 0;

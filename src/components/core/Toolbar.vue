@@ -6,7 +6,7 @@
             color="rgba(0, 0, 0, 0.76)"
     >
         <v-row class="pt-3">
-            <social-sharing url="https://dogcalas.github.io/cuba-hotels/#/"
+            <social-sharing url="https://hoteles.eltoque.com"
                             title="La apuesta hotelera en Cuba"
                             description="Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital cubano. ¿Valdrá la pena?"
                             quote="Cuba apuesta con todo al turismo para su desarrollo. Aunque los números están en su contra, se pretende convertir al país en un paraíso hotelero. Un proyecto financiado, en su mayoría con capital cubano. ¿Valdrá la pena?"

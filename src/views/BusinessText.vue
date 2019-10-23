@@ -40,7 +40,7 @@
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
                                 <v-img width="100%"  src="@/assets/2/4.jpg"></v-img>
-                                <div class="img-footer">El hotel Manzana Kempinsky fue el primer hotel 5 estrellas plus en cuba, inaugurado en 2016, FOTO: Jorge Beltrán</div>
+                                <div class="img-footer">El hotel Manzana Kempinsky fue el primer hotel 5 estrellas plus en Cuba, inaugurado en 2016, FOTO: Jorge Beltrán</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
                                 <v-img width="100%"  src="@/assets/2/5.jpg"></v-img>

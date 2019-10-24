@@ -9,7 +9,7 @@
             <v-card color="gray" flat>
                 <v-row class="content-row"  no-gutters>
                     <v-col class="card-col" cols="6" sm="5" md="5" lg="5" xl="5">
-                        <router-link to="/gaesa/" style="text-decoration: none">
+                        <router-link :to="{name: 'gaesa'}" style="text-decoration: none">
                         <div class="card-title-container">
                             <v-card-title class="text-left pt-6  pl-0 pb-0">
                                 <h1 class="card-title text-uppercase">
@@ -39,7 +39,7 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions class="text-left">
-                            <router-link to="/gaesa/" style="text-decoration: none">
+                            <router-link :to="{name: 'gaesa'}" style="text-decoration: none">
                                 <v-btn text class="more-btn">
                                     Leer más
                                 </v-btn>

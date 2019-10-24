@@ -61,7 +61,7 @@
                                         El regreso del lujo
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link to="/montecarlo/" style="text-decoration: none">
+                                    <router-link :to="{name: 'montecarlo'}" style="text-decoration: none">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>
@@ -76,7 +76,7 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link class="text-right" to="/negocio/" style="text-decoration: none;">
+                                    <router-link class="text-right" :to="{name: 'negocio'}" style="text-decoration: none;">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>

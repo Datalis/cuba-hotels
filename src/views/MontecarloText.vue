@@ -41,7 +41,7 @@
                                         El negocio hotelero
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link class="text-right" to="/negocio/" style="text-decoration: none;">
+                                    <router-link class="text-right" :to="{name: 'negocio'}" style="text-decoration: none;">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>
@@ -56,7 +56,7 @@
                                         El esquema gaesa para construir hoteles
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link to="/gaesa/" style="text-decoration: none">
+                                    <router-link :to="{name: 'gaesa'}" style="text-decoration: none">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>

@@ -21,17 +21,17 @@ export default new Router({
                     component: Home
                 },
                 {
-                    path: '/montecarlo',
+                    path: '/El-regreso-del-lujo-a-Cuba',
                     name: 'montecarlo',
                     component: MontecarloText
                 },
                 {
-                    path: '/gaesa',
+                    path: '/El-esquema-GAESA-para-construir-hoteles',
                     name: 'gaesa',
                     component: GaesaText
                 },
                 {
-                    path: '/negocio',
+                    path: '/El-negocio-hotelero-en-Cuba',
                     name: 'negocio',
                     component: BusinessText
                 }

@@ -13,10 +13,10 @@
                             hashtags="HotelesEnCuba"
                             inline-template>
                 <div data-v-b9a2390a="" align="center" class="pt-0 pt-sm-0 pt-md-6 pt-lg-6 pt-xl-6 pl-0 pr-5 col col-2">
-                    <network network="facebook">
+                    <network network="facebook" style="border-color: transparent">
                         <i aria-hidden="true"
                            class="v-icon notranslate toolbar-social-icon mr-2 v-icon--dense mdi mdi-facebook theme--light"
-                           style="color: rgba(255, 255, 255, 0.87); caret-color: rgba(255, 255, 255, 0.87);"></i>
+                           style="color: rgba(255, 255, 255, 0.87); caret-color: rgba(255, 255, 255, 0.87); background-color: transparent"></i>
                     </network>
                     <network network="twitter">
                         <i aria-hidden="true"
@@ -41,7 +41,7 @@
                 </router-link>
             </v-col>
             <v-col cols="2" class="pt-4">
-                <a href="#" style="text-decoration: none;">
+                <a href="https://eltoque.com/" style="text-decoration: none;">
                     <v-img class="lg-screen" src="@/assets/home/logos/eltoque.png" max-width="1.50in"></v-img>
                     <v-img class="small-screen" src="@/assets/logo.png" max-width="1.50in"></v-img>
                 </a>

@@ -6,7 +6,7 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         categories: require('@/data/categories.json'),
-        // regions: require('@/data/regions.json'),
+        regions: require('@/data/regions.json'),
         montecarlo: require('@/data/textos/montecarlo.json'),
         business: require('@/data/textos/business.json'),
         gaesa: require('@/data/textos/gaesa.json'),
@@ -26,12 +26,17 @@ const store = new Vuex.Store({
     getters: {
         categories: state => state.categories,
         managers: state => [...new Set(state.hotels.map(p => p.oper_cu))],
-        regions: state => [...new Set(state.hotels.map(p => p.provincia.nombre))],
+        regions: state => state.regions,
         montecarlo: state => state.montecarlo.textos,
         gaesa: state => state.gaesa.textos,
         business: state => state.business.textos,
-        // regions: state => state.regions,
-        hotels: state => state.hotels,
+        hotels: state => state.hotels.sort((h1,h2)=>{
+            var h1_index = state.regions.indexOf(h1.provincia.nombre)
+            console.log(h1_index)
+            var h2_index = state.regions.indexOf(h2.provincia.nombre)
+            console.log(h2_index)
+            return h1_index - h2_index
+        }),
         projects: state => state.projects,
         years: state => [...new Set(state.projects.map(p => parseInt(p.fecha_fin)))].filter(y => !isNaN(y))
     }

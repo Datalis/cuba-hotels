@@ -27,27 +27,27 @@
                                 style="margin-top: 20px; margin-bottom: 20px;  height: max-content !important;"
                         >
                             <v-carousel-item style="height: min-content!important;">
-                                    <v-img width="100%" src="@/assets/2/1.jpg"></v-img>
+                                    <img width="100%" src="@/assets/2/1.jpg"/>
                                 <div class="img-footer">Inaugurado en 1928 y ubicado en la calle G del Vedado, el Hotel Presidente fue en su época el primer rascacielos de Cuba. FOTO: Alejandro Basulto</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
-                                <v-img width="100%" src="@/assets/2/2.jpg"></v-img>
+                                <img width="100%" src="@/assets/2/2.jpg"/>
                                 <div class="img-footer">El hotel Prado y Malecón, operado por las cadenas Accor y Gaviota es el 5 estrellas plus de más reciente apertura, en octubre de 2019. FOTO: Jans Sosa</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
-                                <v-img width="100%"  src="@/assets/2/3.jpg"></v-img>
-                                <div class="img-footer">El Hotel Parque Central, uno de los más emblemáticos del centro de la Habana, está actualmente operado por la cadena Iberostar. FOTO: Jorge Beltrán</div>
+                                <img width="100%"  src="@/assets/2/3.jpg"/>
+                                <div class="img-footer">El Hotel Parque Central, uno de los más emblemáticos del centro de La Habana, está actualmente operado por la cadena Iberostar. FOTO: Jorge Beltrán</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
-                                <v-img width="100%"  src="@/assets/2/4.jpg"></v-img>
+                                <img width="100%"  src="@/assets/2/4.jpg"/>
                                 <div class="img-footer">El hotel Manzana Kempinsky fue el primer hotel 5 estrellas plus en Cuba, inaugurado en 2016, FOTO: Jorge Beltrán</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
-                                <v-img width="100%"  src="@/assets/2/5.jpg"></v-img>
+                                <img width="100%"  src="@/assets/2/5.jpg"/>
                                 <div class="img-footer">El hotel Inglaterra es el más antiguo de Cuba, fundado en 1875, y es monumento nacional. FOTO: Jorge Beltrán</div>
                             </v-carousel-item>
                             <v-carousel-item style="height: min-content!important;">
-                                <v-img width="100%"  src="@/assets/2/6.jpg"></v-img>
+                                <img width="100%"  src="@/assets/2/6.jpg"/>
                                 <div class="img-footer">Hotel Panorama, operado por la cadena española H10, en el litoral norte de La Habana. FOTO: Jorge Beltrán</div>
                             </v-carousel-item>
                         </v-carousel>
@@ -67,7 +67,7 @@
                                         El regreso del lujo
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link to="/montecarlo/" style="text-decoration: none">
+                                    <router-link :to="{name: 'montecarlo'}" style="text-decoration: none">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
                                 </v-card-title>
@@ -82,7 +82,7 @@
                                         El esquema gaesa para construir hoteles
                                     </div>
                                     <div class="sep-line"></div>
-                                    <router-link to="/gaesa/" style="text-decoration: none">
+                                    <router-link :to="{name: 'gaesa'}" style="text-decoration: none">
                                         <div class="card-action-text text-uppercase">Leer mas</div>
                                     </router-link>
 

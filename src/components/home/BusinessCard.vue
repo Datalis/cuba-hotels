@@ -12,7 +12,7 @@
                     </v-col>
                     <v-col cols="6" sm="5" md="5" lg="5" xl="5" class="card-col pr-0" style="position: relative;">
                         <div class="card-title-container text-left">
-                            <router-link to="/negocio/" style="text-decoration: none;">
+                            <router-link :to="{name: 'negocio'}" style="text-decoration: none;">
                             <v-card-title class="text-left pt-6  pb-0">
                                 <v-row align="center">
                                     <v-col cols="12">
@@ -32,7 +32,7 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions>
-                            <router-link class="text-right" to="/negocio/" style="text-decoration: none; width: 100%">
+                            <router-link class="text-right" :to="{name: 'negocio'}" style="text-decoration: none; width: 100%">
                                 <v-btn text class="more-btn ">
                                     Leer más
                                 </v-btn>

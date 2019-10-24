@@ -10,7 +10,7 @@
                 <v-row class="content-row" no-gutters>
                     <v-col class="card-col " cols="6" sm="5" md="5" lg="5" xl="5"
                            style="height: max-content !important;">
-                        <router-link to="/montecarlo/" style="text-decoration: none">
+                        <router-link :to="{name: 'montecarlo'}" style="text-decoration: none">
                         <v-card-title class="card-title-container">
                             <v-row align="center">
                                 <v-col cols="12">
@@ -29,7 +29,7 @@
                             </v-row>
                         </v-card-text>
                         <v-card-actions class="btn-container text-left">
-                            <router-link to="/montecarlo/" style="text-decoration: none">
+                            <router-link :to="{name: 'montecarlo'}" style="text-decoration: none">
                                 <v-btn text class="more-btn">
                                     Leer más
                                 </v-btn>

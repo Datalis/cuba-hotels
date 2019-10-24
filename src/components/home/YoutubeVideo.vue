@@ -17,7 +17,7 @@
                         ¿Quién paga el paraíso?
                     </v-card-title>
                     <v-card-text class="summary text-left">
-                        Más de 19 mil millones proyecta invertir el gobierno para asegurar el desarrollo turístico en
+                        Más de 17 mil millones proyecta invertir el gobierno para asegurar el desarrollo turístico en
                         Cuba. Una apuesta arriesgada, para un sector que hoy ya posee 72 mil habitaciones
                     </v-card-text>
                 </v-card>

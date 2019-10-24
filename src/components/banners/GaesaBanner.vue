@@ -95,14 +95,14 @@
         }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 450px) {
         .banner-title {
-            font-size: 9.28pt;
+            font-size: 10.28pt;
             letter-spacing: 2px;
         }
     }
 
-    @media screen and (max-width: 370px) {
+    @media screen and (max-width: 400px) {
         .d400{
             display: flex;
         }
@@ -111,6 +111,7 @@
             display: none;
         }
     }
+
 
 
 </style>

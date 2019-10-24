@@ -1,4 +1,4 @@
- [
+[
     {
         "cadena": "Cubanacán SA",
         "cat": "5",
@@ -321,6 +321,28 @@
         "localizacion": "Zulueta esq. a Teniente Rey",
         "modalidad": "Hotel",
         "nombre": "Gran Hotel",
+        "propiedad": "Propio",
+        "provincia": {
+            "codigo": "OTRO",
+            "nombre": "La Habana"
+        },
+        "suelo": "Ejecución",
+        "tipo": "Nuevo"
+    },
+    {
+        "cadena": "Gaviota SA",
+        "cat": "5",
+        "costo": "83600000",
+        "est_inv": "Ejecución",
+        "est_negocio": "Propio",
+        "fecha_fin": "2019",
+        "fecha_ini": "2016",
+        "ha": "0.36",
+        "habitaciones": "250",
+        "id": 16,
+        "localizacion": "Paseo del Prado esq. a Malecón",
+        "modalidad": "Hotel",
+        "nombre": "Hotel Paseo del Prado",
         "propiedad": "Propio",
         "provincia": {
             "codigo": "OTRO",

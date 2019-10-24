@@ -32,9 +32,7 @@ const store = new Vuex.Store({
         business: state => state.business.textos,
         hotels: state => state.hotels.sort((h1,h2)=>{
             var h1_index = state.regions.indexOf(h1.provincia.nombre)
-            console.log(h1_index)
             var h2_index = state.regions.indexOf(h2.provincia.nombre)
-            console.log(h2_index)
             return h1_index - h2_index
         }),
         projects: state => state.projects,

@@ -19,8 +19,12 @@
                                     El esquema</h1>
                                 <h1 class="text-left banner-title">
                                     GAESA</h1>
-                                <h1 class="text-left banner-title">
+                                <h1 class="nd400 text-left banner-title">
                                     para construir</h1>
+                                <h1 class="d400 text-left banner-title">
+                                    para </h1>
+                                <h1 class="d400 text-left banner-title">
+                                    construir</h1>
                                 <h1 class="text-left banner-title">
                                     hoteles </h1>
                             </div>
@@ -41,6 +45,9 @@
 </script>
 
 <style scoped>
+    .d400{
+        display: none;
+    }
     .banner-title {
         white-space: nowrap;
         font-size: 30.28pt;
@@ -57,26 +64,26 @@
 
     @media screen and (max-width: 1100px) {
         .banner-title {
-            font-size: 30.28pt;
+            font-size: 25.28pt;
         }
     }
 
     @media screen and (max-width: 900px) {
         .banner-title {
-            font-size: 25.28pt;
+            font-size: 22.28pt;
         }
     }
 
-    @media screen and (max-width: 750px) {
+    @media screen and (max-width: 850px) {
         .banner-title {
-            font-size: 20.28pt;
+            font-size: 18.28pt;
             letter-spacing: 2px;
         }
     }
 
     @media screen and (max-width: 600px) {
         .banner-title {
-            font-size: 18.28pt;
+            font-size: 14.28pt;
             letter-spacing: 2px;
         }
     }
@@ -90,8 +97,20 @@
 
     @media screen and (max-width: 400px) {
         .banner-title {
-            font-size: 10.28pt;
+            font-size: 9.28pt;
             letter-spacing: 2px;
         }
     }
+
+    @media screen and (max-width: 370px) {
+        .d400{
+            display: flex;
+        }
+
+        .nd400{
+            display: none;
+        }
+    }
+
+
 </style>

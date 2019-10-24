@@ -58,7 +58,6 @@
                     },
                     series: [
                         {
-                            "color": '#3a3d59',
                             "data": [
                                 {
                                     "fact": "Está en Cuba desde enero de 2018 y quieren ir creciendo poco a poco. Especializados en instalaciones de alto estándar, su segundo hotel será El Paseo del Prado de la Habana, uno de los 5 estrellas plus de la Habana.",
@@ -74,7 +73,6 @@
                             "name": "Francia"
                         },
                         {
-                            "color": '#f6ab68',
                             "data": [
                                 {
                                     "fact": "Fundada en 1997 y anteriormente conocido como Aston International, es la una cadena de gestión hotelera de servicio completo más grande de Indonesia. Es la última en llegar a Cuba en 2019.",
@@ -85,7 +83,6 @@
                             "name": "Indonesia"
                         },
                         {
-                            "color": '#6d889b',
                             "data": [
                                 {
                                     "fact": "Posee más de 60 hoteles alrededor del mundo, ubicados en su mayoría en destinos como Indonesia, Singapur, Tailandia, Laos y China. Su entrada al mercado cubano se dio en 2017 y tiene otros dos proyectos confirmados con Gaviota.",
@@ -96,18 +93,16 @@
                             "name": "Singapur"
                         },
                         {
-                            "color": '#ec6c5e',
                             "data": [
                                 {
                                     "fact": "Es la compañía de Resort de más rápido crecimiento en el Caribe y tienen proyectos de ampliación para 2019 en Cuba. Pertenece a Sondwing TMD Group, el mayor consorcio turístico canadiense, que además opera más de 100 vuelos charters a Cuba. ",
                                     "name": "Blue Diamond Resort",
-                                    "value": 8853
+                                    "value": 8551
                                 }
                             ],
                             "name": "Canadá"
                         },
                         {
-                            "color": '#f6ab68',
                             "data": [
                                 {
                                     "fact": "Es uno de los mayores del mundo, con más de 180 hoteles y 26 mil habitaciones solo en México. La apuesta de Posadas es por el destino Caribe, a través de sus marcas Fiesta América, en países como Cuba y Domincana.",
@@ -118,7 +113,6 @@
                             "name": "México"
                         },
                         {
-                            "color": '#3a3d59',
                             "data": [
                                 {
                                     "fact": "Poseen intereses en todo el Caribe y están presentes en Cuba desde 2012. Todos sus negocios en la Isla han tenido a Gaviota como contraparte cubana.",
@@ -169,7 +163,6 @@
                             "name": "España"
                         },
                         {
-                            "color": '#3a3d59',
                             "data": [
                                 {
                                     "fact": "Creado en 1897, es el grupo de hoteles de lujo más antiguo de Europa. Administra una cartera de 78 hoteles y residencias de cinco estrellas en 34 países y continúa agregando nuevas propiedades en Europa, Medio Oriente, África y Asia. Kempinski es miembro fundador de Global Hotel Alliance (GHA). En Cuba administra desde el año 2017 el primer Hotel cinco estrellas plus.",
@@ -180,7 +173,6 @@
                             "name": "Suiza"
                         },
                         {
-                            "color": '#f6ab68',
                             "data": [
                                 {
                                     "fact": "Marca alemana comercializada por Meeting Point Hotels, cadena adscrita al tercer turoperdor de Alemania. Fundada en 2015, Labranda administra cerca de 72 hoteles en destinos como Islas Canarias, Turquía, Egipto, Calabria, Grecia y desde noviembre de 2018 Cuba. Su producto es de sol y playa, enfocada en el mercado europeo y en el sector de familia.",
@@ -191,7 +183,6 @@
                             "name": "Alemania"
                         },
                         {
-                            "color": '#4c2b37',
                             "data": [
                                 {
                                     "fact": "Es la única cadena estadounidense de hoteles de lujo en Cuba. Llegó en 2016, después de la apertura de relaciones diplomáticas entre ambos países, y actualmente gestiona dos hoteles.",
@@ -202,7 +193,6 @@
                             "name": "Estados Unidos"
                         },
                         {
-                            "color": '#9c8986',
                             "data": [
                                 {
                                     "fact": "Presente en Cuba desde agosto de 2017. Actualmente cuentan con 4 hoteles y tienen proyectos de ampliación en La Habana, Varadero y Cayo Santamaría. Trabajan para un segmento de mercado amplio, pero tienen un producto exclusivo indio, como la comida y la realización de bodas indú.",
@@ -213,7 +203,6 @@
                             "name": "India"
                         },
                         {
-                            "color": '#6d889b',
                             "data": [
                                 {
                                     "fact": "Con más de 11.000 habitaciones, Pestana Hotel Group cada año atrae a más de tres millones de viajeros a sus hoteles de cuatro y cinco estrellas en 14 países. En Cuba cuenta con una sola instalación.",
@@ -224,7 +213,6 @@
                             "name": "Portugal"
                         },
                         {
-                            "color": '#f19384',
                             "data": [
                                 {
                                     "fact": "Tiene más de 20 años de experiencia en la gestión hotelera en instalaciones de 3 estrellas, con negocios en varios países europeos. En Cuba tiene presencia en La Habana y Trinidad y se encuentra en negociaciones para adquirir otro hotel de playa.",

@@ -6466,27 +6466,5 @@
     },
     "suelo": "Sin Preparación",
     "tipo": "Nuevo"
-  },
-  {
-    "cadena": "Cubanacán SA",
-    "cat": "4",
-    "costo": "5000000",
-    "est_inv": "Ejecución",
-    "est_negocio": "Propio",
-    "fecha_fin": "2018",
-    "fecha_ini": "2018",
-    "ha": "",
-    "habitaciones": "25",
-    "id": 303,
-    "localizacion": "Paseo 454, entre 19 y 21, Vedado",
-    "modalidad": "Hotel",
-    "nombre": "Hotel /E/ Portales de Paseo",
-    "propiedad": "Propio",
-    "provincia": {
-      "codigo": "OTRO",
-      "nombre": "La Habana"
-    },
-    "suelo": "Empresa Alojamiento",
-    "tipo": "Nuevo"
   }
 ]

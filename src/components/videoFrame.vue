@@ -1,5 +1,5 @@
 <template>
-    <iframe :width="width" :height="height" src="https://www.youtube.com/embed/QmwXjXV1jkk" frameborder="0"
+    <iframe :width="width" :height="height" src="https://www.youtube.com/embed/ZWzTWUj56QY" frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </template>
 

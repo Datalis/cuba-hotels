@@ -201,7 +201,6 @@
         },
 
         mounted() {
-            console.log(this.$vuetify.breakpoint)
             const me = this
             this.$refs.list.$el.addEventListener('scroll', function () {
                 const year = me.getActiveIYear()

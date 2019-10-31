@@ -41,7 +41,7 @@
                         <div>Fotografía: Jans Sosa, Jorge Beltrán y Alejandro Basulto</div>
                         <div>Redes Sociales: Beatriz Valdés y Enrique Torres</div>
                         <div class="pt-8"><a class="method text-uppercase" href="https://eltoque.com/como-se-hizo-el-especial-multimedia-la-apuesta-hotelera-en-cuba/" target="_blank" style="text-decoration: none;">Metodología</a></div>
-                        <div class="pt-4 pb-6"><a class="method text-uppercase" target="_blank" style="text-decoration: none;" href="Base de datos Hoteles y Proyectos en Cuba FINAL oct 2019.xlsx">Base de Datos</a></div>
+                        <div class="pt-4 pb-6"><a class="method text-uppercase" style="text-decoration: none;" href="Base de datos Hoteles y Proyectos en Cuba FINAL oct 2019.zip">Base de Datos</a></div>
                     </v-col>
                     <v-col cols="12" sm="12" md="4" lg="5" xl="5" align="center">
                         <a href="https://eltoque.com/" style="text-decoration: none;">

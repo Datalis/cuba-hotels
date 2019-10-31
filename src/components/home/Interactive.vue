@@ -562,10 +562,19 @@
             padding-left: 24px;
         }
 
+        .cuba-map{
+            position: relative;
+            top: 70px;
+            /*height: 300px;*/
+        }
         .map-col {
-            overflow-x: scroll;
+            overflow-x:scroll;
             overflow-y: hidden;
             height: 300px;
+        }
+
+        .statistics-row {
+            margin-bottom: 0;
         }
 
         .map-date {
@@ -615,11 +624,11 @@
             color: #cc983c;
         }
 
-        .map-col {
-            overflow-x: scroll;
-            overflow-y: hidden;
-            height: 220px;
-        }
+    /*    .map-col {*/
+    /*        overflow-x: scroll;*/
+    /*        overflow-y: hidden;*/
+    /*        height: 220px;*/
+    /*    }*/
     }
 
     @media screen and (max-width: 400px) {
